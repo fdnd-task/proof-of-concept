@@ -2,6 +2,7 @@
 
 # Podcast webapp - de Correspondent
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+In deze repository is gewerkt aan een webapplicatie die podcasts aanbied aan desbetreffenden.
 
 ## Inhoudsopgave
 
