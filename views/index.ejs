@@ -2,12 +2,28 @@
 
 <!-- Header van de indexpagina -->
 <header>
-
+    
 </header>
 
 <!-- Inhoud met diverse podcasts -->
 <main>
-    <% Collections.forEach(Collection => { %>
+    <% data.forEach(collection => { %>
+
+        <h1><%= collection.attributes.title %></h1>
+        <p><%= collection.attributes.subtitle %></p>
+        <p><%= collection.attributes.intro %></p>
+        <p>Last published at: <%= collection.attributes.lastPublishedAt %></p>
+        <p>Slug: <%= collection.attributes.slug %></p>
+
+        <h2>Main Visual</h2>
+        <p>Type: <%= collection.relationships.mainVisual.data.type %></p>
+        <p>ID: <%= collection.relationships.mainVisual.data.id %></p>
+
+        <h2>Authors</h2>
+        <% collection.relationships.authors.data.forEach(author => { %>
+            <p>Type: <%= author.type %></p>
+            <p>ID: <%= author.id %></p>
+        <% }); %>
 
     <% }); %>
 </main>

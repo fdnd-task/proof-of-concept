@@ -19,9 +19,10 @@ import http from 'http';
 // Importeert het .env bestand
 import dotenv from 'dotenv';
 
+// Configureert het .env bestand
 dotenv.config();
 
-const collectionsJson = './course/collections.json';
+const collectionsJson = "https://raw.githubusercontent.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/main/course/collections.json" 
 
 // Start de server en luister naar de opgegeven poort
 app.set("port", process.env.PORT || 8000);
@@ -40,24 +41,12 @@ app.use(express.static("public"));
 
 // Definieer de route voor de hoofdpagina ("/")
 app.get("/", (request, response) => {
-    fs.readFile(collectionsJson, "utf8", (err, data) => {
-      if (err) {
-        console.error("Fout bij het lezen van het JSON-bestand:", err);
-        response.status(500).render("error");
-      } 
-      else {
-        try {
-          // Parsen van JSON-gegevens naar een JavaScript-object of array
-          const collectionsJson = JSON.parse(data);
-          // Render de "index" view en geef de JSON-gegevens door als gegevens
-          response.render("index", { data: collectionsJson });
-        } catch (error) {
-          console.error("Fout bij het parsen van JSON:", error);
-          response.status(500).render("error");
-        }
-      }
-    });
-  });
+	fetchJson(collectionsJson).then((data) => {
+		response.render("index", data);
+
+        console.log(data)
+	});
+});
 
 // Definieert een route voor de 404-pagina
 app.get("*", (request, response) => {
