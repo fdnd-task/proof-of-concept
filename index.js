@@ -25,7 +25,7 @@ dotenv.config();
 const collectionsJson = "https://raw.githubusercontent.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/main/course/collections.json" 
 
 // Start de server en luister naar de opgegeven poort
-app.set("port", process.env.PORT || 8000);
+app.set("port", process.env.PORT || 8888);
 
 const server = http.createServer(app);
 server.listen(app.get("port"), () => {
@@ -43,6 +43,15 @@ app.use(express.static("public"));
 app.get("/", (request, response) => {
 	fetchJson(collectionsJson).then((data) => {
 		response.render("index", data);
+
+        console.log(data)
+	});
+});
+
+// Definieer de route voor de overzichtspagina ("/")
+app.get("/collections", (request, response) => {
+	fetchJson(collectionsJson).then((data) => {
+		response.render("collections", data);
 
         console.log(data)
 	});

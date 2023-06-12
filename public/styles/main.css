@@ -1,8 +1,206 @@
 * {
     box-sizing: border-box;
+    margin: 0;
     padding: 0;
 }
 
-body {
-    background-color: white;
+@font-face {
+    font-family: 'Bree-Regular';
+    src: url(./fonts/bree-regular.otf) format("Opentype");
 }
+:root {
+    /* Kleuren */
+    --color-default: #ffffff;
+    --color-invert: #121212;
+    --color-primary: #df5b57;
+    --color-secundary-150: #194d49;
+    --color-secundary-100: #70b3ad;
+    --color-secundary-75: #9dceca;
+    --color-secundary-0: #eaf6f5;
+    --color-accent-100: #666666;
+    --color-accent-75: #b2b2b2;
+    --color-accent-50: #e5e4e4;
+
+    /* Eenheden */
+    --u-nano: 0.125em;
+    --u-micro: 0.25em;
+    --u-small: 0.4em;
+    --u-medium: 0.5em;
+    --u-default: 1em;
+    --u-large: 2em;
+    --u-round: 50%;
+
+    /* Schaduwen en effecten */
+    --shadow-default: 0px 1px 4px rgba(0, 0, 0, 0.1), 0px 4px 4px -2px rgba(0, 0, 0, 0.12), 0px 10px 12px -5px rgba(0, 0, 0, 0.2);
+
+}
+
+body {
+    background-color: var(--color-secundary-75);
+    font-family: 'Bree-Regular', sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* header */
+header {
+    padding: var(--u-default);  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .site-logo {
+    width: 10em;
+    height: 3.33em;
+}
+
+header video {
+    width: 12em;
+    display: block;
+}
+
+
+
+/* Layout */
+
+main.index {
+    width: 20em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--u-large);
+    margin: auto;
+    padding: var(--u-default);
+    container-type: inline-size;
+    container-name: overview;
+    
+}
+
+.index article {
+    width: 18em;
+    aspect-ratio: 4/5;
+    text-wrap: balance;
+    padding: var(--u-default);
+    background-color: var(--color-secundary-0);
+    border: 2px solid var(--color-secundary-100);
+    border-radius: var(--u-medium);
+    box-shadow: var(--shadow-default);
+    left: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10fr 1fr 1fr;
+    position: relative;
+    transition: 0.3s ease-in;
+}
+
+.index article:hover {
+    left: 0.5em;
+    bottom: 0.5em;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}   
+
+.index article picture {
+    background-color: var(--color-secundary-75);
+    border-radius: var(--u-micro);
+}
+
+.index article h2 {
+    width: inherit;
+    padding: var(--u-medium);
+    position: absolute;
+    bottom: 2.5em;
+    left: var(--u-medium);
+    border-radius: var(--u-micro);
+    background-color: var(--color-secundary-150);
+    color: var(--color-secundary-0);
+    transition: 0.3s ease-in-out;
+}
+
+.index article h2:hover {
+    left: -0.33em;
+    transition: 0.3s ease-in-out;
+}
+
+/* Interactief */
+
+a {
+    width: fit-content;
+    color: var(--color-secundary-150);
+    display: flex;
+    align-items: center;
+    gap: var(--u-medium);
+    text-decoration: none;
+    border: 1px solid var(--color-secundary-0);
+    border-radius: var(--u-micro);
+    padding: var(--u-micro);
+    transition: 0.2s ease-in-out;
+
+    font-family: "bree", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a svg {
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    border: 1px solid var(--color-secundary-100);
+}
+
+a:hover svg {
+    rotate:  -45deg;
+}
+
+a:focus {
+    border: 1px solid var(--color-secundary-150);
+    padding: 0.25em 1em;
+}
+
+a:focus-visible {
+    outline: none;
+}
+
+/* Typografie */
+
+h1, h2, h3 {
+    color: var(--color-secundary-150);
+    line-height: 1;
+    font-family: "bree", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1, h2, h3, p {
+    max-width: 20em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.66em;
+}
+
+h3 {
+    font-size: var(--u-default);
+}
+
+/* Container queries */
+
+@media (min-width: 48em ) {
+    main.index {
+        width: 39em;
+        grid-template-columns: 1fr 1fr;
+    }   
+}
+
+@media (min-width: 80em ) {
+    main.index {
+        width: 60em;
+        grid-template-columns: 1fr 1fr 1fr;
+    }   
+}
+
