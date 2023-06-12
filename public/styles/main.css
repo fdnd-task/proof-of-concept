@@ -9,6 +9,14 @@
     src: url(./fonts/bree-regular.otf) format("Opentype");
 }
 :root {
+
+    /* Animaties */
+    --a-quick: 0.2s;
+    --a-default: 0.3s;
+    --a-medium: 0.6s;
+    --a-large: 1s;
+    --a-loading: 3s;
+
     /* Kleuren */
     --color-default: #ffffff;
     --color-invert: #121212;
@@ -91,13 +99,13 @@ main.index {
     grid-template-columns: 1fr;
     grid-template-rows: 10fr 1fr 1fr;
     position: relative;
-    transition: 0.3s ease-in;
+    transition: var(--a-default) ease-in;
 }
 
 .index article:hover {
     left: 0.5em;
     bottom: 0.5em;
-    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: var(--a-quick) cubic-bezier(0.075, 0.82, 0.165, 1);
 }   
 
 .index article picture {
@@ -110,16 +118,16 @@ main.index {
     padding: var(--u-medium);
     position: absolute;
     bottom: 2.5em;
-    left: var(--u-medium);
+    left: 0.33em;
     border-radius: var(--u-micro);
     background-color: var(--color-secundary-150);
     color: var(--color-secundary-0);
-    transition: 0.3s ease-in-out;
+    transition: var(--a-default) ease-in-out;
 }
 
 .index article h2:hover {
     left: -0.33em;
-    transition: 0.3s ease-in-out;
+    transition: var(--a-default) ease-in-out;
 }
 
 /* Interactief */
@@ -134,7 +142,7 @@ a {
     border: 1px solid var(--color-secundary-0);
     border-radius: var(--u-micro);
     padding: var(--u-micro);
-    transition: 0.2s ease-in-out;
+    transition: var(--a-quick) ease-in-out;
 
     font-family: "bree", sans-serif;
     font-weight: 400;
@@ -142,17 +150,12 @@ a {
 }
 
 a svg {
-    transition: 0.3s ease-in-out;
+    transition: var(--a-default) ease-in-out;
 }
 
 a:hover {
     border: 1px solid var(--color-secundary-100);
 }
-
-a:hover svg {
-    rotate:  -45deg;
-}
-
 a:focus {
     border: 1px solid var(--color-secundary-150);
     padding: 0.25em 1em;
@@ -188,19 +191,39 @@ h3 {
     font-size: var(--u-default);
 }
 
-/* Container queries */
+/* Vermindert aniamties */
+@media (prefers-reduced-motion) {
+    :root {
+    /* Animaties */
+    --a-quick: 0.01s;
+    --a-default: 0.01s;
+    --a-medium: 0.01s;
+    --a-large: 0.01s;
+    --a-loading: 0.01s;
+    }
+}
 
-@media (min-width: 48em ) {
+/* Media queries  */
+@media (min-width: 40em ) {
     main.index {
-        width: 39em;
+        width: 40em;
         grid-template-columns: 1fr 1fr;
     }   
 }
 
-@media (min-width: 80em ) {
+@media (min-width: 67.5em ) {
     main.index {
         width: 60em;
         grid-template-columns: 1fr 1fr 1fr;
     }   
 }
 
+@media (min-width: 90em ) {
+    main.index {
+        width: 80em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }   
+}
+
+/* Container queries */
+@supports (container-type: inline-size;) {}

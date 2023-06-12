@@ -8,26 +8,26 @@
 	<% data.forEach(collection => { %>
 	<article>
 		<picture>
-            <source srcset="<%=  %>" type="">
-			<img
-                src="<%  %>"
-				alt="<%= collection.attributes.title %>"
-                width="300"
-                height="300"
-			/>
+			<source 
+            <% data.forEach(imagefile => { %> 
+            srcset="
+            <%= imagefile.attributes.sourceset %>" 
+            <% }); %> 
+            type="">
+			<img <% data.forEach(imagetransformation => { %>
+			src="<%= imagetransformation.attributes.url %>" <% });
+			%> alt="<%= collection.attributes.title %>"
+			width="300" height="300" />
 		</picture>
 		<h2><%= collection.attributes.title %></h2>
 		<p><%= collection.relationships.authors.data.id %></p>
-		<a href="/collections?id=<%= collection.id %>">
-            Ga naar deze aflevering 
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-volume" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+		<a href="/collection?id=<%= collection.id %>">
+			Ga naar deze aflevering
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M15 8a5 5 0 0 1 0 8"></path>
-                <path d="M17.7 5a9 9 0 0 1 0 14"></path>
-                <path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"></path>
+                <path d="M7 4v16l13 -8z"></path>
              </svg>
-        </a
-		>
+		</a>
 	</article>
 	<% }); %>
 </main>

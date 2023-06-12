@@ -49,9 +49,12 @@ app.get("/", (request, response) => {
 });
 
 // Definieer de route voor de overzichtspagina ("/")
-app.get("/collections", (request, response) => {
+app.get("/collection", async (request, response) => {
+
+    let urlId = request.query.id || "";
+
 	fetchJson(collectionsJson).then((data) => {
-		response.render("collections", data);
+		response.render("collection", data);
 
         console.log(data)
 	});
