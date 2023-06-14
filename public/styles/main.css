@@ -77,6 +77,7 @@ main.index {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: var(--u-large);
+    grid-template-areas: ;
     margin: auto;
     padding: var(--u-default);
     container-type: inline-size;
@@ -108,7 +109,11 @@ main.index {
     transition: var(--a-quick) cubic-bezier(0.075, 0.82, 0.165, 1);
 }   
 
-.index article picture {
+.index article img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     background-color: var(--color-secundary-75);
     border-radius: var(--u-micro);
 }
@@ -129,6 +134,12 @@ main.index {
     left: -0.33em;
     transition: var(--a-default) ease-in-out;
 }
+
+.index article a {
+    position: absolute;
+    bottom: var(--u-medium);
+    right: var(--u-medium);
+}   
 
 /* Interactief */
 
@@ -155,10 +166,11 @@ a svg {
 
 a:hover {
     border: 1px solid var(--color-secundary-100);
+    padding: 0.25em 1em 0.25em 0.25em;
 }
 a:focus {
     border: 1px solid var(--color-secundary-150);
-    padding: 0.25em 1em;
+    padding: 0.25em 1em 0.25em 0.25em;
 }
 
 a:focus-visible {
@@ -208,6 +220,7 @@ h3 {
     main.index {
         width: 40em;
         grid-template-columns: 1fr 1fr;
+        grid-template-areas:"cta cta" ;
     }   
 }
 

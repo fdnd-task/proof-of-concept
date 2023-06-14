@@ -41,24 +41,58 @@ app.use(express.static("public"));
 
 // Definieer de route voor de hoofdpagina ("/")
 app.get("/", (request, response) => {
-	fetchJson(collectionsJson).then((data) => {
-		response.render("index", data);
 
-        console.log(data)
-	});
+    // Fetch the data from the url
+    fetchJson(collectionsJson).then((data) => {
+
+    var mainVisuals = {}
+    var imageFiles = {}
+    
+    // Loop door alle included variabelen heen
+    data.included.forEach(element => {
+      if (element.type == 'MainVisual') {
+          mainVisuals[element.id] = element.relationships.image.data.id
+      } else if (element.type == 'ImageFile') {
+          imageFiles[element.id] = element.attributes.sourceSet
+      }
+    })
+
+    console.log(imageFiles)
+
+		response.render("index", {...data, mainVisuals: mainVisuals, imageFiles: imageFiles});
 });
 
 // Definieer de route voor de overzichtspagina ("/")
-app.get("/collection", async (request, response) => {
-
-    let urlId = request.query.id || "";
-
-	fetchJson(collectionsJson).then((data) => {
-		response.render("collection", data);
-
-        console.log(data)
-	});
-});
+app.get('/collection', (request, response) => {
+    const slug = request.params.slug;
+  
+    fetchJson(collectionsJson).then((data) => {
+      const collections = data.data;
+      const item = collections.find(collection => collection.attributes.slug === slug);
+  
+      if (item) {
+        const itemId = item.id;
+        const itemJsonUrl = `https://raw.githubusercontent.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/main/course/collection/${itemId}.json`;
+  
+        fetchJson(itemJsonUrl).then((itemData) => {
+          // Fetch main visuals and image files
+          var mainVisuals = {};
+          var imageFiles = {};
+  
+          data.included.forEach(element => {
+            if (element.type === 'MainVisual') {
+              mainVisuals[element.id] = element.relationships.image.data.id;
+            } else if (element.type === 'ImageFile') {
+              imageFiles[element.id] = element.attributes.sourceSet;
+            }
+          });
+  
+          const message = "De Correspondent - " + item.attributes.title;
+          response.render('collection', { ...data, item, itemData, message, mainVisuals, imageFiles });
+        });
+      }
+    });
+  });
 
 // Definieert een route voor de 404-pagina
 app.get("*", (request, response) => {
@@ -91,3 +125,4 @@ async function postJson(url, data) {
     // Geef de ontvangen gegevens terug
     return responseData;
 }
+});
