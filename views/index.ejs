@@ -4,7 +4,11 @@
 <%- include('./partials/header') %>
 
 <!-- Inhoud met diverse podcasts -->
-<main class="index">
+<main>
+	<div class="index-title">
+		<h1>Luister naar de nieuwste podcasts:</h1>
+	</div>
+	<section class="index">
 	<% if (data && data.length) { %>
 		<% data.forEach(collection => { %>
 			<article>
@@ -15,7 +19,7 @@
 				<h2><%= collection.attributes.title %></h2>
 				<p><%= collection.attributes.intro %></p>
 				<a id="<%= collection.attributes.slug %>" href="/collection/<%= collection.attributes.slug %>">
-					Ga naar deze aflevering
+					Ga naar deze show
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
 						<path d="M7 4v16l13 -8z"></path>
@@ -24,7 +28,8 @@
 			</article>
 		<% }); %>
 	<% } %>
-	
+	</section>
 </main>
+
 
 <%- include('./partials/foot') %>
