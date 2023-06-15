@@ -36,59 +36,75 @@ server.listen(app.get("port"), () => {
 app.set("view engine", "ejs");
 app.set("views", "./views")
 
+
 // Wijs de "public" map toe als de statische map voor het serveren van bestanden
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 // Definieer de route voor de hoofdpagina ("/")
 app.get("/", (request, response) => {
-
     // Fetch the data from the url
     fetchJson(collectionsJson).then((data) => {
-
-    var mainVisuals = {}
-    var imageFiles = {}
-    
-    // Loop door alle included variabelen heen
-    data.included.forEach(element => {
-      if (element.type == 'MainVisual') {
-          mainVisuals[element.id] = element.relationships.image.data.id
-      } else if (element.type == 'ImageFile') {
-          imageFiles[element.id] = element.attributes.sourceSet
-      }
-    })
-
-    console.log(imageFiles)
-
-		response.render("index", {...data, mainVisuals: mainVisuals, imageFiles: imageFiles});
-});
-
-// Definieer de route voor de overzichtspagina ("/")
-app.get('/collection', (request, response) => {
+      var mainVisuals = {};
+      var imageFiles = {};
+  
+      // Loop door alle included variabelen heen
+      data.included.forEach((element) => {
+        if (element.type == "MainVisual") {
+          mainVisuals[element.id] = element.relationships.image.data.id;
+        } else if (element.type == "ImageFile") {
+          imageFiles[element.id] = element.attributes.sourceSet;
+        }
+      });
+  
+      response.render("index", {
+        ...data,
+        mainVisuals: mainVisuals,
+        imageFiles: imageFiles,
+      });
+    });
+  });
+  
+  // Definieer de route voor de overzichtspagina ("/collection/:slug")
+  app.get("/collection/:slug", (request, response) => {
     const slug = request.params.slug;
   
     fetchJson(collectionsJson).then((data) => {
       const collections = data.data;
-      const item = collections.find(collection => collection.attributes.slug === slug);
+      const item = collections.find(
+        (collection) => collection.attributes.slug === slug
+      );
   
       if (item) {
         const itemId = item.id;
         const itemJsonUrl = `https://raw.githubusercontent.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/main/course/collection/${itemId}.json`;
-  
+
         fetchJson(itemJsonUrl).then((itemData) => {
           // Fetch main visuals and image files
           var mainVisuals = {};
           var imageFiles = {};
   
-          data.included.forEach(element => {
-            if (element.type === 'MainVisual') {
+          data.included.forEach((element) => {
+            if (element.type === "MainVisual") {
               mainVisuals[element.id] = element.relationships.image.data.id;
-            } else if (element.type === 'ImageFile') {
+            } else if (element.type === "ImageFile") {
               imageFiles[element.id] = element.attributes.sourceSet;
             }
           });
+
+          fetchJson(collectionsJson).then((data) => {
+            })
   
           const message = "De Correspondent - " + item.attributes.title;
-          response.render('collection', { ...data, item, itemData, message, mainVisuals, imageFiles });
+          response.render("collection", {
+            ...data,
+            item,
+            itemData,
+            message,
+            mainVisuals,
+            imageFiles,
+          });
+          console.log(itemJsonUrl)
         });
       }
     });
@@ -101,14 +117,15 @@ app.get("*", (request, response) => {
 });
 
 // Asynchrone functie om JSON-gegevens op te halen van een opgegeven URL
-async function fetchJson(url) {
-    // Doe een HTTP-verzoek naar de opgegeven URL
-    const response = await fetch(url);
-    // Wacht op de respons en converteer deze naar JSON-formaat
-    const data = await response.json();
-    // Geef de opgehaalde gegevens terug
-    return data;
-}
+    async function fetchJson(url) {
+        // Doe een HTTP-verzoek naar de opgegeven URL
+        const response = await fetch(url);
+        // Wacht op de respons en converteer deze naar JSON-formaat
+        const responseData = await response.text();
+        console.log(responseData); // Log de ontvangen respons
+        const data = JSON.parse(responseData);
+        return data;
+  }
 
 // Asynchrone functie om JSON-gegevens te verzenden naar een opgegeven URL
 async function postJson(url, data) {
@@ -125,4 +142,3 @@ async function postJson(url, data) {
     // Geef de ontvangen gegevens terug
     return responseData;
 }
-});
