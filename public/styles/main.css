@@ -395,6 +395,33 @@ p {
     }
 }
 
+/* Activeert donkere modus */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Kleuren */
+        --color-default: #121212;
+        --color-invert: #ffffff ;
+        --color-primary: #df5b57;
+        --color-secundary-150: #eaf6f5;
+        --color-secundary-125: #c7ece9;
+        --color-secundary-100: #9dceca;
+        --color-secundary-75: #70b3ad;
+        --color-secundary-50: #2f736e;
+        --color-secundary-0: #194d49 ;
+        --color-accent-100: #666666;
+        --color-accent-75: #b2b2b2;
+        --color-accent-50: #e5e4e4;
+    }
+
+    body {
+        background-color: var(--color-secundary-0);
+    }
+
+    .index article {
+        background-color: var(--color-secundary-50);
+    }
+}
+
 /* Media queries  */
 @media (min-width: 40em ) {
     header video {
