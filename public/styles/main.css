@@ -9,6 +9,11 @@
     src: url(./fonts/bree-regular.otf) format("Opentype");
 }
 
+::selection {
+    background-color: #df5b57;
+    color: #eaf6f5;
+}
+
 :root {
 
     /* Animaties */
@@ -82,7 +87,7 @@ li {
     grid-template-columns: 1fr;
     grid-gap: var(--u-large);
     grid-template-areas: first first;
-    margin: 0 auto;
+    margin: 0 auto var(--u-large);
     padding: var(--u-default);
     container-type: inline-size;
     container-name: overview;
@@ -182,11 +187,12 @@ li {
     border-radius: var(--u-medium);
     margin: var(--u-default) auto;
     padding: var(--u-default);
+    box-shadow: var(--shadow-default);
 }
 
 .collection .collection-index {
     grid-template-columns: 1fr;
-    grid-template-rows: 4fr 3fr 1fr;
+    grid-template-rows: 2fr 3fr;
     grid-gap: var(--u-default);
 }
 .collection .collection-index span {
@@ -194,10 +200,19 @@ li {
     align-items: center;
     justify-content: start;
     gap: 0.5em;
+    margin-bottom: var(--u-default);
+}
+
+.collection-index h1 {
+    line-height: 1;
 }
 
 .collection .collection-index span a {
     border: 2px solid var(--color-secundary-50);
+}
+
+.collection .collection-index span a:focus {
+    border: 2px solid var(--color-secundary-125);
 }
 
 .collection .collection-index img {
@@ -212,6 +227,7 @@ li {
     grid-template-columns: 9fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'title' 'ul' 'playbuttons';
+    margin-bottom: 10em;
 }
 
 .collection-episodes div {
@@ -255,12 +271,13 @@ li {
 
 footer {
     width: inherit;
-    background-color: var(--color-secundary-100);
+    background-color: var(--color-secundary-75);
     box-shadow: var(--shadow-default);
-    display: grid;
-    grid-template-columns: 9fr 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: var(--u-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: var(--u-default);
     margin: auto;
     padding: var(--u-default);
     position: sticky;
@@ -272,8 +289,13 @@ footer {
 /* Interactief */
 
 progress {
+    width: 80%;
+    height: var(--u-default);
     accent-color: var(--color-primary);
+    background-color: var(--color-secundary-50);
     border: none;
+    border-radius: var(--u-micro);
+    margin: 1em;
 }
 
 a {
@@ -320,27 +342,29 @@ button {
 }
 
 .button-play {
-    width: fit-content;
-    background-color: var(--color-secundary-0);
-    color: var(--color-secundary-125);
-    border: 2px solid var(--color-secundary-100);
+    height: 5em;
+    aspect-ratio: 1/1;
+    background-color: var(--color-secundary-150);
+    color: var(--color-secundary-75);
+    border: 2px solid var(--color-secundary-75);
     border-radius: var(--u-default);
     padding: var(--u-medium);
     transition: var(--a-quick) ease-in-out;
     cursor: pointer;
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-gap: var(--u-default);
+    display: flex;
+    grid-template-columns: 1fr;
+    grid-gap: var(--u-small);
 }
 
 .button-play:hover {
-    background-color: var(--color-secundary-50);
+    background-color: var(--color-secundary-100);
+    color: var(--color-secundary-50);
 }
 
 .button-play:focus {
-    background-color: var(--color-secundary-100);
-    color: var(--color-secundary-0);
-    border: 2px solid var(--color-secundary-0);
+    background-color: var(--color-secundary-50);
+    color: var(--color-secundary-150);
+    border: 2px solid var(--color-secundary-150);
 }
 
 .button-play div {
@@ -367,11 +391,18 @@ h1, h2, h3, p {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.25em;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+h1 + h2 {
+    margin-bottom: 0.5em;
 }
 
 h2 {
     font-size: 1.66em;
+
 }
 
 h3 {
@@ -382,6 +413,14 @@ p {
     font-family: Bree;
     color: var(--color-secundary-150)
 }
+
+mark {
+    background-color: #df5b57;
+    color: var(--color-default);
+    padding: 0 var(--u-micro);
+}
+
+
 
 /* Vermindert aniamties */
 @media (prefers-reduced-motion) {
@@ -423,6 +462,17 @@ p {
 }
 
 /* Media queries  */
+@media (min-width: 30em ) {
+    footer {
+        border-radius: var(--u-medium);
+        position: fixed;
+        bottom: var(--u-large);
+        left: var(--u-large);
+        right: var(--u-large);
+    }
+}
+
+/* Media queries  */
 @media (min-width: 40em ) {
     header video {
         width: 12em;
@@ -443,12 +493,16 @@ p {
     }
 
     .collection section {
-        width: 30em;
+        width: 38em;
         margin: var(--u-large) auto;
     }
 
+    .collection section:last-child {
+        margin-bottom: 10em;
+    }
+
     .collection .collection-index {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: none;
     }
 

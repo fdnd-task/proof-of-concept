@@ -6,17 +6,23 @@
 <!-- Inhoud met diverse podcasts -->
 <main>
 	<div class="index-title">
-		<h1>Luister naar de nieuwste podcasts:</h1>
+		<h1>Luister naar de <mark>nieuwste</mark>  podcasts:</h1>
 	</div>
 	<section class="index">
+	<!-- Genereert alle shows -->
 	<% if (data && data.length) { %>
 		<% data.forEach(collection => { %>
 			<article>
 				<picture>
-					<img srcset="/public<%= imageFiles[mainVisuals[collection.relationships.mainVisual.data.id]] %>" alt="<%= collection.attributes.title %>" width="320" height="320" />
+					<img  srcset="/public<%= imageFiles[mainVisuals[collection.relationships.mainVisual.data.id]] %>" alt="<%= collection.attributes.title %>" width="320" height="320" />
 				</picture>
 
 				<h2><%= collection.attributes.title %></h2>
+					<h3>
+						<% collection.relationships.authors.data.forEach(author => { %>
+						  <%= author.id %>,
+						<% }); %>
+					  </h3>
 				<p><%= collection.attributes.intro %></p>
 				<a id="<%= collection.attributes.slug %>" href="/collection/<%= collection.attributes.slug %>">
 					Ga naar deze show

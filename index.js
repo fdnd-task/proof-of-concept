@@ -122,7 +122,7 @@ app.get("*", (request, response) => {
         const response = await fetch(url);
         // Wacht op de respons en converteer deze naar JSON-formaat
         const responseData = await response.text();
-        console.log(responseData); // Log de ontvangen respons
+        // console.log(responseData); // Log de ontvangen respons
         const data = JSON.parse(responseData);
         return data;
   }
