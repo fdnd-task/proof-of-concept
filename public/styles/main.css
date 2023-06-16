@@ -183,10 +183,10 @@ li {
 .collection section {
     width: 20em;
     display: grid;
-    background-color: var(--color-secundary-50);
+    background-color: var(--color-secundary-0);
     border-radius: var(--u-medium);
     margin: var(--u-default) auto;
-    padding: var(--u-default);
+    padding: var(--u-large);
     box-shadow: var(--shadow-default);
 }
 
@@ -208,7 +208,7 @@ li {
 }
 
 .collection .collection-index span a {
-    border: 2px solid var(--color-secundary-50);
+    border: 2px solid var(--color-secundary-0);
 }
 
 .collection .collection-index span a:focus {

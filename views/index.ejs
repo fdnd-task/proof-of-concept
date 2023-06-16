@@ -18,11 +18,6 @@
 				</picture>
 
 				<h2><%= collection.attributes.title %></h2>
-					<h3>
-						<% collection.relationships.authors.data.forEach(author => { %>
-						  <%= author.id %>,
-						<% }); %>
-					  </h3>
 				<p><%= collection.attributes.intro %></p>
 				<a id="<%= collection.attributes.slug %>" href="/collection/<%= collection.attributes.slug %>">
 					Ga naar deze show
