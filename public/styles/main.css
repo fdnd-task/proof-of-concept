@@ -91,6 +91,16 @@ li {
     list-style: none;
 }
 
+.index-animation {
+    width: 20em;
+    margin: 0 auto;
+}
+
+.index-animation lottie-player {
+    width: 100%;
+    height: 0;
+}   
+
 .index {
     width: 20em;
     display: flex;
@@ -329,7 +339,7 @@ a:hover {
 }
 a:focus {
     border: 1px solid var(--color-secundary-150);
-    padding: 0.25em 1em 0.25em 0.25em;
+    padding: 0.25em 1em 0.25em 1em;
 }
 
 a:focus-visible {
@@ -484,6 +494,9 @@ em {
         height: auto;
         display: block;
     }
+
+    .index-animation {
+        width: 30em;
 
     .index {
         width: 40em;
