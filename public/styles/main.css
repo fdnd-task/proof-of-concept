@@ -73,6 +73,16 @@ header video {
     display: block;
 }
 
+header svg {
+    width: 12em;
+    height: 6em;
+    display: block;
+}
+
+
+main {
+    view-transition-name: main;
+}
 
 
 /* Layout */
@@ -120,12 +130,6 @@ li {
     transition: var(--a-default) ease-in;
 }
 
-.index article:hover {
-    left: 0.5em;
-    bottom: 0.5em;
-    transition: var(--a-quick) cubic-bezier(0.075, 0.82, 0.165, 1);
-}   
-
 .index article img {
     width: 15.75em;
     height: 15.75em;
@@ -145,11 +149,6 @@ li {
     border-radius: var(--u-micro);
     background-color: var(--color-secundary-150);
     color: var(--color-secundary-0);
-    transition: var(--a-default) ease-in-out;
-}
-
-.index article h2:hover {
-    left: -0.33em;
     transition: var(--a-default) ease-in-out;
 }
 
@@ -216,7 +215,7 @@ li {
 }
 
 .collection .collection-index img {
-    width: 18em;
+    width: 16em;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: var(--u-medium);
@@ -286,6 +285,11 @@ footer {
     right: var(--u-large);
 }
 
+footer h1 {
+    visibility: hidden;
+    position: absolute;
+}
+
 /* Interactief */
 
 progress {
@@ -296,7 +300,7 @@ progress {
     border: none;
     border-radius: var(--u-micro);
     margin: 1em;
-}
+} 
 
 a {
     width: fit-content;
@@ -414,9 +418,10 @@ p {
     color: var(--color-secundary-150)
 }
 
-mark {
+em {
     background-color: #df5b57;
     color: var(--color-default);
+    font-style: normal;
     padding: 0 var(--u-micro);
 }
 
@@ -572,3 +577,30 @@ mark {
         grid-template-columns: 1fr 1fr 1fr;
     }   
 }
+
+/* View transition */
+@keyframes fade-in {
+    from { opacity: 0; }
+  }
+  
+  @keyframes fade-out {
+    to { opacity: 0; }
+  }
+  
+  @keyframes slide-from-right {
+    from { transform: translateX(30px); }
+  }
+  
+  @keyframes slide-to-left {
+    to { transform: translateX(-30px); }
+  }
+
+::view-transition-old(root) {
+    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+  }
+  
+  ::view-transition-new(root) {
+    animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+  }
