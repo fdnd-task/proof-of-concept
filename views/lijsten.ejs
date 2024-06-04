@@ -1,0 +1,18 @@
+<%- include('./partials/head') %>
+
+<% if (lists && lists.length > 0) { %>
+  <% lists.forEach(list => { %>
+    <ul>
+      <li>
+        <h2><%= list.title %></h2>
+        <form action="/lijsten/<%= list.id %>" method="GET">
+          <button type="submit">View Houses</button>
+        </form>
+      </li>
+    </ul>
+  <% }) %>
+<% } else { %>
+  <p>No lists available.</p>
+<% } %>
+
+<%- include('./partials/foot') %>

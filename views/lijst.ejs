@@ -1,0 +1,14 @@
+<%- include('./partials/head') %>
+
+
+  <% houses.forEach(house => { %>
+    <ul>
+      <li>
+        <img src="https://fdnd-agency.directus.app/assets/<%= house.poster_image %>" alt="">
+        <h2><%= house.street %></h2>
+      </li>
+    </ul>
+  <% }) %>
+
+
+<%- include('./partials/foot') %>
