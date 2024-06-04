@@ -1,0 +1,45 @@
+:root {
+    /*colors*/
+    --main-color: #003D86;
+    --main-color-active: #0096DA;
+
+    --secondary-color: #0096DA;
+    --secondary-color-active: #0096DA;
+
+    --form-check-color: #0E7D33;
+    --form-error-color: #BB0606;
+
+    /*border radius*/
+    --border-radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+box-icon {
+    width: 4em;
+height: 4em;
+}
+
+

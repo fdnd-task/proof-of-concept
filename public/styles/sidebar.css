@@ -1,0 +1,107 @@
+header {
+    display: flex;
+    flex-direction: column;
+ align-items: center;
+    width: 6em;
+    height: 100vh;
+    background-color: var(--main-color);
+    margin: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+/*hamburger menu knop styling*/
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    width: 4em;
+    height: 4em;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.hamburger-menu span {
+    background-color: var(--main-color);
+    width: 2em;
+    height: 4px;
+    margin: 0.3em;
+    transition: all 0.3s ease;
+    border-radius: var(--border-radius);
+
+}
+
+.hidden-checkbox:checked + header {
+   animation: menuAnimation 0.5s forwards;
+}
+
+/*Wanneer hidden checkbox checked is pakt hij het eerst volgende element aangrenzend en selecteerd daarvan het eerste element met het type span*/
+.hidden-checkbox:checked + header span {
+    background-color: var(--form-error-color);
+}
+
+.hidden-checkbox:checked + header span:nth-of-type(1) {
+    transform: translateY(0.9em) rotate(-45deg);
+    width: 3em;
+}
+
+.hidden-checkbox:checked + header span:nth-of-type(2) {
+    background-color: transparent;
+    width: 5px;
+}
+
+.hidden-checkbox:checked + header span:nth-of-type(3) {
+    transform: translateY(-0.8em) rotate(45deg);
+    width: 3em;
+}
+
+.hidden-checkbox:not(:checked) + header {
+    animation: menuAnimationReverse 0.5s forwards;
+}
+
+/*animations*/
+
+/*forward*/
+@keyframes menuAnimation {
+    from {
+        width: 6em;
+    }
+    to {
+        width: 20em;
+    }
+}
+
+/*reverse*/
+@keyframes menuAnimationReverse {
+    from {
+        width: 20em;
+    }
+    to {
+        width: 6em;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+

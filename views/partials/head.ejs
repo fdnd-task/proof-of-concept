@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<!--Meta data-->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Meta data-->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>ANWB Piquete Planner</title>
-<!--Favicon-->
+    <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="/img/anwb-favicon-16.png">
-<!--Styles-->
-
-<!--Scripts-->
+    <!--Styles-->
+    <link rel="stylesheet" href="/styles/main.css"/>
+    <link rel="stylesheet" href="/styles/sidebar.css"/>
+    <!--Imports-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!--Scripts-->
 
 </head>
 <body>
+<input type="checkbox" id="menu-toggle" class="hidden-checkbox">
 <header>
-<nav class="sidebar">
 
-</nav>
+    <label for="menu-toggle" class="hamburger-menu" aria-label="menu knop">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav>
+        <ul>
+            <li>
+                <a title="kalender">
+                    <box-icon color="white" name='calendar' alt="kalender"></box-icon>
+                </a>
+            </li>
+            <li>
+                <a title="kalender">
+                    <box-icon color="white" name='calendar' alt="kalender"></box-icon>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
 <main>
 
