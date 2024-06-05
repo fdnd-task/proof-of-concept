@@ -1,18 +1,17 @@
 <%- include('./partials/head') %>
 
-<% if (lists && lists.length > 0) { %>
-  <% lists.forEach(list => { %>
-    <ul>
-      <li>
-        <h2><%= list.title %></h2>
-        <form action="/lijsten/<%= list.id %>" method="GET">
-          <button type="submit">View Houses</button>
-        </form>
-      </li>
-    </ul>
-  <% }) %>
-<% } else { %>
+<ul>
+  <% if (lists && lists.length > 0) { %> <% lists.forEach(list => { %>
+  <li>
+    <img src="/images/download.svg" alt="" height="200" width="200">
+    <h2><%= list.title %></h2>
+    <form action="/lijsten/<%= list.id %>" method="GET">
+      <button type="submit">Bekijk lijst</button>
+    </form>
+  </li>
+  <% }) %> <% } else { %>
   <p>No lists available.</p>
-<% } %>
+  <% } %>
+</ul>
 
 <%- include('./partials/foot') %>

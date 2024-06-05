@@ -23,7 +23,7 @@
   --primary-grey: #e6f2f7;
 
   /* ====== Transition ====== */
-  
+
   /* Spacing */
 
   /* Borders */
@@ -38,12 +38,12 @@
   padding: 0;
   line-height: 1.5;
   font-family: AvenirMedium;
+  list-style: none;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary-white);
-  
 }
 
 span {
@@ -66,4 +66,27 @@ h2 {
 
 p {
   text-align: center;
+}
+
+/* navbar */
+
+.wrapper-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper-nav nav:nth-child(1) {
+  display: flex;
+}
+
+.wrapper-nav nav ul {
+  display: flex;
+}
+
+/* index */
+
+.wrapper-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

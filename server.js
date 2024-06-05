@@ -7,11 +7,11 @@ import fetchJson from './helpers/fetch-json.js';
 
 // Set the base endpoint
 const apiUrl = "https://fdnd-agency.directus.app/items/";
-const apiHouse = `${apiUrl}f_houses`;
-const apiHouseIMG = `${apiUrl}f_houses?fields=*,poster_image.id,poster_image.height,poster_image.width`;
-const apiList = `${apiUrl}f_list`;
-const apiUsers = `${apiUrl}f_users`;
-const apiFeedback = `${apiUrl}f_feedback`;
+const apiHouse = `${apiUrl}f_houses/`;
+const apiHouseIMG = `${apiUrl}f_houses?fields=*,poster_image.id,poster_image.height,poster_image.width/`;
+const apiList = `${apiUrl}f_list/`;
+const apiUsers = `${apiUrl}f_users/`;
+const apiFeedback = `${apiUrl}f_feedback/`;
 
 // Create a new express app
 const app = express();
@@ -45,7 +45,7 @@ app.get("/lijsten", async function (request, response) {
   console.log(listPromise)
 
   const [houses, lists] = await Promise.all([housesPromise, listPromise]);
-  console.log("Lists:", lists);
+  console.log("houses:", houses);
 
 
   response.render("lijsten", {
@@ -54,19 +54,14 @@ app.get("/lijsten", async function (request, response) {
   });
 });
 
-app.get("/lijsten/:id", async function (request, response) {
-  const listId = request.params.id; 
-  const housesPromise = fetchJson(apiHouse);
-  const ListPromiseID = fetchJson(`${apiList}?filter[list][_eq]=${listId}`);
-  // const housesPromise = fetchJson(`${apiHouse}?filter[list][_eq]=${listId}`);
-  
-  const [houseslist, Listnr] = await Promise.all([housesPromise, ListPromiseID]);
 
-  response.render("lijst", {
-    houses: houseslist.data,
-    lists: Listnr.data
-  });
-});
+app.get('/lijsten/:id', function (request, response) {
+    fetchJson(apiList + request.params.id + '?fields=*.*.*,houses.f_houses_id.poster_image.id,houses.f_houses_id.poster_image.width,houses.f_houses_id.poster_image.height').then((apiData) => {
+        response.render('lijst.ejs', {list: apiData.data})  
+        // console.log(apiData.data.houses) 
+    })
+  })
+
 
 // 3. Start the web server
 
