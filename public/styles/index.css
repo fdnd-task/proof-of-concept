@@ -1,0 +1,27 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10em 30em 5em 30em;
+}
+
+.hero button {
+    margin-top: 2em;
+}
+
+.planner {
+    display: flex;
+    justify-content: center;
+}
+
+.weeks {
+    display: flex;
+    overflow-y: auto;
+    -ms-scroll-snap-x: mandatory;
+    width: 90%;
+}
+
+.weeks .secondairy-button {
+    margin: 0.5em;
+}
+

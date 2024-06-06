@@ -6,7 +6,9 @@
     --secondary-color: #0096DA;
     --secondary-color-active: #0096DA;
 
-    --text-color: #FFFF;
+    --tertairy-color: #FFFF;
+
+    --important-color: #FFCD00;
 
     --form-check-color: #0E7D33;
     --form-error-color: #BB0606;
@@ -31,9 +33,14 @@ main {
     width: 100vw;
 }
 
+h1 {
+    color: var(--main-color);
+    font-size: 5em;
+}
+
 p {
-    color: var(--text-color);
-    font-size: 1.5em;
+    color: var(--main-color);
+    font-size: 2em;
 }
 
 ul {
@@ -45,9 +52,40 @@ a {
     cursor: pointer;
 }
 
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+
+.primairy-button {
+    background-color: var(--important-color);
+    color: var(--main-color);
+    padding: 0.2em 2em 0.2em 2em;
+}
+
+.secondairy-button {
+    background-color: var(--main-color);
+    color: var(--tertairy-color);
+    padding: 0.2em 0.8em 0.2em 0.8em;
+
+}
+
+
+
+button:hover {
+    scale: 1.1;
+    transition: 0.2s ease;
+}
+
 box-icon {
     width: 4em;
 height: 4em;
 }
+
+
 
 
