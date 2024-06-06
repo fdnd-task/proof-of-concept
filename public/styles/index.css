@@ -11,17 +11,43 @@
 
 .planner {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .weeks {
     display: flex;
     overflow-y: auto;
-    -ms-scroll-snap-x: mandatory;
-    width: 90%;
+  -ms-scroll-snap-x: mandatory;
 }
 
 .weeks .secondairy-button {
     margin: 0.5em;
 }
+
+/*kalender*/
+.planner-table {
+    display: flex;
+
+    width: 100%;
+}
+/* Basisstijl voor de tabel */
+.table-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(7, minmax(50px,1fr));
+    grid-template-rows: minmax(50px, auto);
+    padding: 0; /* Reset de padding */
+}
+
+.table-cell {
+    padding: 5em;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+
+
 
