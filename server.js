@@ -19,31 +19,33 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 // Stel het basis endpoint in
-const apiUrl = "https://fdnd-agency.directus.app/items/";
+const apiUrl = "https://fdnd-agency.directus.app/items/deloitte_";
 
 // Home pagina
 app.get("/", function (request, response) {
-  fetchJson(apiUrl + "deloitte_categories").then((items) => { console.log(items.data)
+  fetchJson(apiUrl + "categories").then((items) => { console.log(items.data)
     response.render("home", {
       categories: items.data,
+      subcategories: items.data,
     });
   });
 });
 
 // audit
+
 app.get('/audit', function (request, response) {
-    fetchJson(apiUrl).then((items) => { console.log(items.data)
+    fetchJson(apiUrl + "prompts").then((items) => { console.log(items.data)
       response.render('audit', {
-        categories: items.data,
+        prompts: items.data,
       });
     });
   });
 
 // innovation
   app.get('/innovation', function (request, response) {
-    fetchJson(apiUrl).then((items) => { 
+    fetchJson(apiUrl + "subcategories").then((items) => { 
       response.render('innovation', {
-        categories: items.data,
+        subcategories: items.data,
       });
     });
   });
@@ -58,7 +60,7 @@ app.get('/audit', function (request, response) {
   });
 
 app.get('/home/:id', function(request, response) {
-    fetchJson(apiUrl + "deloitte_categories").then((items) => { 
+    fetchJson(apiUrl + "categories").then((items) => { 
         response.render("home", {
             categories: items.data
         });
