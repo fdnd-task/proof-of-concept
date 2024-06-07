@@ -1,4 +1,19 @@
 <%- include('./partials/head') %>
 
+<main>
+
+    <article>
+
+        <h1 class="welkom-tekst"> Deloitte </h1>
+    
+
+        <% prompts.forEach(prompt => { %>
+            <a href="./index/<%= prompt.id %>" class="">
+                <li><%= prompt.text %></li>
+
+            </a>
+        <% }) %>
+    </article>
+</main>
 
 <%- include('./partials/foot') %>

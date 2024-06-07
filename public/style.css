@@ -4,8 +4,9 @@
   padding: 0;
 }
 
-/* Light mode */
+
 :root {
+    /* Light mode */
 --color-accent: #6fc2b4;
 --color-text: #000000;
 --color-base: #ddefe8;
@@ -18,43 +19,55 @@
 --color-support: #007680;
 --color-tint-support: #004f59;
 --message-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+/* dark mode */
+--color-accent: #007680;
+--color-text: #ffffff;
+--color-base: #004f59;
+--color-card: #333333;
+--color-error: #fc0a0a;
+--color-nav-text: #000000;
+--color-secondary-light: #515d69;
+--color-secondary-mid: #ececec;
+--color-secondary-tint: #f2f2f2cc;
+--color-support: #6fc2b4;
+--color-tint-support: #ddefe8;
+
 }
 
-/* Dark mode */
-:root {
-    --color-accent: #007680;
-    --color-text: #ffffff;
-    --color-base: #004f59;
-    --color-card: #333333;
-    --color-error: #fc0a0a;
-    --color-nav-text: #000000;
-    --color-secondary-light: #515d69;
-    --color-secondary-mid: #ececec;
-    --color-secondary-tint: #f2f2f2cc;
-    --color-support: #6fc2b4;
-    --color-tint-support: #ddefe8;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 
 
-/* 
+img.logoHeadstart {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
 article {
-  width: 772px;
-  height: 800px;
-  border: 1px solid;
-  overflow: scroll;
-  scrollbar-color: lightgrey white;
-  scrollbar-width: normal;
+  width: 40%;
+  height: 100%;
 }
 
 h1 {
-  font-size: 2em;
-  margin-left: 0.1em;
+margin-right: 5.5em;
+margin-top: 0.7em;
 }
 
 a {
   text-decoration: none;
   margin-left: 0.5em;
+  margin-right: 1em;
 }
 
 a:link {
@@ -72,10 +85,10 @@ p {
   font-family: inherit;
   font-size: inherit;
   text-decoration: none;
-  color: green;
-  background: blue;
+  color: white;
+  background: var(--color-tint-support);
   cursor: pointer;
-  margin-left: 0.5em;
+  margin-bottom: 1em;
 }
 
 #menu_open:not(:target) {
@@ -100,15 +113,15 @@ svg {
 }
 
 nav {
+  position: fixed;
   width: 35%;
-  height: 802px;
-  background-color: green;
+  height: 100%;
+  background-color:var(--color-base);
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 8px;
   font-size: 1em;
-  font-weight: bold;
+  margin-top: 40px;
 }
 
 nav ul {
@@ -124,19 +137,19 @@ nav ul li {
 }
 
 nav ul li:focus-visible {
-  outline: 3px solid blue;
+  outline: 3px solid var(--color-support);
   outline-offset: 3px;
 }
 
 nav a {
   text-decoration: none;
-  color: blue;
+  color: var(--color-text);
 }
 
 nav a:hover {
-  color: green;
+    color: var(--color-nav-text);
 }
 
 nav ul li:hover {
-  background: blue;
-} */
+  background: var(--color-accent);
+} 

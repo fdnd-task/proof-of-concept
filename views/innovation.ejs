@@ -1,5 +1,14 @@
 <%- include('./partials/head') %>
 
+<main>
+    <article>
+<% subcategories.forEach(categorie => { %>
+    <a href="./index/<%= categorie.id %>" class="">
+        <li><%= categorie.name %></li>
 
+    </a>
+<% }) %>
+</article>
+</main>
 
 <%- include('./partials/foot') %>

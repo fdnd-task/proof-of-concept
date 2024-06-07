@@ -1,41 +1,43 @@
 <%- include('./partials/head') %>
 
-<main>
+    <main>
 
-    <article>
+        <article>
+<!-- 
+            <h1 class="welkom-tekst"> Headstart </h1> -->
+<!-- 
+            <img src="/assets/headstart-logo.png" class="logoHeadstart"> -->
 
-        <h1 class="welkom-tekst"> Deloitte </h1>
+            <a href="#menu_open" class="menu-btn">Menu</a>
 
-        <h2>Mobiel menu</h2>
-        <a href="#menu_open" class="menu-btn">Menu</a>
-    
 
-        <nav id="menu_open">
-            <a href="#"> <svg viewBox="0 0 32 32" width="32" height="32">
-                <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
-            </svg></a>
+            <nav id="menu_open">
+                <a href="#"> <svg viewBox="0 0 32 32" width="32" height="32">
+                        <path
+                            d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z">
+                        </path>
+                    </svg></a>
 
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="faq.html">Veelgestelde vragen</a></li>
-                <li><a href="switch.html">Switch control</a></li>
-                <li><a href="menu.html">Mobiel menu</a></li>
-                <li><a href="rating.html">Rating</a></li>
-                <li><a href="carrousel.html">Carrousel</a></li>
-                <li><a href="pickers.html">Favorieten picker</a></li>
-                <li><a href="tabs.html">Tabbladen</a></li>
-                <li><a href="file.html">File image upload met preview</a></li> -->
-            </ul>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
 
-        <% categories.forEach(categorie => { %>
-            <a href="./index/<%= categorie.id %>" class="">
-                <li><%= categorie.name %></li>
+                </ul>
 
-            </a>
-        <% }) %>
-    
-        <!-- <p><%= categories[1].name %></p> -->
-    </article>
-</main>
+                <% categories.forEach(categorie=> { %>
+                    <a href="./<%= categorie.name %>" class="">
+                        <li>
+                            <%= categorie.name %>
+                        </li>
+                    </a>
+                    <% }) %>
 
-<%- include('./partials/foot') %>
+                        <% subcategories.forEach(categorie=> { %>
+                            <a href="./index/<%= categorie.id %>" class="">
+                            </a>
+                            <% }) %>
+
+                                <!-- <p><%= categories[1].name %></p> -->
+        </article>
+    </main>
+
+    <%- include('./partials/foot') %>
