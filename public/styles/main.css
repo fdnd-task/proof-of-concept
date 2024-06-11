@@ -31,6 +31,7 @@ body {
 main {
     height: 100vh;
     width: 100vw;
+
 }
 
 h1 {
@@ -71,7 +72,6 @@ button {
     background-color: var(--main-color);
     color: var(--tertairy-color);
     padding: 0.2em 0.8em 0.2em 0.8em;
-
 }
 
 

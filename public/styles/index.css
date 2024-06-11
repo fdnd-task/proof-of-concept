@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10em 30em 5em 30em;
+    margin: 10em auto; /* Center horizontally */
+    width: 80%; /* Adjust width to fit the content properly */
 }
 
 .hero button {
@@ -19,35 +20,35 @@
 .weeks {
     display: flex;
     overflow-y: auto;
-  -ms-scroll-snap-x: mandatory;
+    -ms-scroll-snap-x: mandatory;
 }
 
 .weeks .secondairy-button {
     margin: 0.5em;
 }
 
-/*kalender*/
+/* Kalender */
 .planner-table {
     display: flex;
-
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
+
 /* Basisstijl voor de tabel */
 .table-container {
     display: grid;
-    place-items: center;
-    grid-template-columns: repeat(7, minmax(50px,1fr));
-    grid-template-rows: minmax(50px, auto);
-    padding: 0; /* Reset de padding */
+    justify-content: center; /* Center the grid */
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    padding: 0;
+    width: 100%;
 }
 
 .table-cell {
-    padding: 5em;
+    padding: 1em; /* Reduced padding */
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
-
-
-
-
