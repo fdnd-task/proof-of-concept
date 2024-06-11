@@ -41,31 +41,40 @@
 </section>
 
 <section class="planner-table">
-    <div class="table-container" id="table-container">
-        <!-- Cells will be dynamically generated -->
-    </div>
+
+    <% weeks.forEach(function(week) { %>
+        <div class="table-cell" id="table-container">
+            <h2><%= week.week %></h2>
+            <p><%= week.assignments.person %></p>
+        </div>
+
+    <% }) %>
+
 </section>
+
+
+
 
 <%- include('./partials/foot') %>
 
-<script>
-    // JavaScript to dynamically generate table cells with dates
-    const tableContainer = document.getElementById('table-container');
+<!--<script>-->
+<!--    // JavaScript to dynamically generate table cells with dates-->
+<!--    const tableContainer = document.getElementById('table-container');-->
 
-    // Set the start date
-    const startDate = new Date();
-    startDate.setHours(0, 0, 0, 0); // Set time to midnight for consistency
+<!--    // Set the start date-->
+<!--    const startDate = new Date();-->
+<!--    startDate.setHours(0, 0, 0, 0); // Set time to midnight for consistency-->
 
-    // Define the number of cells (e.g., for a month)
-    const numCells = 42; // 6 weeks x 7 days
+<!--    // Define the number of cells (e.g., for a month)-->
+<!--    const numCells = 42; // 6 weeks x 7 days-->
 
-    for (let i = 0; i < numCells; i++) {
-        const cellDate = new Date(startDate);
-        cellDate.setDate(startDate.getDate() + i);
+<!--    for (let i = 0; i < numCells; i++) {-->
+<!--        const cellDate = new Date(startDate);-->
+<!--        cellDate.setDate(startDate.getDate() + i);-->
 
-        const cell = document.createElement('div');
-        cell.classList.add('table-cell');
-        cell.textContent = cellDate.toDateString(); // Format the date as needed
-        tableContainer.appendChild(cell);
-    }
-</script>
+<!--        const cell = document.createElement('div');-->
+<!--        cell.classList.add('table-cell');-->
+<!--        cell.textContent = cellDate.toDateString(); // Format the date as needed-->
+<!--        tableContainer.appendChild(cell);-->
+<!--    }-->
+<!--</script>-->

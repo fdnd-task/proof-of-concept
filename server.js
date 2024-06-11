@@ -6,6 +6,7 @@ import fetchJson from './helpers/fetch-json.js'
 
 // // Stel het basis endpoint in
 const apiUrl = "https://fdnd-agency.directus.app/items/"
+const anwbWeek = apiUrl + "anwb_week"
 // Maak een nieuwe express app aan
 const app = express()
 
@@ -22,11 +23,15 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
 app.get('/', function (request, response) {
-
+    fetchJson(anwbWeek).then((weeks) => {
+        // Render de detailpagina en geef de nodige data mee
         response.render('index', {
-            // apiUser: apiUser.data
+            weeks: weeks.data
 
-    })
+        });
+        console.log(weeks)
+    });
+
 })
 
 app.set('port', process.env.PORT || 8001)
