@@ -6,6 +6,8 @@ import fetchJson from './helpers/fetch-json.js'
 
 // // Stel het basis endpoint in
 const apiUrl = "https://fdnd-agency.directus.app/items/"
+const apiUrlWeeksAssignments = apiUrl + "anwb_week?fields=*,anwb_assignments.*"
+const apiUrlWeeksAssignmentsPersons = apiUrl + "anwb_week?fields=*,anwb_assignments.*,anwb_assignments.person.*"
 const anwbWeek = apiUrl + "anwb_week"
 // Maak een nieuwe express app aan
 const app = express()
@@ -21,18 +23,24 @@ app.use(express.static('public'))
 
 // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({extended: true}))
-
 app.get('/', function (request, response) {
-    fetchJson(anwbWeek).then((weeks) => {
-        // Render de detailpagina en geef de nodige data mee
-        response.render('index', {
-            weeks: weeks.data
-
+    Promise.all([fetchJson(anwbWeek), fetchJson(apiUrlWeeksAssignments), fetchJson(apiUrlWeeksAssignmentsPersons)])
+        .then(([weeks, weeksAsignments, weeksAsignmentsPersons]) => {
+            // Render the index page and pass the fetched data to the template
+            response.render('index', {
+                weeks: weeks.data,
+                weeksAsignments: weeksAsignments.data,
+                weeksAssignmentsPersons: weeksAsignmentsPersons.data
+            });
+            console.log(weeks);
+            console.log(weeksAsignments);
+            console.log(weeksAsignmentsPersons);
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+            response.status(500).send('Error fetching data');
         });
-        console.log(weeks)
-    });
-
-})
+});
 
 app.set('port', process.env.PORT || 8001)
 
