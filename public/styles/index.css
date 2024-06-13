@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10em auto;
+    margin: 10em auto 3em;
     width: 80%;
+
 }
 
 #weekForm {
@@ -15,6 +16,9 @@
 select {
     color: var(--main-color);
     font-size: 1.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 2px var(--main-color);
 }
 
 option:active {
@@ -26,6 +30,7 @@ option:active {
 }
 
 #week-data {
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,9 +39,10 @@ option:active {
 }
 
 .week-data-zero-state {
+    margin-top: 0;
     fill: var(--form-error-color);
-    width: 20em;
-    height: 20em;
+    width: 15em;
+    height: 15em;
 }
 
 
