@@ -2,13 +2,43 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10em auto; /* Center horizontally */
-    width: 80%; /* Adjust width to fit the content properly */
+    margin: 10em auto;
+    width: 80%;
+}
+
+#weekForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+select {
+    color: var(--main-color);
+    font-size: 1.8em;
+}
+
+option:active {
+    background-color: var(--important-color);
 }
 
 .hero button {
-    margin-top: 2em;
+    margin-top: 1em;
 }
+
+#week-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.week-data-zero-state {
+    fill: var(--form-error-color);
+    width: 20em;
+    height: 20em;
+}
+
 
 .planner {
     display: flex;
@@ -36,9 +66,9 @@
 }
 
 /* Basisstijl voor de tabel */
-.table-container {
+#table-container {
     display: grid;
-    justify-content: center; /* Center the grid */
+    justify-content: center;
     grid-template-columns: repeat(7, 1fr);
     grid-auto-rows: minmax(50px, auto);
     padding: 0;
@@ -46,9 +76,18 @@
 }
 
 .table-cell {
-    padding: 1em; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    height: 20em;
+    width: 15em;
+    padding: 1em;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     text-align: center;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    box-sizing: border-box;
+}
+
+.assignment {
+    margin-top: 1em;
 }

@@ -2,79 +2,94 @@
 <article class="hero">
     <section>
         <h1>Welkom Daan</h1>
-        <p>Vandaag heb jij een dienst als 1e hulp lijn</p>
-        <button class="primairy-button">Plannen</button>
+        <p>Kies hieronder welk rooster jij wilt zien</p>
+        <form id="weekForm">
+            <label for="weekSelect">Selecteer een week:</label>
+            <select id="weekSelect" name="weekId" value="1">
+                <% weeks.forEach((week) => { %>
+                    <option value="<%= week.id %>"><%= week.week %></option>
+                <% }); %>
+                <!-- Voeg meer opties toe voor andere weken -->
+            </select>
+            <button class="primairy-button" type="submit">Rooster Bekijken</button>
+        </form>
+
+
     </section>
     <img src="/img/hero.png" alt="planner" width="400" height="400">
 </article>
 
-<section class="planner">
-    <ul class="weeks">
-        <li>
-            <button class="secondairy-button">Week 1/6</button>
-        </li>
-        <li>
-            <button class="secondairy-button">Week 6/12</button>
-        </li>
-        <li>
-            <button class="secondairy-button">Week 12/18</button>
-        </li>
-        <li>
-            <button class="secondairy-button">Week 18/24</button>
-        </li>
-        <li>
-            <button class="secondairy-button">Week 24/30</button>
-        </li>
-        <li>
-            <button class="secondairy-button">Week 30/36</button>
-        </li>
-        <li>
-            <button class="secondairy-button">Week 36/42</button>
-        </li>
-        <li>
-            <button class="secondairy-button">Week 42/48</button>
-        </li>
-        <li>
-            <button class="secondairy-button">Week 48/52</button>
-        </li>
-    </ul>
+<section id="week-data">
+    <box-icon class="week-data-zero-state" name='calendar-x'></box-icon>
+    <h2>Er is nog geen rooster geselecteerd</h2>
 </section>
 
-<section class="planner-table">
 
-    <% weeks.forEach(function(week) { %>
-        <div class="table-cell" id="table-container">
-            <h2><%= week.week %></h2>
-            <p><%= week.assignments.person %></p>
-        </div>
 
-    <% }) %>
 
-</section>
+
+<script>
+    // Voeg een event listener toe aan het formulier met id 'weekForm'
+    document.getElementById('weekForm').addEventListener('submit', function(event) {
+        // Voorkom standaardgedrag van het formulier (zoals het opnieuw laden van de pagina)
+        event.preventDefault();
+
+        // Haal de waarde op van het geselecteerde weekId uit de dropdown met id 'weekSelect'
+        const weekId = document.getElementById('weekSelect').value;
+
+        // Roep de functie fetchWeekData aan met het weekId als argument
+        fetchWeekData(weekId);
+    });
+
+    // Definieer de functie fetchWeekData die data ophaalt van een API endpoint op basis van weekId
+    function fetchWeekData(weekId) {
+        // Gebruik fetch om gegevens op te halen van een URL die dynamisch is samengesteld met weekId
+        fetch(`/week/${weekId}`)
+            // Verwerk het response object als JSON
+            .then(response => response.json())
+            // Verwerk de ontvangen data
+            .then(data => {
+                // Zoek het element met id 'week-data' en update de HTML-inhoud
+
+                const weekDataContainer = document.getElementById('week-data');
+                weekDataContainer.innerHTML = `<h2>Week ${data.week}</h2>`; // Voeg de weektitel toe
+
+                // Itereer over de assignments in de ontvangen data
+                data.assignments.forEach(assignment => {
+                    // Itereer over de rolesAndPersons voor elke assignment
+                    assignment.rolesAndPersons.forEach(rp => {
+                        // Maak een nieuw <p> element aan
+                        const p = document.createElement('p');
+                        // Voeg tekstinhoud toe aan het <p> element met de naam en rol van de persoon
+                        p.textContent = `${rp.name} - ${rp.role}`;
+                        // Voeg het <p> element toe aan weekDataContainer
+                        weekDataContainer.appendChild(p);
+                    });
+                });
+            })
+            // Vang eventuele fouten op en log ze naar de console
+            .catch(error => console.error('Error fetching week data:', error));
+    }
+</script>
 
 
 
 
 <%- include('./partials/foot') %>
 
-<!--<script>-->
-<!--    // JavaScript to dynamically generate table cells with dates-->
-<!--    const tableContainer = document.getElementById('table-container');-->
 
-<!--    // Set the start date-->
-<!--    const startDate = new Date();-->
-<!--    startDate.setHours(0, 0, 0, 0); // Set time to midnight for consistency-->
-
-<!--    // Define the number of cells (e.g., for a month)-->
-<!--    const numCells = 42; // 6 weeks x 7 days-->
-
-<!--    for (let i = 0; i < numCells; i++) {-->
-<!--        const cellDate = new Date(startDate);-->
-<!--        cellDate.setDate(startDate.getDate() + i);-->
-
-<!--        const cell = document.createElement('div');-->
-<!--        cell.classList.add('table-cell');-->
-<!--        cell.textContent = cellDate.toDateString(); // Format the date as needed-->
-<!--        tableContainer.appendChild(cell);-->
-<!--    }-->
-<!--</script>-->
+<!--<section class="planner">-->
+<!--    <ul class="weeks">-->
+<!--        <form id="formWeek1/6" method="GET">-->
+<!--        <li><button id="buttonWeek1/6" class="secondairy-button" type="submit">Week 1/6</button></li>-->
+<!--        </form>-->
+<!--        <li><button class="secondairy-button">Week 6/12</button></li>-->
+<!--        <li><button class="secondairy-button">Week 12/18</button></li>-->
+<!--        <li><button class="secondairy-button">Week 18/24</button></li>-->
+<!--        <li><button class="secondairy-button">Week 24/30</button></li>-->
+<!--        <li><button class="secondairy-button">Week 30/36</button></li>-->
+<!--        <li><button class="secondairy-button">Week 36/42</button></li>-->
+<!--        <li><button class="secondairy-button">Week 42/48</button></li>-->
+<!--        <li><button class="secondairy-button">Week 48/52</button></li>-->
+<!--    </ul>-->
+<!--</section>-->

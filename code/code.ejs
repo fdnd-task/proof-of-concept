@@ -1,0 +1,15 @@
+<!--planner van index-->
+
+<section class="planner-table">
+    <% weeks.forEach((week) => { %>
+        <div class="table-cell">
+            <h2 class="week-nr"><%= week.week %></h2>
+            <% week.assignments.forEach((assignment) => {
+            assignment.rolesAndPersons.forEach(({ role, name }) => {
+            %>
+                <p class="assignment role-<%= role %>"><%= name %> - <%= role %></p>
+            <% });
+            }); %>
+        </div>
+    <% }); %>
+</section>
