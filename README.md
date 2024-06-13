@@ -25,6 +25,7 @@
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+Node JS,
 
 ## Bronnen
 
