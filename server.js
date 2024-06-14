@@ -21,18 +21,26 @@ app.use(express.urlencoded({ extended: true }));
 // Stel het basis endpoint in
 const apiUrl = "https://fdnd-agency.directus.app/items/deloitte_";
 
+const apiPrompts = apiUrl + "prompts"
+                     
+const ApiSub = apiUrl + "subcategories"
+
+
 // Home pagina
 app.get("/", function (request, response) {
   fetchJson(apiUrl + "categories").then((items) => { console.log(items.data)
+    fetchJson(apiUrl + "subcategories").then((subcategories) =>
+    fetchJson(apiUrl + "prompts").then((prompt) => 
     response.render("home", {
       categories: items.data,
-      subcategories: items.data,
-    });
+      subcategories: subcategories.data,
+      prompts: prompt.data
+    })));
   });
 });
 
-// audit
 
+// audit
 app.get('/audit', function (request, response) {
     fetchJson(apiUrl + "prompts").then((items) => { console.log(items.data)
       response.render('audit', {
@@ -50,22 +58,24 @@ app.get('/audit', function (request, response) {
     });
   });
 
-  // consulting
-  app.get('/consulting', function (request, response) {
-    fetchJson(apiUrl).then((items) => { 
-      response.render('consulting', {
-        categories: items.data,
-      });
-    });
-  });
+//   // consulting
+//   app.get('/consulting', function (request, response) {
+//     fetchJson(apiUrl).then((items) => { 
+//       response.render('consulting', {
+//         categories: items.data,
+//       });
+//     });
+//   });
 
-app.get('/home/:id', function(request, response) {
-    fetchJson(apiUrl + "categories").then((items) => { 
-        response.render("home", {
-            categories: items.data
-        });
-    })
-})
+// app.get('/home/:id', function(request, response) {
+//     fetchJson(apiUrl + "categories").then((items) => { 
+//         response.render("home", {
+//             categories: items.data
+//         });
+//     })
+// })
+
+
 
 
 
