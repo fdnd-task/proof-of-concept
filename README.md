@@ -2,6 +2,7 @@
 
 # Titel
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+Deloitte headstart
 
 ## Inhoudsopgave
 
@@ -25,6 +26,7 @@
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+Node JS,
 
 ## Bronnen
 
