@@ -117,7 +117,6 @@ nav ul li {
   padding: 15px 5px 10px 10px;
 }
 
-
 nav ul li:focus-visible {
   outline: 3px solid var(--lightcolor-accentcolor-support);
   outline-offset: 3px;

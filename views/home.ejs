@@ -34,13 +34,20 @@
                         </li>
                     </a>
                     <% }) %>
-
-                        <% subcategories.forEach(categorie=> { %>
-                            <a href="./index/<%= categorie.id %>" class="">
-                            </a>
+        
+                        <% subcategories.forEach(subcategorie=> { %>
+                            <p><%= subcategorie.name %></p>
                             <% }) %>
 
                                 <!-- <p><%= categories[1].name %></p> -->
+
+                                <% prompts.forEach(prompt=> { %>
+                                    <a href="./<%= prompt.label %>" class="">
+                                        <li class="categories">
+                                            <%= prompt.label %>
+                                        </li>
+                                    </a>
+                                    <% }) %>
         </article>
     </main>
 
