@@ -60,24 +60,32 @@ app.get('/', function (request, response) {
 // Route voor het ophalen van weekdata op basis van weekId
 app.get('/week/:weekId', function (request, response) {
     const weekId = request.params.weekId;
+    // haal de velden op van week met het meegegeven id
     fetchJson(`${apiUrl}/anwb_week/${weekId}?fields=*,assignments.*,assignments.anwb_assignments_id.*,assignments.anwb_assignments_id.role.anwb_roles_id.*,assignments.anwb_assignments_id.role.anwb_roles_id.role,assignments.anwb_assignments_id.person.anwb_persons_id.name`)
+        // Stop de data in een variabele weekData
         .then((weekData) => {
-            const week = weekData.data;
+           const week = weekData.data;
+            // maak een variabele aan waarin de data van week in een ibject wordt gestopt
             const processedWeek = {
+                // Ga door week heen en maak er een object van
                 ...week,
                 assignments: week.assignments.map(assignment => {
+                    // maak een variabele aan waarin je alle rollen van de assignments stopt
                     const rolesAndPersons = assignment.anwb_assignments_id.role.map((roleObj, i) => {
+                        // geef de rol en naam terug
                         return {
                             role: roleObj.anwb_roles_id.role,
                             name: assignment.anwb_assignments_id.person[i].anwb_persons_id.name
                         };
                     });
+                    // Ga door assignment heen en geef de variabele rolesAdPersons terug
                     return {
                         ...assignment,
                         rolesAndPersons
                     };
                 })
             };
+            // Geef processedweek als response mee
             response.json(processedWeek);
         })
         .catch((error) => {
@@ -91,6 +99,6 @@ app.get('/week/:weekId', function (request, response) {
 app.set('port', process.env.PORT || 8001);
 
 // Start express op en haal daarbij het ingestelde poortnummer op
-app.listen(app.get('port'), function () {
+ap.listen(app.get('port'), function () {
     console.log(`Application started on http://localhost:${app.get('port')}`);
 });

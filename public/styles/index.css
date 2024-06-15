@@ -13,17 +13,7 @@
     margin-top: 1em;
 }
 
-select {
-    color: var(--main-color);
-    font-size: 1.8em;
-    border-radius: 5px;
-    cursor: pointer;
-    border: solid 2px var(--main-color);
-}
 
-option:active {
-    background-color: var(--important-color);
-}
 
 .hero button {
     margin-top: 1em;
@@ -35,8 +25,23 @@ option:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
+
+select {
+    color: var(--main-color);
+    font-size: 1.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 2px var(--main-color);
+}
+
+#week-data label {
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: 1.8em;
+}
+
+
 
 .week-data-zero-state {
     margin-top: 0;

@@ -50,12 +50,6 @@ p  {
     font-size: 2em;
 }
 
- label {
-     font-weight: bold;
-     color: var(--main-color);
-     font-size: 1.5em;
- }
-
 ul {
     list-style: none;
 }
