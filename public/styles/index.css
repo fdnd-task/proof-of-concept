@@ -4,7 +4,6 @@
     align-items: center;
     margin: 10em auto 3em;
     width: 80%;
-
 }
 
 #weekForm {
@@ -12,8 +11,6 @@
     flex-direction: column;
     margin-top: 1em;
 }
-
-
 
 .hero button {
     margin-top: 1em;
@@ -41,15 +38,12 @@ select {
     font-size: 1.8em;
 }
 
-
-
 .week-data-zero-state {
     margin-top: 0;
     fill: var(--form-error-color);
     width: 15em;
     height: 15em;
 }
-
 
 .planner {
     display: flex;
