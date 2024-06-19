@@ -1,13 +1,20 @@
 <%- include('./partials/head') %>
 
 <main>
-  <article>
-    <% subcategories.forEach(categorie => { %>
-    <a href="./index/<%= categorie.id %>" class="">
-      <li><%= categorie.name %></li>
-    </a>
-    <% }) %>
-  </article>
+
+    <article>
+
+        <a href="/">home</a>
+
+        <h1 class="welkom-tekst"> Deloitte </h1>
+        <ul>
+            <% prompts.forEach(prompt=> { %>
+                <li>
+                    <%= prompt.text %>
+                </li>
+            <% }) %>
+        </ul>
+    </article>
 </main>
 
 <%- include('./partials/foot') %>

@@ -45,25 +45,50 @@ body {
   margin: 0 auto;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+h1.headstart {
+  position: absolute;
+  left: 15%;
+  top: 0;
+  margin-top: 13px;
+  font-weight: 300;
+  z-index: 1;
+}
+
 img.logoHeadstart {
   position: absolute;
   left: 0;
   top: 0;
-  width: 30px;
+  width: 32px;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 9px;
+  z-index: 1;
 }
 
-h1 {
-  margin-right: 4.5em;
-  margin-top: 0.4em;
-  font-weight: 100;
-}
+/* h1.titel {
+  position: absolute;
+  left: 15px;
+  margin-top: 5em;
+  font-weight: 300;
+} */
 
-a {
-  text-decoration: none;
-  margin-left: 0.5em;
-  margin-right: 1em;
+/* h1 {
+  margin-top: 5px;
+  font-weight: 300;
+  text-align: left;
+  margin-right: 2.6em;
+} */
+
+h2 {
+  margin-top: 3.5em;
+  margin-right: 7.5em;
 }
 
 a:link {
@@ -82,12 +107,37 @@ p {
   display: visible;
 }
 
-svg {
+svg.open {
   position: absolute;
   right: 0;
   top: 0;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 12px;
+}
+
+nav.sidebar {
+  width: 100%;
+  height: 100%;
+  background-color: var(--darkcolor-base);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+  list-style: none;
+}
+
+#sidebar {
+  width: 40%;
+  height: 100%;
+  background-color: var(--lightolor-nav-text);
+  border-right: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+  list-style: none;
+  display: none;
+  z-index: 1;
 }
 
 nav {
@@ -99,6 +149,7 @@ nav {
   left: 0;
   font-size: 1em;
   list-style: none;
+  /* border: 1px solid var(--lightcolor-secondary-tint); */
 }
 
 a li.categories {
@@ -106,7 +157,6 @@ a li.categories {
 }
 
 nav ul {
-  margin-top: 20px;
   padding-inline-start: 0px;
 }
 
@@ -125,6 +175,8 @@ nav ul li:focus-visible {
 nav a {
   text-decoration: none;
   color: var(--darkcolor-text);
+  margin-left: 0.5em;
+  margin-right: 1em;
 }
 
 nav a:hover {
@@ -133,4 +185,260 @@ nav a:hover {
 
 nav ul li:hover {
   background: var(--darkcolor-accent);
+}
+
+ul.breadcrumb {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+  margin-left: 0.5em;
+}
+
+li.breadcrumbItem {
+  list-style: none;
+  margin-left: 0.5em;
+}
+
+svg.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+button.buttonChat {
+  margin-top: 7em;
+  position: absolute;
+  left: 5%;
+  padding: 0.3em 0.6em;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: var(--darkcolor-base);
+  color: white;
+  cursor: pointer;
+}
+
+.homeButton {
+  margin-top: 4em;
+  position: absolute;
+  left: 5%;
+  padding: 0.3em 0.6em;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: var(--darkcolor-base);
+  color: white;
+  cursor: pointer;
+}
+
+i.zoek-balk {
+  padding: 20px;
+}
+
+.zoek-balk-menu {
+  margin-top: 10em;
+  position: absolute;
+  left: 5%;
+  background-color: var(--lightcolor-secondary-mid);
+  color: var(--lightolor-nav-text);
+  border-radius: 6px;
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+  width: 100px;
+}
+
+.zoek-balk input {
+  height: 14px;
+  width: 60px;
+  outline: none;
+  border: none;
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 500;
+  transition: var(--tran-05);
+  padding-left: 10px;
+}
+
+/* summary {
+  list-style: none;
+} */
+
+details {
+  color: var(--lightolor-nav-text);
+  /* margin: 7em ; */
+  /* width: 200px;
+  height:  200px; */
+  /* background-color: var(--lightcolor-support); */
+}
+
+a.subcategorieLink {
+  text-decoration: none;
+  color: white;
+}
+
+ul li {
+  list-style: none;
+  padding: 0.8em;
+}
+
+.subcategorieLink {
+  margin-top: 1em;
+}
+
+article .categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  background-color: #004f59;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+}
+
+article.audit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p.prompt {
+  margin-top: 10em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  /* text-align: left; */
+  margin-bottom: 1.5em;
+}
+
+.text-input {
+  background-color: var(--lightcolor-card);
+  margin-left: 1em;
+  width: 20em;
+  height: 2em;
+  border: none;
+  border-radius: 10px;
+  font-style: italic;
+  margin-bottom: 5em;
+}
+
+.submit-input {
+  background-color: var(--lightcolor-card);
+  width: 20em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+button.cancelButton {
+  background-color: var(--lightcolor-card);
+  width: 20em;
+  margin-bottom: 5em;
+  margin-left: 1em;
+}
+
+form {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* mediaqueries voor responsiviteit */
+@media (min-width: 375px) {
+  h1.headstart {
+      position: absolute;
+      left: 13%;
+      top: 0;
+      margin-top: 13px;
+      font-weight: 300;
+      z-index: 1;
+  }
+
+  h2.prompt {
+    margin-right: 9.3em;
+  }
+
+  article.categories {
+    width: 350px;
+  }
+}
+
+@media (min-width: 425px) {
+  article.categories {
+    width: 400px;
+  }
+
+  h2.prompt {
+    margin-right: 11.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  #sidebar {
+    display: block;
+  }
+
+  h1.headstart {
+    position: absolute;
+    left: 7%;
+    top: 0;
+    margin-top: 13px;
+    z-index: 2;
+  }
+
+  h2.prompt {
+    margin-bottom: 1em;
+    position: absolute;
+    left: 9%;
+    top: 0;
+  }
+
+  article.categories {
+    width: 300px;
+    margin: 1em;
+  }
+
+  article.categorie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15em;
+    margin-top: 10em;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2.prompt {
+    margin-bottom: 1em;
+    position: absolute;
+    left: 5%;
+    top: 0;
+  }
+
+  article.categorie {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: 5em;
+    margin-top: 10em;
+
+  }
+
+  article.categories {
+    width: 300px;
+    margin: 1em;
+  }
+
+
 }

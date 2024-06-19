@@ -1,4 +1,21 @@
 <%- include('./partials/head') %>
 
+<main>
+
+    <article>
+
+        <a href="/">home</a>
+
+        <h1 class="welkom-tekst"> Deloitte </h1>
+        <form>
+            <% prompts.forEach(prompt=> { %>
+                <p>
+                    <%= prompt.text %>
+                </p>
+            <% }) %>
+            </form>
+    </article>
+</main>
+
 
 <%- include('./partials/foot') %>

@@ -1,54 +1,189 @@
 <%- include('./partials/head') %>
 
     <main>
-
         <article>
-
-            <h1 class="welkom-tekst"> Headstart </h1> 
-    <img src="/assets/headstart-logo.png" class="logoHeadstart" alt="logoHeadstart">
-
+            <h1 class="headstart">Headstart</h1>
+            <!--  <img src="/assets/headstart-logo.png" class="logoHeadstart" alt="logoHeadstart" /> -->
+            <h2 class="prompt"> Prompts</h2>
+  
             <a href="#menu_open" class="">
-                <svg viewBox="0 0 100 80" width="30" height="30">
+                <svg class="open" viewBox="0 0 100 80" width="30" height="30">
                     <rect width="100" height="15" rx="8"></rect>
                     <rect y="30" width="100" height="15" rx="8"></rect>
                     <rect y="60" width="100" height="15" rx="8"></rect>
-                </svg></a>
-
+                </svg>
+            </a>
 
             <nav id="menu_open">
-                <a href="#"> <svg viewBox="0 0 32 32" width="32" height="32">
+                <a href="#">
+                    <svg class="close" viewBox="0 0 32 32" width="32" height="32">
                         <path
                             d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z">
                         </path>
-                    </svg></a>
+                    </svg>
+                </a>
 
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+                
 
-                </ul>
+                <button class="buttonChat"> new chat </button>
 
-                <% categories.forEach(categorie=> { %>
-                    <a href="./<%= categorie.name %>" class="">
-                        <li class="categories">
-                            <%= categorie.name %>
-                        </li>
+                <div class="zoek-balk">
+                    <div class="zoek-balk-menu">
+                        <i class='bx bx-search icon'></i>
+                        <input type="search" placeholder=" filter chats by name">
+                    </div>
+                </div>
+
+            </article>
+                    <!-- <% categories.forEach(categorie=> { %>
+                        <details class="categories">
+                            <summary>
+                                <%= categorie.name %>
+                            </summary>
+                            <ul>
+                                
+                                <% categorie.subcategories.forEach(subcategorie=> { %>
+                    <a href="./<%= categorie.name %>/<%= subcategorie.data.id %>" class="">
+                                    <li>
+                                        <%= subcategorie.data.name %>
+                                    </li>
+                                
+                                <% }) %>
+                            </ul>
+                        </details>
                     </a>
-                    <% }) %>
-        
-                        <% subcategories.forEach(subcategorie=> { %>
-                            <p><%= subcategorie.name %></p>
-                            <% }) %>
-
-                                <!-- <p><%= categories[1].name %></p> -->
-
-                                <% prompts.forEach(prompt=> { %>
-                                    <a href="./<%= prompt.label %>" class="">
-                                        <li class="categories">
-                                            <%= prompt.label %>
+     
+                    <% }) %> -->
+<!-- 
+                 <% categories.forEach(categorie=> { %>
+                            <details class="categories">
+                                <summary>
+                                    <%= categorie.name %>
+                                </summary>
+                                <ul>
+                                    
+                                    <% categorie.subcategories.forEach(subcategorie=> { %>
+                        <a href="./<%= categorie.name %>/<%= subcategorie.data.id %>" class="">
+                                        <li>
+                                            <%= subcategorie.data.name %>
                                         </li>
-                                    </a>
+                                        
+                                        Voeg hier andere eigenschappen van subcategorie toe indien nodig 
                                     <% }) %>
+                                </ul>
+                            </details>
+                        </a>
+         
+                        <% }) %>
+                </nav>  
+             -->
+
+<!-- 
+
+                <% if (prompts && prompts.length > 0) { %>
+                    <% prompts.forEach(prompt => { %>
+                        <div class="prompt">
+                            <h2><%= prompt.text %></h2>
+                            <p><%= prompt.id %></p>
+                            <% if (prompt.subcategory) { %>
+                                <h3>Subcategorie: <%= prompt.subcategory.name %></h3>
+                                <p>ID: <%= prompt.subcategory.id %></p>
+                            <% } else { %>
+                                <p>Geen subcategorie gevonden.</p>
+                            <% } %>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <p>Geen prompts gevonden.</p>
+                <% } %>  -->
+
+<!--         
+      <% prompts.forEach(prompt => { %>
+            <a href="./index/<%= prompt.id %>" class="">
+                <li><%= prompt.label %></li>
+
+            </a>
+        <% }) %>  -->
+     
+
+        <!-- <form action="" method="get" class="form-example">
+            <div class="form-example">
+              <label for="name">Enter your name: </label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form-example">
+              <label for="email">Enter your email: </label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="form-example">
+              <input type="submit" value="Subscribe!" />
+            </div>
+          </form> -->
+
+                           
+            <!-- <form action="/submit" method="POST">
+                <p>
+                    "As an experienced auditor, you are tasked with thoroughly reviewing the
+                    quarterly financial statements to ensure accuracy and compliance with
+                    regulatory standards. Please upload the
+                    <span id="financialStatementFile">Financial Statement File</span> for
+                    further analysis, indicate the <span id="reviewDate">Review Date</span>,
+                    and assign the task to the <span id="leadAuditor">Lead Auditor</span>."
+                </p>
+
+                <label for="fileInput">Upload Financial Statement File:</label>
+                <input type="file" id="fileInput" name="fileInput" />
+
+                <label for="reviewDateInput">Review Date:</label>
+                <input type="date" id="reviewDateInput" name="reviewDateInput" />
+
+                <label for="leadAuditorInput">Lead Auditor:</label>
+                <input type="text" id="leadAuditorInput" name="leadAuditorInput"
+                    placeholder="Enter Lead Auditor's Name" />
+
+                <input type="submit" value="Start the prompt" />
+                <button>cancel</button>
+
+                <label for="textfield"></label>
+                <input type="text" id="textfield" name="name" placeholder="Ask me something!" />
+
+                <button>send</button>
+            </form> -->
+
+            
+             <!-- <ul class="breadcrumb">
+                <li class="breadcrumbItem"><a href="/audit">audit</a></li>
+                <li class="breadcrumbItem"><a href="/innovation">innovation</a></li>
+                <li class="breadcrumbItem"><a href="/consulting"></a></li>
+            </ul> -->
+
+        <article class="categorie">
+
+           <% categories.forEach(categorie=> { %>
+                <article class="categories">
+                    <details>
+                        <summary>
+                            <%= categorie.name %>
+                        </summary>
+                        <ul>
+                            <% categorie.subcategories.forEach(subcategorie => { %>
+                                <li>
+                                    <!-- <a href="./<%= categorie.name %>/<%= subcategorie.data.subcategory_id %>" class="subcategorieLink"> -->
+                                        <a href="./<%= categorie.name %>/" class="subcategorieLink">
+                                        <%= subcategorie.data.name %>
+                                    </a>
+                                </li>
+                            <% }) %>
+                        </ul>
+                    </details>
         </article>
+
+            <% }) %> 
+
+     <nav id="sidebar">
+        <img src="/assets/headstart-logo.png" class="logoHeadstart" alt="logoHeadstart" />
+  </nav>                
+
     </main>
 
     <%- include('./partials/foot') %>
