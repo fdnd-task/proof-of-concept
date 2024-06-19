@@ -77,131 +77,131 @@ app.get("/", async function (request, response) {
 });
 
 
-app.get("/audit", async function (request, response) {
-  try {
-    const items = await fetchJson(apiUrl + "subcategories");
-    const filteredData = items.data.filter((item) => {
-      return item.category == 1;
-    });
-    const promptsResponse = await fetchJson(apiUrl + "prompts");
+// app.get("/audit", async function (request, response) {
+//   try {
+//     const items = await fetchJson(apiUrl + "subcategories");
+//     const filteredData = items.data.filter((item) => {
+//       return item.category == 1;
+//     });
+//     const promptsResponse = await fetchJson(apiUrl + "prompts");
 
-    const filteredPrompts = promptsResponse.data.filter((item) => {
-      return item.subcategorie == 2;
-    })
+//     const filteredPrompts = promptsResponse.data.filter((item) => {
+//       return item.subcategorie == 2;
+//     })
 
-    response.render("audit", {
-      subcategories: filteredData,
-      prompts: filteredPrompts,
-    });
-  } catch (error) {
-    console.error("Er was een probleem met het ophalen van gegevens:", error);
-    response
-      .status(500)
-      .send("Er is een fout opgetreden bij het ophalen van gegevens.");
-  }
-});
+//     response.render("audit", {
+//       subcategories: filteredData,
+//       prompts: filteredPrompts,
+//     });
+//   } catch (error) {
+//     console.error("Er was een probleem met het ophalen van gegevens:", error);
+//     response
+//       .status(500)
+//       .send("Er is een fout opgetreden bij het ophalen van gegevens.");
+//   }
+// });
 
-app.get("/innovation", async function (request, response) {
-  try {
-    const items = await fetchJson(apiUrl + "subcategories");
-    var subCategoryId = [];
-    const filteredData = items.data.filter((item) => {
-      console.log(item);
-      if(item.category == 2) {
-        subCategoryId.push(item.subcategory_id);
-      }
+// app.get("/innovation", async function (request, response) {
+//   try {
+//     const items = await fetchJson(apiUrl + "subcategories");
+//     var subCategoryId = [];
+//     const filteredData = items.data.filter((item) => {
+//       console.log(item);
+//       if(item.category == 2) {
+//         subCategoryId.push(item.subcategory_id);
+//       }
 
-      return item.category == 2;
-    });
-    const promptsResponse = await fetchJson(apiUrl + "prompts");
-    const filteredPrompts = promptsResponse.data.filter((item) => {
-      return subCategoryId.includes(item.subcategory_id);
-    })
+//       return item.category == 2;
+//     });
+//     const promptsResponse = await fetchJson(apiUrl + "prompts");
+//     const filteredPrompts = promptsResponse.data.filter((item) => {
+//       return subCategoryId.includes(item.subcategory_id);
+//     })
 
-    console.log(filteredPrompts);
+//     console.log(filteredPrompts);
 
-    response.render("innovation", {
-      subcategories: filteredData,
-      prompts: filteredPrompts,
-    });
-  } catch (error) {
-    console.error("Er was een probleem met het ophalen van gegevens:", error);
-    response
-      .status(500)
-      .send("Er is een fout opgetreden bij het ophalen van gegevens.");
-  }
-});
+//     response.render("innovation", {
+//       subcategories: filteredData,
+//       prompts: filteredPrompts,
+//     });
+//   } catch (error) {
+//     console.error("Er was een probleem met het ophalen van gegevens:", error);
+//     response
+//       .status(500)
+//       .send("Er is een fout opgetreden bij het ophalen van gegevens.");
+//   }
+// });
 
-app.get("/consulting", async function (request, response) {
-  try {
-    const items = await fetchJson(apiUrl + "subcategories");
-    const filteredData = items.data.filter((item) => {
-      return item.category == 3;
-    });
-    const promptsResponse = await fetchJson(apiUrl + "prompts");
+// app.get("/consulting", async function (request, response) {
+//   try {
+//     const items = await fetchJson(apiUrl + "subcategories");
+//     const filteredData = items.data.filter((item) => {
+//       return item.category == 3;
+//     });
+//     const promptsResponse = await fetchJson(apiUrl + "prompts");
 
-    const filteredPrompts = promptsResponse.data.filter((item) => {
-      return item.subcategorie == 2;
-    })
+//     const filteredPrompts = promptsResponse.data.filter((item) => {
+//       return item.subcategorie == 2;
+//     })
 
-    response.render("consulting", {
-      subcategories: filteredData,
-      prompts: filteredPrompts,
-    });
-  } catch (error) {
-    console.error("Er was een probleem met het ophalen van gegevens:", error);
-    response
-      .status(500)
-      .send("Er is een fout opgetreden bij het ophalen van gegevens.");
-  }
-});
+//     response.render("consulting", {
+//       subcategories: filteredData,
+//       prompts: filteredPrompts,
+//     });
+//   } catch (error) {
+//     console.error("Er was een probleem met het ophalen van gegevens:", error);
+//     response
+//       .status(500)
+//       .send("Er is een fout opgetreden bij het ophalen van gegevens.");
+//   }
+// });
 
 // // audit
-// app.get("/audit/:id", function (request, response) {
+app.get("/audit/:id", function (request, response) {
 
-//   const categoryId = request.params.id;
-//   console.log("categoryId" + categoryId);
-//   fetchJson(apiUrl + "prompts").then((items) => { 
-//     const prompts = items.data.filter((item) => {
-//       console.log("audit log item" + item);
-//       return item.subcategorie == categoryId;
-//     });
-//     console.log(prompts);
-//     response.render("audit", {
-//       prompts: prompts,
-//     });
-//   });
-// });
+  const categoryId = request.params.id;
+  console.log("categoryId" + categoryId);
+  fetchJson(apiUrl + "prompts").then((items) => { 
+    const prompts = items.data.filter((item) => {
+      console.log("audit log item" + item);
+      return item.subcategorie == categoryId;
+    });
+    console.log(prompts);
+    response.render("audit", {
+      prompts: prompts,
+    });
+  });
+});
 
-// app.get("/innovation/:id", function (request, response) {
-//   const categoryId = request.params.id;
-//   console.log("categoryId" + categoryId);
-//   fetchJson(apiUrl + "prompts").then((items) => { 
-//     const prompts = items.data.filter((item) => {
-//       console.log(item);
-//       return item.subcategorie == categoryId;
-//     });
-//     console.log(prompts);
-//     response.render("innovation", {
-//       prompts: prompts,
-//     });
-//   });
-// });
+app.get("/innovation/:id", function (request, response) {
+  const categoryId = request.params.id;
+  console.log("categoryId" + categoryId);
+  fetchJson(apiUrl + "prompts").then((items) => { 
+    const prompts = items.data.filter((item) => {
+      console.log(item);
+      return item.subcategorie == categoryId;
+    });
+    console.log(prompts);
+    response.render("innovation", {
+      prompts: prompts,
+    });
+  });
+});
 
-// app.get("/consulting/:id", function (request, response) {
-//   const categoryId = request.params.id;
-//   console.log("categoryId" + categoryId);
-//   fetchJson(apiUrl + "prompts").then((items) => { 
-//     const prompts = items.data.filter((item) => {
-//       console.log(item);
-//       return item.subcategorie == categoryId;
-//     });
-//     console.log(prompts);
-//     response.render("consulting", {
-//       prompts: prompts,
-//     });
-//   });
-// });
+app.get("/consulting/:id", function (request, response) {
+  const categoryId = request.params.id;
+  console.log("categoryId" + categoryId);
+  fetchJson(apiUrl + "prompts").then((items) => { 
+    const prompts = items.data.filter((item) => {
+      console.log(item);
+      return item.subcategorie == categoryId;
+    });
+    console.log(prompts);
+    response.render("consulting", {
+      prompts: prompts,
+    });
+  });
+});
 
 
 

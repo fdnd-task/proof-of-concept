@@ -168,8 +168,7 @@
                         <ul>
                             <% categorie.subcategories.forEach(subcategorie => { %>
                                 <li>
-                                    <!-- <a href="./<%= categorie.name %>/<%= subcategorie.data.subcategory_id %>" class="subcategorieLink"> -->
-                                        <a href="./<%= categorie.name %>/" class="subcategorieLink">
+                                    <a href="./<%= categorie.name %>/<%= subcategorie.data.id %>" class="subcategorieLink">
                                         <%= subcategorie.data.name %>
                                     </a>
                                 </li>
