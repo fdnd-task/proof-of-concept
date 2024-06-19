@@ -7,25 +7,14 @@
         <a href="/" class="homeButton">home</a>
 
         <h1 class="titel"> Prompt</h1>
-
-   
                     <form>
-                    <% prompts.forEach(prompt=> { %>
-                        <p class="prompt">
-                            <%= prompt.text %>
-                        </p>
-                    <% }) %>
-
-                    <label for="fileInput">Upload Financial Statement File:</label>
-                    <input type="file" id="fileInput" name="fileInput" />
-    
-                    <label for="reviewDateInput">Review Date:</label>
-                    <input type="date" id="reviewDateInput" name="reviewDateInput" />
-    
-                    <label for="leadAuditorInput">Lead Auditor:</label>
-                    <input type="text" id="leadAuditorInput" name="leadAuditorInput"
-                        placeholder="Enter Lead Auditor's Name" />
-
+                        <ul>
+                            <% prompts.forEach(prompt => { %>
+                                <li>
+                                    <p class="prompt"><%- prompt.text %></p>
+                                </li>
+                            <% }); %>
+                        </ul>
                     </form>
 
                     <input type="submit" class="submit-input" value="Start the prompt" />
