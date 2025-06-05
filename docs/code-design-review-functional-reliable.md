@@ -9,9 +9,9 @@ Deze week ben je begonnen met de mini-meesterproef. Je bent een server-side webs
 
 Bekijk onderstaande drie stappen en bepaal tot welke stap jij bent gekomen:
 
-1. Je hebt ontwerpen en schetsen gemaakt van de One Column Layout met data en Get Routes, en je hebt de `server.js` op basis daarvan opgezet.
-2. Je haalt data op uit de API, oftewel: User Generated Content.
-3. Je hebt een POST gemaakt of je bent al voorbij de reliable-laag en bezig met enhancements.
+1. Je hebt **ontwerpen** en schetsen gemaakt van de One Column Layout met data en **Get Routes**, en je hebt de **`server.js`** op basis daarvan opgezet.
+2. Je haalt data op uit de API, oftewel: **User Generated Content**.
+3. Je hebt een **POST** gemaakt of je bent al voorbij de reliable-laag en bezig met **enhancements**.
 
 ### Bedenk waar je feedback op wilt ontvangen
 
