@@ -3,7 +3,7 @@
 ## Code/Design-review – testen van de functional en reliable laag
 Deze week ben je begonnen met de mini-meesterproef. Je bent een server-side website met interacties en animaties aan het maken voor een opdrachtgever – en dat alles in 3 weken!
 
-## Code Review in issues bij peers (vanaf 10:00)
+## 1. Code Review in issues bij peers (vanaf 10:00)
 
 ### Bepaal bij welke stap je bent
 
@@ -39,7 +39,7 @@ Zoek minimaal 2 andere studenten van wie jij een review wilt ontvangen. Je kunt 
   - Om welke code het gaat.
 
 
-## Code Review online in gesprek met peers + docenten (vanaf 10:30)
+## 2. Code Review online in gesprek met peers + docenten (vanaf 10:30)
 
 ### Drie rondes
 
