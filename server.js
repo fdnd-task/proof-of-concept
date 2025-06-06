@@ -16,23 +16,24 @@ app.engine('liquid', engine.express());
 app.get('/', async (req, res) => {
 
   try {
-    const response = await fetch ('https://the-sprint-api.onrender.com/people', {
+    const peopleResponse = await fetch ('https://the-sprint-api.onrender.com/people', {
       headers: {
         'X-API-Key':`${process.env.API_KEY}`
       }
     });
 
-  const data = await response.json();
-  console.log(data)
+    const data = await peopleResponse.json();
+    console.log(data)
 
   res.render('index.liquid', { users:data}); 
-  } catch (err) {
-  console.error('Fout bij ophalen:', err);
-  res.status(500).send('Fout bij het ophalen van data');
-  }
+  } 
+    catch (err) {
+      console.error('Fout bij ophalen:', err);
+      res.status(500).send('Geen mensen te zien');
+    }
 
 });
-app.set('port', process.env.PORT || 7000)
+app.set('port', process.env.PORT || 8000)
 
 app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
