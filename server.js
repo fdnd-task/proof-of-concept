@@ -17,7 +17,7 @@ app.use(express.static('public'))
 
 app.use(express.urlencoded({extended: true}))
 
-  const response = await fetch ('https://the-sprint-api.onrender.com/people')
+  const peopleResponse = await fetch ('https://the-sprint-api.onrender.com/people')
 
 app.get('/', async (req, res) => {
 
