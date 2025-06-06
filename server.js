@@ -11,6 +11,12 @@ const app = express()
 const engine = new Liquid();
 app.engine('liquid', engine.express()); 
 
+app.set('views', './views');
+
+app.use(express.static('public'))
+
+app.use(express.urlencoded({extended: true}))
+
   const response = await fetch ('https://the-sprint-api.onrender.com/people')
 
 app.get('/', async (req, res) => {
@@ -27,7 +33,7 @@ app.get('/', async (req, res) => {
 
   res.render('index.liquid', { users:data}); 
   } 
-    catch (err) {
+  catch (err) {
       console.error('Fout bij ophalen:', err);
       res.status(500).send('Geen mensen te zien');
     }
