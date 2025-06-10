@@ -67,10 +67,4 @@ Mobile first/one column layout met basis huisstijl.
 Schetsen/prototypen:
 Sitemap met url-design, routes en data fetch, wireframes met statische en dynamische data, wireflow voor interactie en animatie, High res in Figma responsive layouts.
 
-
-Goede HTML onderzoeken. Fomulieren met fieldsets. Server side afhandelen van User generated content.
-Mobile first/one column layout met basis huisstijl.
-
-Sitemap met url-design, routes en data fetch, wireframes met statische en dynamische data, wireflow voor interactie en animatie,. high res in Figma responsive layouts.
-
 -->
