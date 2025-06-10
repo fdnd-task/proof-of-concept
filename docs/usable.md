@@ -6,7 +6,7 @@
 
 Hoe ontwerp en bouw je een website die goed te gebruiken is? Nadat je eerst de *functional* en *reliable* laag hebt ontworpen, gebouwd en getest (met server-side rendering en de simpelste technieken zoals HTML, formulier elementen en eenvoudige CSS) kan je je website gebruiksvriendelijk maken met enhancements.
 
-🍔
+🍴🍔
 
 Een gebruiksvriendelijke user interface heeft een duidelijke visuel hierarchie en maakt gebruik van Gestalt principes zoals *grouping*. Daarnaast zorg je ervoor dat de website goed te gebruiken is met duidelijke feedback en feedforward, animaties en Ui States.
 

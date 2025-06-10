@@ -6,7 +6,7 @@
 
 Een pleasurable interface is een interface waar een gebruiker plezier aan beleeft. Als een interface echt leuk is, zullen mensen eerder terukomen en de website sneller aanbevelen bij anderen.
 
-🍧
+✨🪩
 
 Een pleasurable interface is gebouwd op een stevig fundament, een website die het altijd doet. Zonder functional, reliable, en usable laag werkt een 'leuke' interface juist averechts. Begin daarom altijd met met stap 1 en 2 voordat je met de enhancements aan de slag gaat.
 Staat jouw fundament stevig? Met server-side rendering, netter url's en routes, responsive huisstijl en degelijke UI states? Dan gaan we los...
