@@ -17,7 +17,8 @@ Staat jouw fundament stevig? Met server-side rendering, netter URLs en routes, r
 
 In Sprint 11 heb je geleerd over de pleasurable user interface. 
 
-👉 Lees en bespreek met je buur de workshop "Client-Side Fetch met Server-side partials" uit sprint 9 nog een keer. Maak aantekeningen in je Learning Journal en pas de stof toe op de opdracht waar je nu aan werkt.
+#### 👉 Lees en bespreek met je buur de workshop "Client-Side Fetch met Server-side partials" uit sprint 9 nog een keer. 
+Maak aantekeningen in je Learning Journal en pas de stof toe op de opdracht waar je nu aan werkt.
 - [Workshop Pleasurable is in the details](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/pleasurable-is-in-the-details.md)
 
 #### 👉 Ontwerp een Pleasurable interactie
@@ -29,6 +30,8 @@ Maak daarna een breakdown waarin je de (nieuwe) CSS technieken en JS gebruikt vo
 Noteer daarna de "fallback", wat gebeurt er als een browser de client-side technieken niet ondersteumt? Wat krijg je dan te zien? 
 
 Tot slot, noteer de *core functionaliteit*, teken en beschrijf wat er gebeurt als een er iets misgaat, of een browser of device oud is. Wat krijg je te zien als alleen de HTML en basic CSS wordt geladen? 
+
+Bespreek je ontwerp met een docent.
 
   
 
