@@ -13,7 +13,9 @@ Een gebruiksvriendelijke user interface heeft een duidelijke visuele hiërarchie
 
 ### Aanpak
 
-Dit semester heb je veel geleerd over Progressive Enhancement en de _Hierarchy of User Needs_ van Aarron Walter. Lees en bespreek met je buur de workshop "Client-Side Fetch met Server-side partials" uit Sprint 9 nog een keer. Maak aantekeningen in je Learning Journal en pas de stof toe op de opdracht waar je nu aan werkt. 
+Dit semester heb je veel geleerd over Progressive Enhancement en de _Hierarchy of User Needs_ van Aarron Walter. 
+
+👉 Lees en bespreek met je buur de workshop "Client-Side Fetch met Server-side partials" uit Sprint 9 nog een keer. Schrijf de begrippen en technieken op het whiteboard en noteer welke je al beheerst of welke  je nog moet leren,
 
 - [Workshop Client-Side Fetch met Server-side partials](https://github.com/fdnd-task/the-web-is-for-everyone-interactive-functionality/blob/main/docs/client-side-fetch.md)
 
