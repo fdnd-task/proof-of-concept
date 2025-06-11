@@ -13,6 +13,14 @@ Staat jouw fundament stevig? Met server-side rendering, netter url's en routes, 
 
 
 
+### Aanpak
+
+In sprint 11 heb je geleerd over de pleasurable user interface. Lees en bespreek met je buur de workshop "Pleasurable is in the details" nog een keer. Maak aantekeningen in je Learning Journal en pas de stof toe op de opdracht waar je nu aan werkt. 
+
+- [Workshop Pleasurable is in the details](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/pleasurable-is-in-the-details.md)
+
+  
+
 <!--
 ## Aanpak
 
