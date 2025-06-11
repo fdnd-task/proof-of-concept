@@ -27,7 +27,7 @@ Schets een interactie met animatie voor jouw website. Je kan bijvoorbeeld pleasu
 
 Maak daarna een breakdown waarin je de (nieuwe) CSS technieken en JS gebruikt voor de pleasurable laag. 
 
-Noteer daarna de "fallback", wat gebeurt er als een browser de client-side technieken niet ondersteumt? Wat krijg je dan te zien? 
+Noteer daarna de "fallback", wat gebeurt er als een browser de client-side technieken niet ondersteunt? Wat krijg je dan te zien? 
 
 Tot slot, noteer de *core functionaliteit*, teken en beschrijf wat er gebeurt als een er iets misgaat, of een browser of device oud is. Wat krijg je te zien als alleen de HTML en basic CSS wordt geladen? 
 
