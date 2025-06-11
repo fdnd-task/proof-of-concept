@@ -8,14 +8,14 @@ Een pleasurable interface is een interface waar een gebruiker plezier aan beleef
 
 ✨🪩
 
-Een pleasurable interface is gebouwd op een stevig fundament, een website die het altijd doet. Zonder functional, reliable, en usable laag werkt een 'leuke' interface juist averechts. Begin daarom altijd met met stap 1 en 2 voordat je met de enhancements aan de slag gaat.
-Staat jouw fundament stevig? Met server-side rendering, netter url's en routes, responsive huisstijl en degelijke UI states? Dan gaan we los...
+Een pleasurable interface is gebouwd op een stevig fundament, een website die het altijd doet. Zonder functional, reliable, en usable laag werkt een 'leuke' interface juist averechts. Begin daarom altijd met stap 1 en 2, voordat je met de enhancements aan de slag gaat.
+Staat jouw fundament stevig? Met server-side rendering, netter URLs en routes, responsive huisstijl en degelijke UI states? Dan gaan we los...
 
 
 
 ### Aanpak
 
-In sprint 11 heb je geleerd over de pleasurable user interface. Lees en bespreek met je buur de workshop "Pleasurable is in the details" nog een keer. Maak aantekeningen in je Learning Journal en pas de stof toe op de opdracht waar je nu aan werkt. 
+In Sprint 11 heb je geleerd over de pleasurable user interface. Lees en bespreek met je buur de workshop "Pleasurable is in the details" nog een keer. Maak aantekeningen in je Learning Journal en pas de stof toe op de opdracht waar je nu aan werkt. 
 
 - [Workshop Pleasurable is in the details](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/pleasurable-is-in-the-details.md)
 

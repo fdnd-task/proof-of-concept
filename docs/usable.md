@@ -8,12 +8,12 @@ Hoe ontwerp en bouw je een website die goed te gebruiken is? Nadat je eerst de *
 
 🍴🍔
 
-Een gebruiksvriendelijke user interface heeft een duidelijke visuel hierarchie en maakt gebruik van Gestalt principes zoals *grouping*. Daarnaast zorg je ervoor dat de website goed te gebruiken is met duidelijke feedback en feedforward, animaties en Ui States.
+Een gebruiksvriendelijke user interface heeft een duidelijke visuele hiërarchie en maakt gebruik van Gestalt principes, zoals *grouping*. Daarnaast zorg je ervoor dat de website goed te gebruiken is met duidelijke feedback en feedforward, animaties en UI States.
 
 
 ### Aanpak
 
-Dit semester heb je veel geleerd over Progressive enhancement en de _Hierarchy of User Needs_ van Aaron Walters. Lees en bespreek met je buur de workshop "Client-Side Fetch met Server-side partials" uit sprint 9 nog een keer. Maak aantekeningen in je Learning Journal en pas de stof toe op de opdracht waar je nu aan werkt. 
+Dit semester heb je veel geleerd over Progressive Enhancement en de _Hierarchy of User Needs_ van Aarron Walter. Lees en bespreek met je buur de workshop "Client-Side Fetch met Server-side partials" uit Sprint 9 nog een keer. Maak aantekeningen in je Learning Journal en pas de stof toe op de opdracht waar je nu aan werkt. 
 
 - [Workshop Client-Side Fetch met Server-side partials](https://github.com/fdnd-task/the-web-is-for-everyone-interactive-functionality/blob/main/docs/client-side-fetch.md)
 
