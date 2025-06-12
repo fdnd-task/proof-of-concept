@@ -18,7 +18,7 @@ Ga door je website heen en bepaal welke componenten jij hebt gemaakt. Denk bijvo
 | **Component 3**    |                |              |            |                 |
 
 ### Bepalen welke lagen er zijn gemaakt
-Pak de tabel er nog eens bij en vul nu per component in hoe jij de verschillende lagen hebt geïmplementeerd (of hoe je dit zou kunnen doen). Het ziet er dan bijvoorbeeld zo uit:
+Pak de tabel er nog eens bij en vul nu per component in hoe jij de verschillende lagen hebt geïmplementeerd (of hoe je dit zou kunnen doen). Het hoeft niet zo te zijn dat je voor elk component alle lagen hebt uitgewerkt. Het ziet er dan bijvoorbeeld zo uit:
 
 |                    | **Functional** | **Reliable** | **Usable** | **Pleasurable** |
 |----------------    |----------------|--------------|------------|-----------------|
@@ -26,7 +26,7 @@ Pak de tabel er nog eens bij en vul nu per component in hoe jij de verschillende
 | **Berichten achterlaten**    |     `<form>` met post en server side fetch           |        verschillende states (zero, empty)     |       perf enhancement met client side JS, view transitions om de states lekker te laten smoelen     |            het formulier als een soort envelop opvouwen, weg laten vliegen met een swoosh, en de reactie letter voor letter laten uittypen als een soort typmachine     |
 | **Carrousel**    |         een lijst met images onder elkaar, waar je van boven naar onder doorheen kunt scrollen       |     scroll snap naast elkaar         |      responsive images, performance enhancements, misschien wat knopjes en affordances toevoegen/css carrousel met nieuwe dingen      |       geluidjes als je scrollt, scroll markers die animeren          |
 
-Het hoeft niet zo te zijn dat elk component alle lagen heeft uitgewerkt. Het is wel goed om hier mee bewust van te zijn en dat je kan beargumenteren waarom je dat niet hebt gedaan. 
+
 
 ### Feedback ontvangen van peers
 Tag in het issue per component minimaal één peer die jouw component gaat reviewen. Zorg dat je voor elk component iemand anders vraagt voor een review. 
