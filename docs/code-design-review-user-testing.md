@@ -8,7 +8,7 @@ Vandaag ga je in kaart brengen welke componenten je hebt gemaakt voor jouw websi
 
 ### Bepaal welke component je hebt gemaakt
 
-Ga door je website heen en bepaal welke component jij hebt gemaakt. Denk bijvoorbeeld aan een menu, carrousel, contact formulier, het achterlaten van een bericht of het bekijken van een kunstwerk. Maak een issue aan en noteer al jouw componenten onder elkaar in onderstaande tabel.
+Ga door je website heen en bepaal welke componenten jij hebt gemaakt. Denk bijvoorbeeld aan een menu, carrousel, contact formulier, het achterlaten van een bericht of het bekijken van een kunstwerk. Maak een issue aan en noteer al jouw componenten onder elkaar in onderstaande tabel.
 
 
 |                    | **Functional** | **Reliable** | **Usable** | **Pleasurable** |
