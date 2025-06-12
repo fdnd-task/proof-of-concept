@@ -8,7 +8,7 @@ Vandaag ga je in kaart brengen welke componenten je hebt gemaakt voor jouw websi
 
 ### Bepaal welke component je hebt gemaakt
 
-Ga door je website heen en bepaal welke componenten jij hebt gemaakt. Denk bijvoorbeeld aan een menu, een carrousel, een contact formulier, het achterlaten van een bericht of het bekijken van een kunstwerk. Maak een issue aan en noteer al jouw componenten onder elkaar in onderstaande tabel. Gebruik hiervoor onderstaand template:
+Ga door je website heen en bepaal welke componenten jij hebt gemaakt. Denk bijvoorbeeld aan een menu, een carrousel, een contact formulier, het achterlaten van een bericht, paginatie of een detail pagina bekijken. Maak een issue aan en noteer al jouw componenten onder elkaar in onderstaande tabel. Gebruik hiervoor onderstaand template:
 
 
 |                    | **Functional** | **Reliable** | **Usable** | **Pleasurable** |
@@ -40,25 +40,7 @@ Je hebt in jouw website gewerkt aan een interactie. Vandaag verzamel je feedback
 
 Het ontwerpen van een goede gebruikerservaring (UX) gaat niet alleen over iets bouwen dat werkt, maar vooral over iets maken dat intuïtief en prettig te gebruiken is. Misschien denk je dat jouw micro-interactie perfect is – alles functioneert precies zoals jij het had bedacht – maar hoe ervaart een gebruiker jouw werk? Om dat te ontdekken, gebruik je user testing. Het doel is om te achterhalen hoe een echte gebruiker, iemand die jouw code niet kent, jouw werk ervaart.
 
-Voer een User Test uit met minimaal 2 users.
+Voer een User Test uit met minimaal 2 users, waarvan één met een docent. 
 
 Pak voor de User Test de instructies van de 'Code/design review User Test' er opnieuw bij. Deze kun je vinden in sprint 5 bij de workshop [Code/Design User Testing](https://github.com/fdnd-task/fix-the-flow-interactive-website/blob/main/docs/code-design-review-user-testing.md). 
 
-## 3. Voortgangsgesprekken met peers + docenten
-
-### Drie rondes
-
-Met een coach bespreken we jullie vorderingen. 
-
-**Bij Krijn & Charley:**
-| Tijd     | Teams |
-| ----------- | ----------- |
-| 10:00-10:45  | Q42 + iO Digital    |
-| 10:45-11:30  | Info + 270 Degrees  |
-
-**Bij Koop & Suus:**
-| Tijd     | Teams |
-| ----------- | ----------- |
-| 10:00-10:45  | Learning Stone + Funda   |
-| 10:45-11:30  | Triple + Future Ready Design   |
-| 11:30-12:15  | Label4 + Fresk.io      |
