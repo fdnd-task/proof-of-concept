@@ -18,7 +18,7 @@ Ga door je website heen en bepaal welke componenten jij hebt gemaakt. Denk bijvo
 | **Component 3**    |                |              |            |                 |
 
 ### Bepalen welke lagen er zijn gemaakt
-Pak de tabel er nog eens bij en vul nu per component in hoe jij de verschillende lagen hebt geïmplementeerd (of hoe je dit zou kunnen doen). Het zou er dan zo uit kunnen komen te zien:
+Pak de tabel er nog eens bij en vul nu per component in hoe jij de verschillende lagen hebt geïmplementeerd (of hoe je dit zou kunnen doen). Het ziet er dan bijvoorbeeld zo uit:
 
 |                    | **Functional** | **Reliable** | **Usable** | **Pleasurable** |
 |----------------    |----------------|--------------|------------|-----------------|
