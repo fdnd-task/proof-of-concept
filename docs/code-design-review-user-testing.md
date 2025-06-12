@@ -48,7 +48,7 @@ Pak voor de User Test de instructies van de 'Code/design review User Test' er op
 
 ### Drie rondes
 
-Met een coach bespreken we jullie vorderingen. Bedenk een vraag voor de ronde waar jij bij hoort. Dit kan een vraag zijn waar je zelf niet uitkomt of iets wat je graag in een team zou willen bespreken.
+Met een coach bespreken we jullie vorderingen. 
 
 **Bij Krijn & Charley:**
 | Tijd     | Teams |
