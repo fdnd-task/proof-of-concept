@@ -4,7 +4,7 @@ Deze week ben je verder gaan bouwen aan de usable en de pleasurable laag van jou
 
 ## 1. Code/Design-review - Testen van de verschillende lagen
 
-Vandaag ga je in kaart brengen welke componenten je hebt gemaakt voor jouw website en welke verschillende lagen je per component hebt gebouwd en/of ontworpen. Hierop ontvang je een code/design review van twee medestudenten.
+Vandaag ga je in kaart brengen welke componenten je hebt gemaakt voor jouw website en welke verschillende lagen je per component hebt gebouwd en/of ontworpen. Hierop ontvang je een code/design review.
 
 ### Bepaal welke component je hebt gemaakt
 
