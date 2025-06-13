@@ -16,3 +16,7 @@
     --font-heading: "tisa_sans", sans-serif;
     --font-text: "proxima_nova", sans-serif;
 }
+
+section {
+    background-color: var(--background-color);
+}

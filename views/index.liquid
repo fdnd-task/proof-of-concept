@@ -1,25 +1,32 @@
-{%  render 'partials/header.liquid' %}
+{% render 'partials/header.liquid' %}
 
 <section class="q_ers" alt="">
-    <article>
-        <h1>De mensen van Q42</h1>
+  <article>
+    <h1>De mensen van Q42</h1>
 
-        <p>Onze mensen noemen we Q'ers. Maar wie zijn dat dan? 
+    <p>Onze mensen noemen we Q'ers. Maar wie zijn dat dan? 
+ 
+ 
+ 
             Die Q'ers die het internet aan het afmaken zijn? Check ze allemaal hieronder. 
             En wil je ook Q'er worden, 
             scroll dan even voorbij onze hoofden voor de openstaande vacatures!
-        </p>
-    </article>
+    </p>
+  </article>
 </section>
 
 <section>
-        {% for user in users %}
-            <article class="q_ers">
-                <h3>{{ user.name }}</h3>
-                <p>{{ user.email }}</p>
-                {% if user.avatars %}
-                    <img src="{{ user.avatars[0] }}" alt="" height="250px" width="250px">
-                {% endif %}
-            </article>
-        {% endfor %}
+  {% for user in users %}
+    <article class="q_ers">
+      <h3>{{ user.name }}</h3>
+      <p>{{ user.email }}</p>
+      {% if user.avatars %}
+        <img
+          src="{{ user.avatars[0] }}"
+          alt=""
+          height="250rem"
+          width="250rem">
+      {% endif %}
+    </article>
+  {% endfor %}
 </section>
