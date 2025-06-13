@@ -8,7 +8,8 @@
     src: url(../fonts/tisa-sans-web-pro-300.woff2) format(woff);
 }
 
-*{
+*{  
+    color-scheme: light dark;
     --background-color: light-dark(#ffffff, #41453b);
     --text-color: light-dark(#212121, #eeeeee);
     --q42-color: #84bc2d;
@@ -17,6 +18,6 @@
     --font-text: "proxima_nova", sans-serif;
 }
 
-section {
+.q_ers{
     background-color: var(--background-color);
 }
