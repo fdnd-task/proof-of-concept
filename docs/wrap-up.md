@@ -15,9 +15,9 @@
 
 👫 Eerst ga je met je team met studenten die dezelfde opdracht hebben de Sprint Review voorbereiden. Ga met elkaar aan tafel zitten. Laat eerst aan elkaar zien wat je hebt gemaakt deze sprint. Bedenk daarna hoe jullie dit gaan presenteren, en spreek een logische volgorde af, zodat jullie elkaar aan kunnen vullen.
 
-🎁 Het proces van Briefing en Sprint Reviews gaat over Communiceren met de opdrachtgever (en je team). Als je straks aan het werk bent, zul je merken dat je ook vaak je werk moet laten zien; wat heb je gedaan, wat heb je niet gedaan, en waarom. Hiermee kun je de verwachtingen van een opdrachtgever sturen.
+🎁 Het proces van Briefing en Sprint Reviews gaat over Communiceren met de opdrachtgever (en je team). Als je straks aan het werk bent, zul je merken dat je ook vaak je werk moet laten zien; wat heb je gedaan, wat heb je niet gedaan, en waarom. Hiermee kun je de verwachtingen van een opdrachtgever sturen. Gebruik de MoSCoW methode en je project board ook om inzicht te geven in wat wel en niet gelukt is.
 
-🎆 Maak ook samen de poster voor de Expo van woensdag 2 juli. Heb jij al vrienden en familie uitgenodigd voor die avond trouwens?
+🎆 Maak ook samen de poster voor de Expo van woensdag 2 juli. Heb jij al vrienden en familie uitgenodigd voor die avond trouwens? De link naar het Figma bestand staat op het scherm en in Teams.
 
 
 ## Readme schrijven
