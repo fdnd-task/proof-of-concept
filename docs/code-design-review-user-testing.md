@@ -16,6 +16,7 @@ Ga door je website heen en bepaal welke componenten jij hebt gemaakt. Denk bijvo
 | **Component 1**    |                |              |            |                 |
 | **Component 2**    |                |              |            |                 |
 | **Component 3**    |                |              |            |                 |
+| **Etc..**    |                |              |            |                 |
 
 ### Bepalen welke lagen er zijn gemaakt
 Pak de tabel er nog eens bij en vul nu per component in hoe jij de verschillende lagen hebt geïmplementeerd (of hoe je dit zou kunnen doen). Het hoeft niet zo te zijn dat je voor elk component alle lagen hebt uitgewerkt. Het ziet er dan bijvoorbeeld zo uit:
