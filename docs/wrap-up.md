@@ -34,16 +34,3 @@
 - [Wrap up Sprint 11, Pleasurabe UI](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/wrap-up.md)
 
 🤩 Zet 'm op bij de Sprint Review morgen!
-
-<!--
-
-Slides voor:
-
-LinkedIn
-2.5.1
-Samen zitten
-Sprint Review voorbereiden -> laat elkaar zien + bepaal volgorde
-Posters
-Readme
-
--->
