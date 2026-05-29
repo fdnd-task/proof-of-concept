@@ -10,8 +10,25 @@ Doe de Sprint planning met de studenten die dezelfde opdrachtgever hebben.
 
 Op basis van een bestaand idee, concept of ontwerp ga je in 3 weken voor een opdrachtgever een server-side website met interacties en animaties ontwerpen en maken.
 
+<!-- 
+Hints geven voor dé aanpak
+en teruglinken naar oude workshops
+
+- content first
+- sitemap met url design
+- wireframes/wireflow met dynamische en statische content
+- huisstijl inventariseren en ...
+
+-->
+
 ### Planning maken
 Bekijk het programma van sprint 12, let op wat er tijdens de code/design review op het programma staat. Maak een projectboad aan en plan de stappen die je moet doorlopen.
+
+<!--
+Opdracht in kaart brengen aan de hand van de briefing
+- MOSCOW bepalen
+
+-->
 
 ### Briefing voorbereiden 
 Bereid de briefing voor. Zorg dat je opdrachtgever na de briefing zo snel mogelijk de debriefing krijgt om te checken of je de opdracht goed hebt begrepen. Daarna kan je beginnen met prototypen. 
