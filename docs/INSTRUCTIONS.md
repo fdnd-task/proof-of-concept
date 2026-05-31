@@ -43,10 +43,18 @@ Deze sprint worden verschillende workshops aangeboden:
 
 Deze opdracht is done als:
 
+- [ ] Je hebt gestructureerd gewerkt via issues en onderdelen van je website iteratief aangepakt
+- [ ] Je hebt server-side rendering, een REST API, en complexere frontend code gecombineerd volgens het principe van Progressive Enhancement
+- [ ] Je hebt interactieve functionaliteit voor user generated content met verschillende UI states ontworpen en gebouwd
+- [ ] Je hebt je werk getest op verschillende browsers en devices, op toegankelijkheid, en op performance, en je testresultaten verwerkt
+- [ ] Je hebt op je werk feedback gekregen van docenten en studenten en feedback gegeven op het werk van andere studenten
+- [ ] Je hebt na de briefing met de opdrachtgever een debriefing gemaakt, je eindresultaat gepresenteerd en je ontwerpkeuzes begrijpelijk uitgelegd in je Readme
+
+<!--
 - [ ] Je hebt een website ontworpen en gemaakt voor een opdrachtgever met NodeJS, Express, Liquid en een REST API
 - [ ] Je website is online gepubliceerd
 - [ ] Je hebt het briefing-debriefing proces doorlopen met de opdrachtgever en je vorderingen gepresenteerd tijdens de sprint review
 - [ ] Jouw gebruikers kunnen iets achterlaten of toevoegen op jouw website
 - [ ] Je hebt met client-side scripting de user experience van je website verbeterd
 - [ ] Je hebt client-side scripting technieken gebruikt voor een 'Pleasurable User Interface'
- 
+-->
