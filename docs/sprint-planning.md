@@ -23,7 +23,7 @@ Opdracht in kaart brengen aan de hand van de briefing
 -->
 
 ### Briefing voorbereiden 
-Bereid de briefing voor. Zorg dat je opdrachtgever na de briefing zo snel mogelijk de debriefing krijgt om te checken of je de opdracht goed hebt begrepen. Daarna kan je beginnen met prototypen. 
+Bereid de briefing voor, gebruik hiervoor de [Briefing/Debriefing workshop](https://github.com/fdnd-task/the-client-website/blob/main/docs/briefing-debriefing.md) en voeg extra vragen toe voor het Data-Driven Web. Zorg dat je opdrachtgever na de briefing zo snel mogelijk de debriefing krijgt om te checken of je de opdracht goed hebt begrepen.  
 
 Voor het ontwerpen en maken van een server-side website moet je zorgen dat je tijdens de briefing veel informatie krijgt van de opdrachtgever! Welke content is beschikbaar? Is er al een API of gaan wij dat verzorgen? Heeft de opdrachtgever ideeën voor interacties en/of animaties? 
 
