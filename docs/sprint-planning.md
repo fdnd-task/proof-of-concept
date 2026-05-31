@@ -28,13 +28,13 @@ Bereid de briefing voor, gebruik hiervoor de [Briefing/Debriefing workshop](http
 Voor het ontwerpen en maken van een server-side website moet je zorgen dat je tijdens de briefing veel informatie krijgt van de opdrachtgever! Welke content is beschikbaar? Is er al een API of gaan wij dat verzorgen? Heeft de opdrachtgever ideeën voor interacties en/of animaties? 
 
 
-#### Content First vragen
+#### Content First vragen voorbereiden
 Content first betekent dat je voor het ontwerpen en maken van een website de content centraal stelt. Content First is een aanpak én manier van denken. Je kan niet een goed ontwerp maken als je geen content hebt, je zal moeten uitzoeken welke content er is, welke nog niet, wat al in de database staat (en of er al een database en API is), en misschien gaan gebruikers zelf content toevoegen. Welke vragen kan je bedenken zodat je na de briefing goed van start kan?
 
 Check ook nog een keer de [Content First workshop](https://github.com/fdnd-task/server-side-rendering-server-side-website/blob/main/docs/sprint-planning.md) en bedenk wat je de opdrachtgever sowieso moet vragen tijdens de briefing.
 
 
-#### Styleguide vragen
+#### Styleguide vragen voorbereiden
 Waarschijnklijk heeft de opdrachtgever wel een idee hoe de website eruit moet komen te zien. Misschien is er al een huisstijl, of een voorbeeld dat je kan gebruiken om een ontwerp mee te maken. Welke vragen kan je bedenken zodat je na de briefing en goede styleguide kan samenstellen?
 
 Check ook nog een keer de [Styleguide workshop](https://github.com/fdnd-task/look-and-feel-corporate-identity/blob/main/docs/styleguide.md) en bedenk wat je de opdrachtgever moet vragen zodat je een goed ontwerp kan maken.
