@@ -17,11 +17,11 @@ Op basis van een bestaand idee, concept of ontwerp ga je in 3 weken voor een opd
 
 ### Planning
 
-* Maandag 2 juni krijg je een briefing bij de opdrachtgever. Tijdens de briefing maak je kennis met het bedrijf en wordt besproken wat je gaat maken.
+* Maandag 1 juni krijg je een briefing bij de opdrachtgever. Tijdens de briefing maak je kennis met het bedrijf en wordt besproken wat je gaat maken.
 
-* Donderdag 19 juni ga je weer op bezoek bij de opdrachtgever en ga je laten zien wat je hebt gemaakt.
+* Donderdag 18 juni ga je weer op bezoek bij de opdrachtgever en ga je laten zien wat je hebt gemaakt.
 
-* Woensdag 2 juli organiseert FDND een EXPO voor bedrijven, opdrachtgevers, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding.
+* Woensdag 1 juli organiseert FDND een EXPO voor bedrijven, opdrachtgevers, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding.
 
 
 ### Workshops
