@@ -12,11 +12,18 @@ Progressive enhancement is een van de principes waarmee je robuuste, betrouwbare
 ### Aanpak
 
 Bouwen volgens het principe van Progressive enhancement betekent dat je de website en componenten opbouwt in lagen: 
-<!-- Door je website en componenten in lagen te bouwen zorg je ervoor dat als een enhancement zoals een mooie animatie, of een interactie met client-side javascript niet door een browser kan worden uitgevoerd  -->
+<!-- Door je website en componenten in lagen te bouwen zorg je ervoor dat als een enhancement zoals een mooie animatie, of een interactie met client-side javascript niet door een browser kan worden uitgevoerd  
 
 1. Bepaal eerst de core functionality van wat je gaat maken
 2. Bouw die functionaliteit met de simpelste techniek (meestal HTML, met een klein beetje Mobile First CSS voor de huisstijl)
 3. Voeg daarna extra enhancements toe met CSS en client-side JS, om de User Experience te verbeteren! (de leukste stap, waar veel frontenders meteen heen springen)
+-->
+
+1. Bouw de functionaliteit robuust, met de simpelste techniek​ in HTML en met Server-Side Rendering​
+2, Voeg Baseline CSS voor de huisstijl toe​
+3. Enhance de functionaliteit geleidelijk voor een betere User Experience
+
+
 
 Begin met stap 1 en 2 voordat je met de enhancements aan de slag gaat. _Ik zeg je eerlijk_ het gaat zeker tijd schelen als je eerst de basis goed opzet.
 
