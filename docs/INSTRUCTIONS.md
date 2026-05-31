@@ -43,7 +43,7 @@ Deze sprint worden verschillende workshops aangeboden:
 
 Deze opdracht is done als:
 
-- [ ] Je hebt gestructureerd gewerkt via issues en onderdelen van je website iteratief aangepakt
+- [ ] Je hebt gestructureerd gewerkt via issues en onderdelen van je website iteratief aangepakt, getest en verbeterd
 - [ ] Je hebt server-side rendering, een REST API, en complexere frontend code gecombineerd volgens het principe van Progressive Enhancement
 - [ ] Je hebt interactieve functionaliteit voor user generated content met verschillende UI states ontworpen en gebouwd
 - [ ] Je hebt je werk getest op verschillende browsers en devices, op toegankelijkheid, en op performance, en je testresultaten verwerkt
