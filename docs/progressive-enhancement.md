@@ -20,7 +20,7 @@ Bouwen volgens het principe van Progressive enhancement betekent dat je de websi
 -->
 
 1. Bouw de functionaliteit robuust, met de simpelste techniek​ in HTML en met Server-Side Rendering​
-2, Voeg Baseline CSS voor de huisstijl toe​
+2. Voeg Baseline CSS voor de huisstijl toe​
 3. Enhance de functionaliteit geleidelijk voor een betere User Experience
 
 
