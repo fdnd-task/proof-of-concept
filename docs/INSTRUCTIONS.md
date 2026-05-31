@@ -45,7 +45,7 @@ Deze opdracht is done als:
 
 - [ ] Je hebt gestructureerd gewerkt via issues en onderdelen van je website iteratief aangepakt, getest en verbeterd
 - [ ] Je hebt server-side rendering, een REST API, interactieve functionaliteit, UI states en complexere frontend code gecombineerd volgens het principe van Progressive Enhancement
-- [ ] Je hebt rekening gehouden met eindgebruikers door je werk te testen op verschillende browsers en devices, op toegankelijkheid, en op performance, en je testresultaten te verwerken
+- [ ] Je hebt rekening gehouden met eindgebruikers door je werk te testen op verschillende browsers en devices, toegankelijkheid, en performance, en je testresultaten te verwerken
 - [ ] Je hebt op je werk feedback gekregen van docenten en studenten en feedback gegeven op het werk van andere studenten
 - [ ] Je hebt na de briefing met de opdrachtgever een debriefing gemaakt, je eindresultaat gepresenteerd en je ontwerpkeuzes begrijpelijk uitgelegd in je Readme
 
