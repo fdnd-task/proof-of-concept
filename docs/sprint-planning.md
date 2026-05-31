@@ -10,19 +10,11 @@ Doe de Sprint planning met de studenten die dezelfde opdrachtgever hebben.
 
 Op basis van een bestaand idee, concept of ontwerp ga je in 3 weken voor een opdrachtgever een server-side website met interacties en animaties ontwerpen en maken.
 
-<!-- 
-Hints geven voor dé aanpak
-en teruglinken naar oude workshops
-
-- content first
-- sitemap met url design
-- wireframes/wireflow met dynamische en statische content
-- huisstijl inventariseren en ...
-
--->
 
 ### Planning maken
-Bekijk het programma van sprint 12, let op wat er tijdens de code/design review op het programma staat. Maak een projectboad aan en plan de stappen die je moet doorlopen.
+Bekijk het programma van sprint 12, let op wat er tijdens de code/design review op het programma staat. Maak een projectboad aan en plan de stappen die je moet doorlopen. Schrijf voor elk issue dat je hebt aangemaakt of verplaatst een duidelijke description. Zo doen ze dat ook in het bedrijfsleven.
+
+Bekijk nog een keer de [Sprint planing van User Experience](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/sprint-planning.md) over het schriven van een duidelijke _description_.
 
 <!--
 Opdracht in kaart brengen aan de hand van de briefing
@@ -32,6 +24,25 @@ Opdracht in kaart brengen aan de hand van de briefing
 
 ### Briefing voorbereiden 
 Bereid de briefing voor. Zorg dat je opdrachtgever na de briefing zo snel mogelijk de debriefing krijgt om te checken of je de opdracht goed hebt begrepen. Daarna kan je beginnen met prototypen. 
+
+Voor het ontwerpen en maken van een server-side website moet je zorgen dat je tijdens de briefing veel informatie krijgt van de opdrachtgever! Welke content is beschikbaar? Is er al een API of gaan wij dat verzorgen? Heeft de opdrachtgever ideeën voor interacties en/of animaties? 
+
+
+#### Content First 
+Content first betekent dat je voor het ontwerpen en maken van een website de content centraal stelt. Content First is een aanpak én manier van denken. Je kan niet een goed ontwerp maken als je geen content hebt, je zal moeten uitzoeken welke content er is, welke nog niet, wat al in de database staat (en of er al een database en API is), en misschien gaan gebruikers zelf content toevoegen. Welke vragen kan je bedenken zodat je na de briefing goed van start kan?
+
+Check ook nog een keer de [Content First workshop](https://github.com/fdnd-task/server-side-rendering-server-side-website/blob/main/docs/sprint-planning.md) en bedenk wat je de opdrachtgever sowieso moet vragen tijdens de briefing.
+
+
+#### Styleguide
+Waarschijnklijk heeft de opdrachtgever wel een idee hoe de website eruit moet komen te zien. Misschien is er al een huisstijl, of een voorbeeld dat je kan gebruiken om een ontwerp mee te maken. Welke vragen kan je bedenken zodat je na de briefing en goede styleguid kan samenstellen?
+
+Check ook nog een keer de [Styleguide workshop](https://github.com/fdnd-task/look-and-feel-corporate-identity/blob/main/docs/styleguide.md) en bedenk wat je de opdrachtgever moet vragen zodat je een goed ontwerp kan maken.
+
+
+
+
+
 
 
 <!--
