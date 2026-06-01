@@ -16,7 +16,7 @@ Bekijk het programma van sprint 12, check wat er tijdens de code/design review o
 
 Maak een projectboard aan en plan de taken die je moet doorlopen. Schrijf voor elk issue dat je hebt aangemaakt een duidelijke description. Zo doen ze dat ook in het bedrijfsleven.
 
-Bekijk nog een keer de [Sprint planning van User Experience](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/sprint-planning.md) over het schrijven van een duidelijke _description_.
+Bekijk nog een keer de [Sprint planning van User Experience](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/sprint-planning.md#description-schrijven) over het schrijven van een duidelijke _description_.
 
 <!--
 Opdracht in kaart brengen aan de hand van de briefing
