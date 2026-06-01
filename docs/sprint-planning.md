@@ -14,7 +14,7 @@ Op basis van een bestaand idee, concept of ontwerp ga je in 3 weken voor een opd
 ### Planning maken
 Bekijk het programma van sprint 12, let op wat er tijdens de code/design review op het programma staat. Maak een projectboad aan en plan de stappen die je moet doorlopen. Schrijf voor elk issue dat je hebt aangemaakt of verplaatst een duidelijke description. Zo doen ze dat ook in het bedrijfsleven.
 
-Bekijk nog een keer de [Sprint planing van User Experience](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/sprint-planning.md) over het schrijven van een duidelijke _description_.
+Bekijk nog een keer de [Sprint planning van User Experience](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/sprint-planning.md) over het schrijven van een duidelijke _description_.
 
 <!--
 Opdracht in kaart brengen aan de hand van de briefing
