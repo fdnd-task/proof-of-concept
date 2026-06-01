@@ -12,11 +12,9 @@ Op basis van een bestaand idee, concept of ontwerp ga je in 3 weken voor een opd
 
 
 ### Planning maken
-Bekijk het programma van sprint 12, check wat er tijdens de code/design review op het programma staat en lees alvast de workshop 'Progressive Enhancement' van woensdag om te zien welke taken je doet om een website in lagen op te bouwen. 
+Bekijk [het programma van Sprint 12](https://programma.fdnd.nl/data-driven-web/proof-of-concept). Check wat er tijdens de code/design reviews op het programma staat en lees alvast de workshop 'Progressive Enhancement' van woensdag om te zien welke taken je zoal doet om een website in lagen op te bouwen. 
 
-Maak een projectboard aan en plan de taken die je moet doorlopen. Schrijf voor elk issue dat je hebt aangemaakt een duidelijke description. Zo doen ze dat ook in het bedrijfsleven.
-
-Bekijk nog een keer de [Sprint planning van User Experience](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/sprint-planning.md#description-schrijven) over het schrijven van een duidelijke _description_.
+Maak een project board aan en plan wat taken die je moet doorlopen. Schrijf voor elk issue dat je hebt aangemaakt een duidelijke description. Zo doen ze dat ook in het bedrijfsleven. Bekijk nog een keer de [Sprint planning van User Experience](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/sprint-planning.md#description-schrijven) over het schrijven van een duidelijke _description_.
 
 <!--
 Opdracht in kaart brengen aan de hand van de briefing
