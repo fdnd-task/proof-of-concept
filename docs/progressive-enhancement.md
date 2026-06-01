@@ -6,6 +6,23 @@
 
 Progressive enhancement is een van de principes waarmee je robuuste, betrouwbare websites kan ontwerpen en bouwen die het altijd doen, voor iedereen, in elke browser.
 
+<!--
+
+TODO; issue refinement op basis van briefing maandag?
+
+Content first -> Wat kun je nu al statisch maken?
+Welke comoponenten worden dynamisch?
+Hoe maak je daarvoor issues aan?
+Wat kun je vrijdag al testen?
+Laten zien hoe je issues goed opsplit
+Moet elk component dynamische user data hebben?
+Moet elk component URL design hebben?
+Wanneer is een component 'af'? Hoe zet je dat in je issue?
+Welke componenten wil je vrijdag kunnen testen?
+
+
+-->
+
 🛝
 
 
