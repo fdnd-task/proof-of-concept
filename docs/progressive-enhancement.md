@@ -27,7 +27,7 @@ Bouwen volgens het principe van Progressive enhancement betekent dat je de websi
 
 Begin met stap 1 en 2 voordat je met de enhancements aan de slag gaat. _Ik zeg je eerlijk_ het gaat zeker tijd schelen als je eerst de basis goed opzet.
 
-Begin met ontwerpen en schetsen van de One Column Layout met data en GET routes.
+Begin _per component_ met ontwerpen en schetsen van de One Column Layout met data en GET routes.
 Ga daarna verder met de User Generated Contend en de POST. 
 Bespreek je planning en aanpak met een docent. 
 
