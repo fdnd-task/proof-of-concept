@@ -37,7 +37,7 @@ Content first betekent dat je voor het ontwerpen en maken van een website de con
 
 
 #### Styleguide vragen voorbereiden
-Waarschijnklijk heeft de opdrachtgever wel een idee hoe de website eruit moet komen te zien. Misschien is er al een huisstijl, of een voorbeeld dat je kan gebruiken om een ontwerp mee te maken. Welke vragen kan je bedenken zodat je na de briefing en goede styleguide kan samenstellen?
+Waarschijnklijk heeft de opdrachtgever wel een idee hoe de website eruit moet komen te zien. Misschien is er al een huisstijl, of een voorbeeld dat je kan gebruiken om een ontwerp mee te maken. Welke vragen kan je bedenken zodat je na de briefing een goede styleguide kan samenstellen?
 
 👉 Check ook nog een keer de [Styleguide workshop](https://github.com/fdnd-task/look-and-feel-corporate-identity/blob/main/docs/styleguide.md) en bedenk wat je de opdrachtgever moet vragen zodat je een goed ontwerp kan maken. Schrijf jullie vragen op het whiteboard.
 
