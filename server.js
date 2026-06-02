@@ -17,6 +17,10 @@ app.get('/', async function (request, response) {
   response.render('home.liquid')
 })
 
+app.get('/niet-beschikbaar', async function (request, response) {
+  response.render('partials/niet-beschikbaar.liquid')
+})
+
 app.set('port', process.env.PORT || 8000)
 
 app.listen(app.get('port'), function () {
