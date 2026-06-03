@@ -32,8 +32,6 @@ app.get('/exhibits/:slug', async function (request, response) {
   const fetchResponseJSON = await fetchResponse.json()
   const exhibit = fetchResponseJSON.data[0]
 
-  console.log(fetchResponseJSON.data[0].creators)
-
   response.render('exhibit-detail.liquid', { 
     exhibit 
   })

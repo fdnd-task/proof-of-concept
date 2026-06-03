@@ -7,53 +7,56 @@
 {% block content %}
 
 <main>
-    <picture>
-        <source type="image/avif"
-            srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=400&quality=70 400w,
-                https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=800&quality=70 800w,
-                https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=1200&quality=70 1200w"
-            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
-        >
-        <source type="image/webp"
-            srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=400&quality=70 400w,
-                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=800&quality=70 800w,
-                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=1200&quality=70 1200w"
-            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
-        >
-        <img
-            src="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70"
-            srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=400&quality=70 400w,
-                https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70 800w,
-                https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=1200&quality=70 1200w"
-            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
-            alt="{{ exhibit.title }}"
-            fetchpriority="high"
-        >
-    </picture>
-
-    <div class="decor-divider flower" aria-hidden="true"></div>
-
-    <section>
-        <p>{{  exhibit.period }}</p>
-        <h1>{{  exhibit.title }}</h1>
-        <p>{{ exhibit.creators.first.teylers_museum_persons_id.last_name }}, {{ exhibit.creators.first.teylers_museum_persons_id.first_name }}</p>
-        <a href="/niet-beschikbaar">Bekijk onze hele collectie</a>
+    <section class="hero">
+        <picture class="hero-image">
+            <source type="image/avif"
+                srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=400&quality=70 400w,
+                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=800&quality=70 800w,
+                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=1200&quality=70 1200w"
+                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+            >
+            <source type="image/webp"
+                srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=400&quality=70 400w,
+                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=800&quality=70 800w,
+                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=1200&quality=70 1200w"
+                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+            >
+            <img
+                src="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70"
+                srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=400&quality=70 400w,
+                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70 800w,
+                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=1200&quality=70 1200w"
+                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+                alt="{{ exhibit.title }}"
+                fetchpriority="high"
+            >
+        </picture>
     </section>
 
-    <article>
-        <section>
-            <dl>
-                <div>
-                    <dt>Objecttype</dt>
+    <div class="decor-divider flower" aria-hidden="true"></div>
+    
+    <article class="exhibit">
+
+        <section class="exhibit-intro">
+            <p class="exhibit-period">{{  exhibit.period }}</p>
+            <h1 class="exhibit-title">{{  exhibit.title }}</h1>
+            <p class="exhibit-creator" >{{ exhibit.creators.first.teylers_museum_persons_id.last_name }}, {{ exhibit.creators.first.teylers_museum_persons_id.first_name }}</p>
+            <a class="exhibit-link" href="/niet-beschikbaar">Bekijk onze hele collectie</a>
+        </section>
+
+        <aside class="exhibit-info">
+            <dl class="info-list">
+                <div class="info-item">
+                    <dt class="info-label">Objecttype</dt>
                     <dd>{{ exhibit.object_type }}</dd> 
                 </div>
             </dl>
 
             <details>
                 <summary>Meer details</summary>
-                <dl>
-                    <div>
-                      <dt>Maker(s)</dt>
+                <dl class="info-list">
+                    <div class="info-item">
+                        <dt class="info-label">Maker(s)</dt>
                         <dd>
                             <ul>
                                 {% for creator in exhibit.creators %}
@@ -69,15 +72,15 @@
                     </div> 
                 </dl>
             </details>
-        </section>
+        </aside>
 
         {% if exhibit.is_on_display %}
-            <p>Nu te zien in het museum</p>
+            <p class="exhibit-status">Nu te zien in het museum</p>
         {% else %}
-            <p>Momenteel niet te zien in het museum</p>
+            <p class="exhibit-status">Momenteel niet te zien in het museum</p>
         {% endif %}
 
-        <section>
+        <section class="exhibit-content">
             {% for block in exhibit.content_blocks %}
                 {% if block.block_type == 'paragraph'%}
                     <p>{{ block.text }}</p>
@@ -88,10 +91,9 @@
                 {% endif %}
             {% endfor %} 
             {% comment %} eventueel uitbreiden met image, video, list, subheading, source {% endcomment %}
-            
         </section>
     </article>
-    <div class="decor-divider flower" aria-hidden="true"></div>
+    <div class="decor-divider stripes" aria-hidden="true"></div>
 </main>
 
 {% endblock %}

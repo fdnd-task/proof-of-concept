@@ -16,21 +16,16 @@
 </head>
 <body>
     <header>
-        <a href="/niet-beschikbaar">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242 286" width="32" height="32">
-                <title>Teylers Museum logo</title>
-                <path fill="#1A3038" d="m175.141 85.25 66.81 66.82V85.25h-66.81ZM41.508 152.07l66.82-66.82h-66.82v66.82ZM175.138 85.26h-66.81V285.7h66.81V85.26ZM49.998 49.76h-8.49v-8.49h25.71v8.49h-8.48v22.96h-8.74V49.76ZM71.95 41.27h23.47v7.74H80.69V53h13.48v7.49H80.69v4.5h15.23v7.73H71.95V41.27ZM109.529 61.24l-10.74-19.97h9.49l5.49 11.23h.25l5.49-11.23h9.49l-10.73 19.97v11.48h-8.74V61.24ZM132.281 41.27h8.74v22.97h13.73v8.48h-22.47V41.27ZM158.992 41.27h23.47v7.74h-14.73V53h13.48v7.49h-13.48v4.5h15.22v7.73h-23.96V41.27Z"/>
-            </svg>
-        </a>
-        <a href="#navigatie" aria-label="Menu openen">
+        <a class="nav-logo" href="/niet-beschikbaar"><img fetchpriority="high" src="/assets/icons/teylers-dark-light.svg" alt="Site logo"></a>
+        <a class="nav-toggle" href="#navigatie" aria-label="Menu openen">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" width="32" height="32">
                 <title>Menu openen</title>
                 <path fill="currentColor" d="M0 13.827v-1.638h32v1.638H0Zm0-4.095V8.095h32v1.637H0Zm0-4.094V4h32v1.638H0ZM4.764 25.967l2.682-5.963h1.158v7.861H7.346v-5.054l-2.282 5.054h-.69l-2.26-4.997v4.997H.858v-7.861h1.224l2.683 5.963ZM11.605 24.44v2.19h3.962v1.235h-5.253v-7.861h5.142v1.235h-3.851v2h3.428v1.2h-3.428ZM21.788 25.608v-5.604h1.257v7.861h-1.19l-3.73-5.604v5.604h-1.257v-7.861h1.19l3.73 5.604ZM27.709 28c-1.814 0-3.005-1.325-3.005-3.077v-4.92h1.29v4.92c0 1.078.646 1.83 1.715 1.83 1.068 0 1.714-.752 1.714-1.83v-4.92h1.291v4.92c0 1.752-1.191 3.077-3.005 3.077Z"/>
             </svg>
         </a>
-        <section class="menu" id="navigatie" aria-label="Hoofdnavigatie">
-            <div>
-                <a href="">
+        <section class="nav-menu" id="navigatie" aria-label="Hoofdnavigatie">
+            <div class="nav-menu-top">
+                <a href="/niet-beschikbaar">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
                         <title>Zoeken</title>
                         <path fill="currentColor" d="M9.664 1.85a14.44 14.44 0 0 1 17.021 22.076l5.494 5.493a1.951 1.951 0 1 1-2.76 2.76l-5.493-5.494A14.44 14.44 0 1 1 9.664 1.85Zm5.525 2.802a10.537 10.537 0 1 0 0 21.074 10.537 10.537 0 0 0 0-21.074Z"/>
@@ -40,8 +35,8 @@
                     <option value="nl">nl</option>
                     <option value="en">en</option>
                 </select>
-                <a href="/niet-beschikbaar">Boek ticket</a>
-                <a href="#" aria-label="Menu sluiten">
+                <a class="btn btn--primary" href="/niet-beschikbaar">Boek ticket</a>
+                <a class="nav-close" href="#" aria-label="Menu sluiten">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
                         <title>Menu sluiten</title>
                         <path fill="currentColor" d="M31.753 30.563a.842.842 0 0 1-1.19 1.19L16 17.191 1.438 31.753a.842.842 0 0 1-1.191-1.19L14.809 16 .247 1.437a.842.842 0 1 1 1.19-1.19L16 14.809 30.562.247a.842.842 0 1 1 1.191 1.19L17.191 16l14.562 14.563Z"/>
@@ -49,7 +44,7 @@
                 </a>
             </div>
 
-            <nav>
+            <nav class="nav-primary">
                 <ul>
                     <li><a href="/niet-beschikbaar">Plan je bezoek</a></li>
                     <li><a href="/niet-beschikbaar">Zien & doen</a></li>
@@ -57,7 +52,7 @@
                 </ul>
             </nav>
 
-            <nav>
+            <nav class="nav-secondary">
                 <ul>
                     <li><a href="/niet-beschikbaar">Organisatie</a></li>
                     <li><a href="/niet-beschikbaar">Collectie</a></li>
@@ -68,9 +63,9 @@
                 </ul>
             </nav>
 
-            <p>Geopend van di t/m zo van 10:00 tot 17:00 uur, op maandag gesloten.</p>
+            <p class="nav-hours">Geopend van di t/m zo van 10:00 tot 17:00 uur, op maandag gesloten.</p>
 
-            <nav>
+            <nav class="nav-utility">
                 <ul>
                     <li><a href="/niet-beschikbaar">Contact</a></li>
                     <li><a href="/niet-beschikbaar">Pers</a></li>
@@ -85,9 +80,9 @@
     {% block content %}{% endblock %}
 
     <footer>
-        <img src="/assets/icons/teylersmuseum.svg" alt="Teylers Museum">
+        <img class="footer-logo" src="/assets/icons/teylersmuseum.svg" alt="Teylers Museum">
         
-        <section>
+        <section class="footer-info">
             <h2>Bezoekersinformatie</h2>
             <dl>
                 <div>
@@ -107,7 +102,7 @@
             </dl>
         </section>
             
-        <section>
+        <section class="footer-social">
             <p>Volg ons</p>
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" width="24" height="24">
@@ -129,15 +124,15 @@
             </span>
         </section>
 
-        <form action="">
+        <form class="footer-newsletter" action="">
             <label for="">Blijf op de hoogte
                 <input type="email" placeholder="voorbeeld@email.nl">
             </label>
             <button type="submit"></button>
         </form>
 
-        <section>
-            <nav>
+        <section class="footer-bottom">
+            <nav class="footer-legal">
                 <ul>
                     <li><a href="/niet-beschikbaar">Cookies</a></li>
                     <li><a href="/niet-beschikbaar">Privacy</a></li>
@@ -146,12 +141,13 @@
                     <li><a href="/niet-beschikbaar">Contact</a></li>
                 </ul>
             </nav>
-            <ul>
+            <ul class="footer-partners">
                 <li><a href="/niet-beschikbaar"><img src="/assets/images/mvocew.svg" alt="Museumvereniging"></a></li>
                 <li><a href="/niet-beschikbaar"><img src="/assets/images/vriendenloterij.svg" alt="Vriendenloterij"></a></li>
                 <li><a href="/niet-beschikbaar"><img src="/assets/images/haarlem.svg" alt="Gemeente Haarlem"></a></li>
             </ul>
         </section>
     </footer>
+    <script src="/js/main.js"></script>
 </body>
 </html>   

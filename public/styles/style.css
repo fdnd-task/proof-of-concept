@@ -1,3 +1,117 @@
 /*=====================-Header-======================*/
-/*=====================-Header-======================*/
-/*=====================-Header-======================*/
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: var(--spacing-lg);
+    padding-left: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    .nav-logo img {
+        width: 3.5rem;
+        height: auto;
+    }
+
+    .nav-toggle svg{
+        width: 2.5rem;
+        height: auto;
+    }
+}
+
+.nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    overflow-y: auto;
+    background-color: var(--color-secondary);
+    color: var(--color-brand);
+    padding-right: var(--spacing-lg);
+    padding-left: var(--spacing-lg);
+
+    &:target,
+    &.open {
+        display: block;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        left: -100%;
+        transition: 0.3s ease-out;
+
+        &:target,
+        &.open {
+            left: 0;
+
+            @starting-style {
+                left: -100%;
+            }
+        }
+    }
+}
+
+.nav-menu-top {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    
+}
+.nav-primary {}
+.nav-secondary {}
+.nav-hours {
+    font-weight: 700;
+}
+.nav-utility {
+    background-color: var(--color-brand);
+    color: var(--color-secondary);
+}
+
+/*=====================-Footer-======================*/
+.footer-logo {}
+.footer-info {}
+.footer-social {}
+.footer-bottom {}
+.footer-legal {}
+.footer-partners {}
+.footer-newsletter {}
+
+
+
+/*====================-Deviders-=====================*/
+
+
+
+
+
+/*=====================-Detail-======================*/
+/*------------------------Hero-----------------------*/
+.hero {
+    background-color: var(--color-secondary);
+}
+
+/*--------------------Hero-image---------------------*/
+.hero-image {}
+
+/*-------------------Exhibit-intro-------------------*/
+.exhibit-intro {}
+.exhibit-period {}
+.exhibit-title {}
+.exhibit-creator {}
+.exhibit-link {}
+
+/*-------------------Exhibit-info--------------------*/
+.exhibit-info {}
+.info-list {}
+.info-item {}
+.info-label {}
+
+/*------------------Exhibit-status-------------------*/
+.exhibit-status {}
+
+/*------------------Exhibit-content------------------*/
+.exhibit-content {}
