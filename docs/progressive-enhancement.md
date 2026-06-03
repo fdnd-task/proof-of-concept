@@ -87,4 +87,6 @@ In de One Column Layout is alles uitgeklapt en zit nog geen interactie. Je gebru
 
 ### Code & Design review
 
-Komende vrijdag gaan we de eerste twee lagen van je website testen tijdens de Code & Design Review. Volgende week gaan we verder om je project meer _usable_ en _pleasurable_ te maken.
+Komende vrijdag gaan we de eerste twee lagen van je website testen tijdens de Code & Design Review. Zorg er in je planning voor dat je van al je componenten een eerste versie hebt.
+
+Volgende week gaan we verder om je project meer _usable_ en _pleasurable_ te maken.
