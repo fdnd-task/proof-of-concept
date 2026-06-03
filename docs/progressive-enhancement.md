@@ -1,13 +1,14 @@
 # Proof of Concept
 
-## Progressive enhancement
+## Progressive Enhancement
 
 <!--Over het bouwen van je website in lagen, en onderzoeken van de functional en reliable laag.-->
 
-Progressive enhancement is een van de principes waarmee je robuuste, betrouwbare websites kan ontwerpen en bouwen die het altijd doen, voor iedereen, in elke browser.
+Progressive Enhancement is één van de principes waarmee je robuuste, betrouwbare websites kan ontwerpen en bouwen die het altijd doen, voor iedereen, in elke browser.
+
+En dat is ook de focus voor deze week. Komende vrijdag ga je je website testen op de _functional_ en _reliable_ lagen.
 
 <!--
-
 TODO; issue refinement op basis van briefing maandag?
 
 Content first -> Wat kun je nu al statisch maken?
@@ -19,39 +20,26 @@ Moet elk component dynamische user data hebben?
 Moet elk component URL design hebben?
 Wanneer is een component 'af'? Hoe zet je dat in je issue?
 Welke componenten wil je vrijdag kunnen testen?
-
-
 -->
-
-🛝
-
 
 ### Aanpak
 
-Bouwen volgens het principe van Progressive enhancement betekent dat je de website en componenten opbouwt in lagen: 
-<!-- Door je website en componenten in lagen te bouwen zorg je ervoor dat als een enhancement zoals een mooie animatie, of een interactie met client-side javascript niet door een browser kan worden uitgevoerd  
-
-1. Bepaal eerst de core functionality van wat je gaat maken
-2. Bouw die functionaliteit met de simpelste techniek (meestal HTML, met een klein beetje Mobile First CSS voor de huisstijl)
-3. Voeg daarna extra enhancements toe met CSS en client-side JS, om de User Experience te verbeteren! (de leukste stap, waar veel frontenders meteen heen springen)
--->
+Bouwen volgens het principe van Progressive Enhancement betekent dat je de website en componenten opbouwt in lagen: 
 
 1. Bouw de functionaliteit robuust, met de simpelste techniek​ in HTML en met Server-Side Rendering​
 2. Voeg Baseline CSS voor de huisstijl toe​
 3. Enhance de functionaliteit geleidelijk voor een betere User Experience
 
-
-
-Begin met stap 1 en 2 voordat je met de enhancements aan de slag gaat. _Ik zeg je eerlijk_ het gaat zeker tijd schelen als je eerst de basis goed opzet.
+Begin met stap 1 en 2, voordat je met de enhancements aan de slag gaat. Het gaat zeker tijd schelen als je eerst de basis goed opzet.
 
 Begin _per component_ met ontwerpen en schetsen van de One Column Layout met data en GET routes.
 Ga daarna verder met de User Generated Content en de POST. 
 Bespreek je planning en aanpak met een docent. 
 
 <!--
-Stundenten komen langs bij Krijn, Sanne, Dorien en Koop:
+Stundenten komen langs bij Krijn, Sanne, Suus en Koop:
 
-Hoe ging de sprint review, wat is de opdracht/ontgwerpvraag/design challenge?
+Hoe ging de sprint review, wat is de opdracht/ontwerpvraag/design challenge?
 > studenten niet te veel laten hangen, maar vragen wat zij zelf gaan doen aan de “problemen”
 
 Planning bespreken adhv projectboard
@@ -62,24 +50,37 @@ Aanpak project opzetten volgens PE principes bespreken
 > Hebben ze hulp nodig voor het schetsen van de User generated content? Zelf proberen of samen schetsen? 
 -->
 
+## Denken in componenten
 
-## One Column Layout
+Maandag heb je een ruwe planning gemaakt voor deze sprint. Waarschijnlijk heb je door de briefing beter inzicht gekregen in wat er van je verwacht wordt. Dit is een goed moment om even naar je issues of project board te kijken, en je planning voor deze week bij te werken.
 
-Maak eerst je pagina's in HTML en eenvoudige CSS met alle data voor de content, het menu, de footer enzovoort. In de one column layout is alles uitgeklapt en zit nog geen interactie. 
+Teken voor jezelf een sitemap, zodat je goed grip krijgt op wat je gaat maken. Bedenk welke URL's/routes de pagina's krijgen.
 
-Teken zo nodig een sitemap. Bedenk welke Url's de pagina's krijgen, met bijhorende routes. Teken Wireframes van de responsive layouts en geef aan of de content statisch of dynamisch is (dit kan je ook in Figma doen - jeweettoch). Onderzoek de API zodat je weet welke data je hebt en hoe je data kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
+Maak voor de verschillende pagina's issues aan. Voeg een snelle schets toe, of een ontwerp als je dat al hebt gemaakt. Bedenk welke onderdelen je op kunt splitsen in verschillende componenten, die herbruikbaar zijn op meerdere pagina's. Maak hiervoor _sub-issues_ aan, zodat je het werk kleiner maakt.
 
-💡tip: Bespreek je breakdown met een medestudent 
+Beschrijf per issue en sub-issue wat je al kunt prototypen met statische HTML, en wat je nog nodig hebt aan dynamische data. Denk aan Content First bouwen en itereren. Schrijf misschien alvast hints en ideeën voor jezelf over de _enhancements_ in de _usable_ en _pleasurable_ lagen, maar stel het werk zelf uit tot later.
 
-💡double dip: Heb je de HTML af? Tag een docent in een issue voor een grondige review
+### HTML prototype
 
-## User Generated Content
+Maak per component of issue een HTML prototype. Misschien heb je hier een route voor nodig, of een partial. Misschien kun je al wat dynamische data gebruiken, misschien maak je een eerste iteratie helemaal statisch. Koppel je commits aan het relevante issue, en ga door met een volgend issue, of werk dit component uit in een One Column Layout.
 
-Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je een POST interactie nodig. Volgens het principe van Progressive enhancement ontwerp en bouw je eerst de POST interactie Server-side. 
+<!--
+Teken Wireframes van de responsive layouts en geef aan of de content statisch of dynamisch is (dit kan je ook in Figma doen - jeweettoch). Onderzoek de API zodat je weet welke data je hebt en hoe je data kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
+-->
+
+💡 Klaar met je HTML? Tag een docent in je issue voor een grondige review.
+
+### One Column Layout
+
+In de One Column Layout is alles uitgeklapt en zit nog geen interactie. Je gebruikt hiervoor baseline CSS.
+
+### Interactie en User Generated Content
+
+Heeft jouw component ook User Generated Content, of een interactie?
+
+Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je een POST interactie nodig. Volgens het principe van Progressive Enhancement ontwerp en bouw je eerst de POST interactie server-side. 
 
 Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het server.js script verwerkt. Onderzoek HTML-formulier-elementen die je kan gebruiken, en maak een breakdown voor de CSS en de HTML en noteer de bronnen.
-
-💡triple bogey: Ben je nog niet helemaal _on par_ met POST? Bespreek dan de breakdown-schets van de interactie met een docent voordat je gaat coderen
 
 <!--
 
