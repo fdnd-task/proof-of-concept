@@ -27,12 +27,14 @@ app.get('/', async function (request, response) {
 })
 
 app.get('/exhibits/:slug', async function (request, response) {
-
-  const fetchResponse = await fetch(`${exhibitUrl}?filter[slug][_eq]=${request.params.slug}`)
+  // exhibit ophalen en creators 
+  const fetchResponse = await fetch(`${exhibitUrl}?filter[slug][_eq]=${request.params.slug}&fields=*,creators.teylers_museum_persons_id.*`)
   const fetchResponseJSON = await fetchResponse.json()
   const exhibit = fetchResponseJSON.data[0]
 
-  response.render('home.liquid', { 
+  console.log(fetchResponseJSON.data[0].creators)
+
+  response.render('exhibit-detail.liquid', { 
     exhibit 
   })
 })

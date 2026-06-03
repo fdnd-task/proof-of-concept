@@ -77,7 +77,7 @@
             </svg>
         </button>
         <picture>
-            <img src="" alt="">
+            <img src="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}" alt="{{ exhibit.title }}">
         </picture>
         <button>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
@@ -96,10 +96,10 @@
     <div class="decor-divider flower" aria-hidden="true"></div>
 
     <section>
-        <p>1783 - 1791</p>
-        <h1>Grote Elektriseermachine met Leidse flessen</h1>
-        <p>Cuthbertson, John</p>
-        <button>Bekijk onze hele collectie</button>
+        <p>{{  exhibit.period }}</p>
+        <h1>{{  exhibit.title }}</h1>
+        <p>{{ exhibit.creators.first.teylers_museum_persons_id.last_name }}, {{ exhibit.creators.first.teylers_museum_persons_id.first_name }}</p>
+        <a href="/niet-beschikbaar">Bekijk onze hele collectie</a>
     </section>
 
     <article>
@@ -107,48 +107,60 @@
             <dl>
                 <div>
                     <dt>Objecttype</dt>
-                    <dd>Elektriciteit</dd>
+                    <dd>{{ exhibit.object_type }}</dd> 
                 </div>
             </dl>
 
             <details>
-                <summary>
-                    Meer details
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false" width="32" height="32">
-                        <path fill="currentColor" d="M32 16.8H0v-1.6h32v1.6Z"/>
-                    </svg>
-                </summary>
+                <summary>Meer details</summary>
                 <dl>
                     <div>
-                        <dt>Makers(s)</dt>
+                      <dt>Maker(s)</dt>
                         <dd>
                             <ul>
-                                <li><strong>Cuthbertson, John</strong> Instrumentmaker</li>
-                                <li><strong>Marum, Martinus van (1750-1837)</strong> Ontwerper</li>
-                                <li><strong>Marum, Martinus van (1750-1837)</strong> Uitvinder</li>
-                                <li><strong>Viervant, Leendert (1752 - 1802)</strong> Ontwerper</li>
+                                {% for creator in exhibit.creators %}
+                                {% for rol in creator.teylers_museum_persons_id.Rollen %}
+                                    <li>
+                                    <p>{{ creator.teylers_museum_persons_id.last_name }}, {{ creator.teylers_museum_persons_id.first_name }} ({{ creator.teylers_museum_persons_id.birth_year }} - {{ creator.teylers_museum_persons_id.death_year }})</p>
+                                    <p>{{ rol }}</p>
+                                    </li>
+                                {% endfor %}
+                                {% endfor %}
                             </ul>
-                        </dd>
-                    </div>
+                        </dd>  
+                    </div> 
                 </dl>
             </details>
         </section>
 
-        <section>
+        {% if exhibit.is_on_display %}
             <p>Nu te zien in het museum</p>
-            <p>Dit instrument is – en was altijd – de grootste wrijvingselektriseermachine ter wereld. Vanaf de opening van Teylers Museum in 1784 staat het in de ovale zaal: een ruimte voor bezoekers, maar óók een laboratorium voor onderzoek.</p>
-            <p>Wetenschappers hebben dan grote interesse in elektriciteit: wat is het en wat doet het precies? Precies de vragen die onderzoeker Martinus van Marum, de eerste directeur van Teylers Museum, ook heeft. Hij laat de machine bouwen voor zichzelf én geleerden uit binnen- en buitenland die er onderzoek mee willen doen. Dat maakt het museum internationaal beroemd.</p>
-            <p>De statische elektriciteit wordt opgewekt doordat de draaiende glazen platen tegen kussens wrijven, net zoals dat in het klein gebeurt als je een ballon tegen je haar wrijft. De machine kan vonken van 60 centimeter produceren en wordt nóg krachtiger als Van Marum zogenoemde ‘Leidse flessen’, die de lading kort opslaan, toevoegt.</p>
-            <p>Van Marum doet jarenlang onderzoek naar de invloed van elektriciteit op verschillende materialen zoals metaal en gas, op planten en dieren. En zelfs mensen – met zichzelf als belangrijkste proefkonijn, om bijvoorbeeld de invloed op de hartslag te onderzoeken. Zijn nieuwe inzichten deelt hij met zoveel mogelijk anderen.</p>
-            <p>Wil je de kracht van statische elektriciteit zelf ervaren? Meld je aan voor de Lorentz Formule om een replica van de grote elektriseermachine in werking te zien!</p>
+        {% else %}
+            <p>Momenteel niet te zien in het museum</p>
+        {% endif %}
+
+        <section>
+            {% for block in exhibit.content_blocks %}
+                {% if block.block_type == 'paragraph'%}
+                    <p>{{ block.text }}</p>
+                {% elsif block.block_type == 'heading' %}
+                    <h2>{{ block.text }}</h2>
+                {% elsif block.block_type == 'quote' %}
+                    <blockquote>{{ block.text }}</blockquote>
+                {% endif %}
+            {% endfor %} 
+            {% comment %} eventueel uitbreiden met image, video, list, subheading, source {% endcomment %}
+            
         </section>
     </article>
     <div class="decor-divider flower" aria-hidden="true"></div>
 </main>
 
 <footer>
-    <img src="" alt="">
-
+    <picture>
+        <img src="/assets/icons/teylersmuseum.svg" alt="Teylers Museum">
+    </picture>
+    
     <section>
         <h2>Bezoekersinformatie</h2>
         <dl>
@@ -209,9 +221,9 @@
             </ul>
         </nav>
         <ul>
-            <li><a href="/niet-beschikbaar"><img src="/assets/images/mvocew.svg" alt=""></a></li>
-            <li><a href="/niet-beschikbaar"><img src="/assets/images/vriendenloterij.svg" alt=""></a></li>
-            <li><a href="/niet-beschikbaar"><img src="/assets/images/haarlem.svg" alt=""></a></li>
+            <li><a href="/niet-beschikbaar"><img src="/assets/images/mvocew.svg" alt="Museumvereniging"></a></li>
+            <li><a href="/niet-beschikbaar"><img src="/assets/images/vriendenloterij.svg" alt="Vriendenloterij"></a></li>
+            <li><a href="/niet-beschikbaar"><img src="/assets/images/haarlem.svg" alt="Gemeente Haarlem"></a></li>
         </ul>
     </section>
 </footer>
