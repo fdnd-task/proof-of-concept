@@ -82,7 +82,9 @@ Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en r
 
 ### One Column Layout
 
-In de One Column Layout is alles uitgeklapt en zit nog geen interactie. Je gebruikt hiervoor waarschijnlijk baseline CSS, en de huisstijl van de opdrachtgever.
+In de One Column Layout is alles onder elkaar uitgeklapt en zit nog vrijwel geen interactie. Je gebruikt hiervoor waarschijnlijk baseline CSS, en de huisstijl van de opdrachtgever.
+
+Probeer ook hier dus nog niet te veel te doen, maar je te concentreren op een goede, solide basis.
 
 
 ### Code & Design review
