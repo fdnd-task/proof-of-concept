@@ -58,38 +58,33 @@ Teken voor jezelf een sitemap, zodat je goed grip krijgt op wat je gaat maken. B
 
 Maak voor de verschillende pagina's issues aan. Voeg een snelle schets toe, of een ontwerp als je dat al hebt gemaakt. Bedenk welke onderdelen je op kunt splitsen in verschillende componenten, die herbruikbaar zijn op meerdere pagina's. Maak hiervoor _sub-issues_ aan, zodat je het werk kleiner maakt.
 
-Beschrijf per issue en sub-issue wat je al kunt prototypen met statische HTML, en wat je nog nodig hebt aan dynamische data. Denk aan Content First bouwen en itereren. Schrijf misschien alvast hints en ideeën voor jezelf over de _enhancements_ in de _usable_ en _pleasurable_ lagen, maar stel het werk zelf uit tot later.
+Beschrijf per issue en sub-issue wat je al kunt prototypen met statische HTML, en wat je nog nodig hebt aan dynamische data. Denk aan _Content First_ bouwen en itereren. Schrijf misschien alvast hints en ideeën voor jezelf over de _enhancements_ in de _usable_ en _pleasurable_ lagen, maar stel het werk zelf uit tot later; _“Plan for enhancements from the start, implement at the end”_.
+
+Schets per component een wireframes van de responsive layouts en geef aan of de content statisch of dynamisch is (dit kan je ook in Figma doen). Onderzoek de API, zodat je weet welke data je hebt en hoe je data kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
 
 ### HTML prototype
 
 Maak per component of issue een HTML prototype. Misschien heb je hier een route voor nodig, of een partial. Misschien kun je al wat dynamische data gebruiken, misschien maak je een eerste iteratie helemaal statisch. Koppel je commits aan het relevante issue, en ga door met een volgend issue, of werk dit component uit in een One Column Layout.
 
-<!--
-Teken Wireframes van de responsive layouts en geef aan of de content statisch of dynamisch is (dit kan je ook in Figma doen - jeweettoch). Onderzoek de API zodat je weet welke data je hebt en hoe je data kan fetchen. Maak een breakdown voor de HTML en CSS die je nodig denkt te hebben en noteer de bronnen die je hebt gebruikt.
--->
+💡 Tip: vaak werkt het prettig om eerst in grote lijnen verschillende componenten uit te werken in HTML, voordat je met de verdere details verder gaat.
 
-💡 Klaar met je HTML? Tag een docent in je issue voor een grondige review.
+👉 Klaar met je HTML? Tag een docent in je issue voor een grondige review.
 
-### One Column Layout
-
-In de One Column Layout is alles uitgeklapt en zit nog geen interactie. Je gebruikt hiervoor baseline CSS.
 
 ### Interactie en User Generated Content
 
-Heeft jouw component ook User Generated Content, of een interactie?
+Heeft jouw component ook User Generated Content, of een interactie? Denk aan een wireflow en UI states, en werk dit ook gelaagd uit. Bedenk hoe je interactie met alleen HTML en server-side rendering zo _functioneel_ en _betrouwbaar_ mogelijk gemaakt kan worden.
 
-Om ervoor te zorgen dat jouw gebruikers iets kunnen achterlaten of toevoegen op jouw website heb je een POST interactie nodig. Volgens het principe van Progressive Enhancement ontwerp en bouw je eerst de POST interactie server-side. 
+Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het server.js script verwerkt. Onderzoek HTML-formulier-elementen die je kan gebruiken, en maak een breakdown voor de HTML en CSS en noteer de bronnen.
 
-Schets een Wireflow van jouw interactie. Bedenk nette URLs voor je pagina's en routes, en schrijf deze erbij. Annoteer je Wireflow met hints voor je dynamische data, en bedenk ook hoe je de POST in het server.js script verwerkt. Onderzoek HTML-formulier-elementen die je kan gebruiken, en maak een breakdown voor de CSS en de HTML en noteer de bronnen.
+👉 Wil je iets gaan maken, maar weet je nog niet hoe en of dat kan? Beschrijf je probleem en tag een docent.
 
-<!--
 
-## Aanpak
+### One Column Layout
 
-Goede HTML onderzoeken. Fomulieren met fieldsets. Server side afhandelen van User generated content.
-Mobile first/one column layout met basis huisstijl.
+In de One Column Layout is alles uitgeklapt en zit nog geen interactie. Je gebruikt hiervoor waarschijnlijk baseline CSS, en de huisstijl van de opdrachtgever.
 
-Schetsen/prototypen:
-Sitemap met url-design, routes en data fetch, wireframes met statische en dynamische data, wireflow voor interactie en animatie, High res in Figma responsive layouts.
 
--->
+### Code & Design review
+
+Komende vrijdag gaan we de eerste twee lagen van je website testen tijdens de Code & Design Review. Volgende week gaan we verder om je project meer _usable_ en _pleasurable_ te maken.
