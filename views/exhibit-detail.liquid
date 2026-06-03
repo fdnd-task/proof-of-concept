@@ -74,49 +74,29 @@
 </header>
 
 <main>
-    <section>
-        <button>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
-                <title>Volledig scherm</title>
-                <path fill="currentColor" d="M0 0h8.4v1.6H1.6v7.053H0V0Zm30.4 1.6h-6.8V0H32v8.653h-1.6V1.6ZM1.6 30.4v-6.8H0V32h8.4v-1.6H1.6Zm28.8 0v-6.8H32V32h-8.4v-1.6h6.8Z"/>
-            </svg>
-        </button>
-        <picture>
-            <source type="image/avif"
-                srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=400&quality=70 400w,
-                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=800&quality=70 800w,
-                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=1200&quality=70 1200w"
-                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
-            >
-            <source type="image/webp"
-                srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=400&quality=70 400w,
-                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=800&quality=70 800w,
-                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=1200&quality=70 1200w"
-                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
-            >
-            <img
-                src="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70"
-                srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=400&quality=70 400w,
-                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70 800w,
-                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=1200&quality=70 1200w"
-                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
-                alt="{{ exhibit.title }}"
-                fetchpriority="high"
-            >
-        </picture>
-        <button>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
-                <title>Vergroten</title>
-                <path fill="currentColor" d="M32 16.8H0v-1.6h32v1.6Z"/>
-            </svg>
-        </button>
-        <button>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
-                <title>Verkleinen</title>
-                <path fill="currentColor" d="M15.2 16.6v14.9h1.6V16.6H32V15H16.8V.5h-1.6V15H0v1.6h15.2Z"/>
-            </svg>
-        </button>
-    </section>
+    <picture>
+        <source type="image/avif"
+            srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=400&quality=70 400w,
+                https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=800&quality=70 800w,
+                https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=1200&quality=70 1200w"
+            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+        >
+        <source type="image/webp"
+            srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=400&quality=70 400w,
+                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=800&quality=70 800w,
+                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=1200&quality=70 1200w"
+            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+        >
+        <img
+            src="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70"
+            srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=400&quality=70 400w,
+                https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70 800w,
+                https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=1200&quality=70 1200w"
+            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
+            alt="{{ exhibit.title }}"
+            fetchpriority="high"
+        >
+    </picture>
 
     <div class="decor-divider flower" aria-hidden="true"></div>
 
