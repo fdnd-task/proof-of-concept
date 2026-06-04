@@ -232,7 +232,7 @@ footer {
         font-size: var(--font-size-body-md);
         margin-top: var(--spacing-4xl);
         padding-bottom: var(--spacing-4xl);
-        
+
         label {
             input {
                 display: block;
@@ -259,7 +259,6 @@ footer {
         }
     }
 }
-
 .footer-bottom {
     padding-left: var(--spacing-xl);
     padding-right: var(--spacing-xl);
@@ -285,21 +284,26 @@ footer {
     }
 }
 
-
-/*====================-Deviders-=====================*/
-
-
-
-
-
 /*=====================-Detail-======================*/
 /*------------------------Hero-----------------------*/
 .hero {
     background-color: var(--color-secondary);
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3rem;
+        background-image: url(/assets/icons/decoratief-flower-pattern.svg);
+        background-repeat: repeat-x;
+        background-size: 3.5rem;
+        background-color: var(--color-neutral-darker);
+    }
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        padding: var(--spacing-5xl) 0;
+    }
 }
-
-/*--------------------Hero-image---------------------*/
-.hero-image {}
 
 /*-------------------Exhibit-intro-------------------*/
 .exhibit-intro {}
