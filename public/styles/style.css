@@ -57,9 +57,36 @@ header{
     justify-content: space-around;
     gap: 1rem;
     align-items: center;
-    padding-top: var(--spacing-lg);
-    padding-bottom: var(--spacing-lg);
-    
+    padding: var(--spacing-lg);
+    .btn-search{
+        text-align: center;
+        svg{
+            height: 1.1rem;
+        }
+    }
+    select{
+        border: none;
+        background-color: inherit;
+        font-family: var(--font-secondary);
+        font-size: var(--font-size-body-md);
+        text-transform: uppercase;
+        appearance: none;
+        background-image: url("/assets/icons/arrow-down.svg");
+        background-repeat: no-repeat;
+        background-position: left 1.8rem center;
+        background-size: 0.9rem;
+        padding-right: 1.5rem;
+    }
+    .btn-ticket{
+        word-break: break-word;
+        line-height: var(--line-hight-lg);
+        font-size: var(--font-size-body-lg);
+        padding: var(--spacing-md);
+        text-align: center;
+    }
+    .nav-close{
+        text-align: center;
+    }
 }
 .nav-primary {
     font-family: var(--font-primary);
@@ -75,6 +102,8 @@ header{
                     content: url("/assets/icons/arror-right.svg");
                     margin-left: 1rem;
                     vertical-align: middle;
+                    display: inline-block;
+                    transform: scale(0.7);
                 }
             }
         }
