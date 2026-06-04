@@ -48,30 +48,26 @@
             <dl class="info-list">
                 <div class="info-item">
                     <dt class="info-label">Objecttype</dt>
-                    <dd>{{ exhibit.object_type }}</dd> 
+                    <dd>{{ exhibit.object_type }}</dd>
+                </div>
+
+                <div class="info-item item-list">
+                    <dt class="info-label">Maker(s)</dt>
+                    <dd>
+                        <ul class="creators-list">
+                            {% for creator in exhibit.creators %}
+                            {% for rol in creator.teylers_museum_persons_id.Rollen %}
+                                <li class="creator-item">
+                                    <p>{{ creator.teylers_museum_persons_id.last_name }}, {{ creator.teylers_museum_persons_id.first_name }} ({{ creator.teylers_museum_persons_id.birth_year }} - {{ creator.teylers_museum_persons_id.death_year }})</p>
+                                    <p>{{ rol | capitalize }}</p>
+                                </li>
+                            {% endfor %}
+                            {% endfor %}
+                        </ul>
+                        <button class="btn btn--secondary btn-more" aria-expanded="false">Meer details</button>
+                    </dd>
                 </div>
             </dl>
-
-            <details>
-                <summary class="btn btn--secondary btn-more">Meer details</summary>
-                <dl class="info-list">
-                    <div class="info-item">
-                        <dt class="info-label">Maker(s)</dt>
-                        <dd>
-                            <ul>
-                                {% for creator in exhibit.creators %}
-                                {% for rol in creator.teylers_museum_persons_id.Rollen %}
-                                    <li>
-                                    <p>{{ creator.teylers_museum_persons_id.last_name }}, {{ creator.teylers_museum_persons_id.first_name }} ({{ creator.teylers_museum_persons_id.birth_year }} - {{ creator.teylers_museum_persons_id.death_year }})</p>
-                                    <p>{{ rol }}</p>
-                                    </li>
-                                {% endfor %}
-                                {% endfor %}
-                            </ul>
-                        </dd>  
-                    </div> 
-                </dl>
-            </details>
         </aside>
 
         {% if exhibit.is_on_display %}

@@ -323,7 +323,7 @@ footer {
             font-weight: var(--font-weight-regular);
         }
         .exhibit-link {
-            font-size: var(--font-size-body-lg);
+            font-size: var(--font-size-body-md);
             padding: var(--spacing-md) var(--spacing-lg);
             display: flex;
             justify-content: center;
@@ -339,30 +339,47 @@ footer {
         .info-item {
             font-family: var(--font-primary);
             font-weight: var(--font-weight-bold);
-            font-size: var(--font-size-body-xl);
-            letter-spacing: var(--letter-spacing-normal);
+            font-size: var(--font-size-body-lg);
         }
         .info-label {
            font-family: var(--font-secondary);
            font-weight: var(--font-weight-regular);
            font-size: var(--font-size-body-md);
         }
-        
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-sm) var(--spacing-sm);
+            li p{
+                margin: -0.5rem;
+                padding: 0;
+                line-height: var(--line-hight-lg);
+            }
+        }
+        .item-list{
+            margin-top: var(--spacing-xl);
+        }
     }
     .btn-more{
         padding: var(--spacing-xs) var(--spacing-md);
         font-size: var(--font-size-body-md);
         width: fit-content;
-        margin-top: var(--spacing-lg);
+        margin-top: var(--spacing-3xl);
         &::after{
             content: url(/assets/icons/plus.svg);
             display: inline-block;
             transform: scale(0.5);
             vertical-align: middle;
             margin-left: -0.7rem;
+            
+        }
+        &:hover::after{
+            content: url(/assets/icons/plus-hover.svg);
         }
     }
 }
+
 
 /*------------------Exhibit-status-------------------*/
 .exhibit-status {
