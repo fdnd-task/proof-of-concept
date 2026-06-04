@@ -1,7 +1,7 @@
 # Proof of Concept
 
 ## Code/Design-review – testen van de functional en reliable laag
-Deze week ben je begonnen met de mini-meesterproef. Je bent een server-side website met interacties en animaties aan het maken voor een opdrachtgever – en dat alles in 3 weken!
+Deze week ben je begonnen met de mini-meesterproef. Je bent een server-side website met interacties en animaties aan het maken voor een opdrachtgever, en dat alles in 3 weken!
 
 ## 1. Code/design Review in issues bij peers (vanaf 10:00)
 
@@ -10,7 +10,7 @@ Deze week ben je begonnen met de mini-meesterproef. Je bent een server-side webs
 Bekijk onderstaande drie stappen en bepaal tot welke stap jij bent gekomen:
 
 1. Je hebt **ontwerpen** en breakdown-schetsen gemaakt en je hebt de **`server.js`** met Routes opgezet.
-2. Je haalt **data** op uit de **API**, je hebt HTML gerenderd in Liquid, en hebt de **One Column Layout** opgezet.
+2. Je haalt **data** op uit de **API**, je hebt HTML gerenderd in Liquid, en hebt de **One Column Layout** opgezet van één of meerdere componenten/pagina's.
 3. Je hebt een **POST** gemaakt of je bent al voorbij de reliable-laag en bezig met **enhancements**.
 
 ### Bedenk waar je feedback op wilt ontvangen
@@ -43,7 +43,7 @@ Zoek minimaal 2 andere studenten van wie jij een review wilt ontvangen. Je kunt 
 
 ### Drie rondes
 
-We gaan vanaf 10:30 in drie rondes alle groepen langs van de drie schillende stappen die we hier boven hebben benoemd. Bedenk een vraag voor de ronde waar jij bij hoort. Dit kan een vraag zijn waar je zelf niet uitkomt of iets wat je graag in een team zou willen bespreken.
+We gaan vanaf 10:30 in drie rondes alle groepen langs van de drie verschillende stappen die we hier boven hebben benoemd. Bedenk een vraag voor de ronde waar jij bij hoort. Dit kan een vraag zijn waar je zelf niet uitkomt of iets wat je graag in een team zou willen bespreken.
 
 **Tijden in Teams:**
 - **10:30:** Iedereen die tot stap 3 is gekomen  
