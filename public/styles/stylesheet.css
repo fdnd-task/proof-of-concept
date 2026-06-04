@@ -1,13 +1,13 @@
 @font-face {
-    font-family: Larken;
-    src: url(/fonts/Larken-Regular.woff2) format(woff2);
+    font-family: Bitter;
+    src: url(/fonts/Bitter-Regular.woff2) format(woff2);
     font-weight: 400;    
     font-display: swap;
 }
     
 @font-face {
-    font-family: Larken;
-    src: url(/fonts/Larken-Black.woff2) format(woff2);
+    font-family: Bitter;
+    src: url(/fonts/Bitter-Bold.woff2) format(woff2);
     font-weight: 700;
     font-display: swap;
 }
@@ -37,6 +37,7 @@
   /* Accent */
   --palette-accent-700:      #FFCC00;
   --palette-accent-rgb:      255, 204, 0;
+  --palette-tertiary-700:    #91B37E;
 
   /* Neutraal */
   --palette-neutral-900:     #000000;
@@ -60,6 +61,7 @@
   --color-secondary-rgb:     var(--palette-secondary-rgb);
   --color-accent:            var(--palette-accent-700);
   --color-accent-rgb:        var(--palette-accent-rgb);
+  --color-tertiary:          var(--palette-tertiary-700);
 
   /* Neutraal */
   --color-neutral-darkest:   var(--palette-neutral-900);
@@ -76,7 +78,7 @@
   --color-success:           var(--palette-success-700);
 
   /* Fonts ===================================================================================*/
-  --font-primary:            "Larken";
+  --font-primary:            "Bitter";
   --font-secondary:          "Inter";
 
   --font-weight-regular:     400;
