@@ -96,7 +96,21 @@ header{
     ul{
         li{
             a{
-                &::after{
+                text-decoration: none;
+                background-image: linear-gradient(currentColor, currentColor);
+                background-size: 0% 2px;
+                background-repeat: no-repeat;
+                background-position: left bottom;
+
+                @media (prefers-reduced-motion: no-preference) {
+                    transition: background-size 0.3s ease;
+                }
+
+                &:hover {
+                    background-size: 100% 2px;
+                }
+
+                &::after {
                     content: url("/assets/icons/arror-right.svg");
                     margin-left: 1rem;
                     vertical-align: middle;
@@ -113,10 +127,27 @@ header{
     margin-top: var(--spacing-2xl);
     padding-right: var(--spacing-lg);
     padding-left: var(--spacing-lg);
-    ul{
+
+    ul {
         display: flex;
         flex-direction: column;
         gap: var(--spacing-md);
+    }
+
+    a {
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-size: 0% 2px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+
+        @media (prefers-reduced-motion: no-preference) {
+            transition: background-size 0.3s ease;
+        }
+
+        &:hover {
+            background-size: 100% 2px;
+        }
     }
 }
 .nav-hours {
@@ -133,10 +164,25 @@ header{
     padding: var(--spacing-xl);
     font-size: var(--font-size-body-lg);
     margin-top: auto;
-    ul{
+    ul {
         display: flex;
         flex-wrap: wrap;
         gap: var(--spacing-md);
+    }
+    a {
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-size: 0% 2px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+
+        @media (prefers-reduced-motion: no-preference) {
+            transition: background-size 0.3s ease;
+        }
+
+        &:hover {
+            background-size: 100% 2px;
+        }
     }
 }
 
@@ -265,11 +311,29 @@ footer {
     background-color: var(--color-error);
     padding-top: var(--spacing-3xl);
 
-    .footer-legal ul {
-        font-size: var(--font-size-body-md);
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-lg);
+    .footer-legal {
+        ul {
+            font-size: var(--font-size-body-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        a {
+            text-decoration: none;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-size: 0% 2px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+
+            @media (prefers-reduced-motion: no-preference) {
+                transition: background-size 0.3s ease;
+            }
+
+            &:hover {
+                background-size: 100% 2px;
+            }
+        }
     }
 
     .footer-partners {
@@ -283,7 +347,6 @@ footer {
         }
     }
 }
-
 /*=====================-Detail-======================*/
 /*------------------------Hero-----------------------*/
 .hero {
