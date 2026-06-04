@@ -18,7 +18,6 @@ header{
         height: auto;
     }
 }
-
 .nav-menu {
     display: none;
     position: fixed;
@@ -51,7 +50,6 @@ header{
         }
     }
 }
-
 .nav-menu-top {
     display: flex;
     justify-content: space-around;
@@ -143,14 +141,149 @@ header{
 }
 
 /*=====================-Footer-======================*/
-.footer-logo {}
-.footer-info {}
-.footer-social {}
-.footer-bottom {}
-.footer-legal {}
-.footer-partners {}
-.footer-newsletter {}
+footer {
+    padding-top: var(--spacing-3xl);
 
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2.5rem;
+        background-image: url(/assets/icons/decoratief-stripe-pattern.svg);
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+    }
+
+    .footer-logo {
+        padding-left: var(--spacing-xl);
+        padding-right: var(--spacing-xl);
+        margin-top: var(--spacing-2xl);
+        height: 14rem;
+    }
+
+    .footer-info {
+        padding-left: var(--spacing-xl);
+        padding-right: var(--spacing-xl);
+        margin-top: var(--spacing-2xl);
+
+        h2 {
+            font-family: var(--font-secondary);
+            font-weight: var(--font-weight-regular);
+            font-size: var(--font-size-body-md);
+        }
+
+        dl {
+            margin-top: var(--spacing-md);
+
+            dt {
+                font-weight: var(--font-weight-bold);
+                font-size: var(--font-size-body-md);
+            }
+
+            dd {
+                font-size: var(--font-size-body-md);
+
+                address {
+                    text-decoration: underline;
+                    font-style: normal;
+                }
+            }
+        }
+
+        .info-block {
+            margin-top: var(--spacing-lg);
+        }
+    }
+
+    .footer-social {
+        padding-left: var(--spacing-xl);
+        padding-right: var(--spacing-xl);
+        margin-top: var(--spacing-5xl);
+
+        p {
+            font-size: var(--font-size-body-md);
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: row;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        a {
+            border-radius: 50%;
+            background-color: var(--color-secondary);
+            padding: 0.6rem;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                color: var(--color-brand);
+            }
+        }
+    }
+
+    .footer-newsletter {
+        padding-left: var(--spacing-xl);
+        padding-right: var(--spacing-xl);
+        font-size: var(--font-size-body-md);
+        margin-top: var(--spacing-4xl);
+        padding-bottom: var(--spacing-4xl);
+        
+        label {
+            input {
+                display: block;
+                border: none;
+                border-bottom: 0.1rem solid var(--color-secondary);
+                background-color: inherit;
+                width: 100%;
+                padding-bottom: var(--spacing-sm);
+                margin-top: var(--spacing-md);
+
+                &::placeholder {
+                    color: var(--color-secondary);
+                    opacity: 0.5;
+                    font-size: var(--font-size-body-md);
+                    letter-spacing: var(--letter-spacing-wide);
+                }
+            }
+        }
+
+        button {
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-size: var(--font-size-body-md);
+            margin-top: var(--spacing-md);
+        }
+    }
+}
+
+.footer-bottom {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+    background-color: var(--color-error);
+    padding-top: var(--spacing-3xl);
+
+    .footer-legal ul {
+        font-size: var(--font-size-body-md);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .footer-partners {
+        display: flex;
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-5xl);
+        padding-bottom: var(--spacing-2xl);
+
+        img {
+            width: 5.5rem;
+        }
+    }
+}
 
 
 /*====================-Deviders-=====================*/

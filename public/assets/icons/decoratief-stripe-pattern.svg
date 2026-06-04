@@ -1,10 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" aria-hidden="true" focusable="false" width="25" height="25">
-  <g fill="#173039" clip-path="url(#a)">
-    <path d="M-329.684 367.712 374.77-336.742h-13.546L-343.23 367.712h13.546ZM-305.454 368.454 399-336h-13.546L-319 368.454h13.546ZM-354.454 367.454 350-337h-13.546L-368 367.454h13.546Z"/>
-  </g>
-  <defs>
-    <clipPath id="a">
-      <path fill="#fff" d="M0 0h25v25H0z"/>
-    </clipPath>
-  </defs>
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_136_54" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="42" height="42">
+<path d="M0 0H42V42H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_136_54)">
+<path d="M-553.869 617.756L629.614 -565.727H606.856L-576.626 617.756H-553.869ZM-513.163 619.003L670.32 -564.48H647.563L-535.92 619.003H-513.163ZM-595.483 617.323L588 -566.16H565.243L-618.24 617.323H-595.483Z" fill="#F4ECDD"/>
+</g>
 </svg>

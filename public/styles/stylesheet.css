@@ -49,7 +49,7 @@
 
   /* Success en error*/
   --palette-success-700:     #2CFF70;
-  --palette-error-700:       #FF0000;
+  --palette-error-700:       #BE1C1D;
 }
 :root {
   /* Kleuren ===================================================================================*/
@@ -127,6 +127,7 @@
   --spacing-2xl:             2.5rem;     
   --spacing-3xl:             3rem;      
   --spacing-4xl:             4rem;      
+  --spacing-5xl:             6rem;      
 
   /* Borders =================================================================================*/
   --border-width-xs:         0.5px;
