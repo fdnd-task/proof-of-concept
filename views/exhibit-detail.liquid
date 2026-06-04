@@ -37,14 +37,14 @@
     
     <article class="exhibit">
 
-        <section class="exhibit-intro">
-            <p class="exhibit-period">{{  exhibit.period }}</p>
-            <h1 class="exhibit-title">{{  exhibit.title }}</h1>
-            <p class="exhibit-creator" >{{ exhibit.creators.first.teylers_museum_persons_id.last_name }}, {{ exhibit.creators.first.teylers_museum_persons_id.first_name }}</p>
-            <a class="btn btn--primary exhibit-link" href="/niet-beschikbaar">Bekijk onze hele collectie</a>
-        </section>
+        <aside class="exhibit-sidebar">
+            <section class="exhibit-intro">
+                <p class="exhibit-period">{{ exhibit.period }}</p>
+                <h1 class="exhibit-title">{{ exhibit.title }}</h1>
+                <p class="exhibit-creator">{{ exhibit.creators.first.teylers_museum_persons_id.last_name }}, {{ exhibit.creators.first.teylers_museum_persons_id.first_name }}</p>
+                <a class="btn btn--primary exhibit-link" href="/niet-beschikbaar">Bekijk onze hele collectie</a>
+            </section>
 
-        <aside class="exhibit-info">
             <dl class="info-list">
                 <div class="info-item">
                     <dt class="info-label">Objecttype</dt>
@@ -70,23 +70,22 @@
             </dl>
         </aside>
 
-        {% if exhibit.is_on_display %}
-            <p class="exhibit-status">Nu te zien in het museum</p>
-        {% else %}
-            <p class="exhibit-status">Momenteel niet te zien in het museum</p>
-        {% endif %}
-
         <section class="exhibit-content">
+            {% if exhibit.is_on_display %}
+                <p class="exhibit-status">Nu te zien in het museum</p>
+            {% else %}
+                <p class="exhibit-status">Momenteel niet te zien in het museum</p>
+            {% endif %}
+
             {% for block in exhibit.content_blocks %}
-                {% if block.block_type == 'paragraph'%}
+                {% if block.block_type == 'paragraph' %}
                     <p>{{ block.text }}</p>
                 {% elsif block.block_type == 'heading' %}
                     <h2>{{ block.text }}</h2>
                 {% elsif block.block_type == 'quote' %}
                     <blockquote>{{ block.text }}</blockquote>
                 {% endif %}
-            {% endfor %} 
-            {% comment %} eventueel uitbreiden met image, video, list, subheading, source {% endcomment %}
+            {% endfor %}
         </section>
     </article>
     <div class="decor-divider stripes" aria-hidden="true"></div>
