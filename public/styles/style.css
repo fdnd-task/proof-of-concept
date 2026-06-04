@@ -201,6 +201,23 @@ footer {
         background-size: auto 100%;
     }
 
+    .footer-top {
+        padding-bottom: var(--spacing-4xl);
+        @media (min-width: 1025px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: start;
+            padding-left: var(--spacing-md);
+            padding-right: var(--spacing-md);
+
+            /*alle directe kinderen van .footer-top*/
+            & > * {
+                margin-top: 0;
+                padding-top: var(--spacing-2xl);
+            }
+        }
+    }
+
     .footer-logo {
         padding-left: var(--spacing-xl);
         padding-right: var(--spacing-xl);
@@ -234,6 +251,9 @@ footer {
                     text-decoration: underline;
                     font-style: normal;
                 }
+                @media (min-width: 1025px) {
+                   margin-bottom: var(--spacing-lg);
+                }
             }
         }
 
@@ -246,6 +266,10 @@ footer {
         padding-left: var(--spacing-xl);
         padding-right: var(--spacing-xl);
         margin-top: var(--spacing-5xl);
+
+        @media (min-width: 1025px) {
+            margin-top: var(--spacing-2xl);
+        }
 
         p {
             font-size: var(--font-size-body-md);
@@ -280,6 +304,10 @@ footer {
         margin-top: var(--spacing-4xl);
         padding-bottom: var(--spacing-4xl);
 
+        @media (min-width: 1025px) {
+            margin-top: var(--spacing-2xl);
+        }
+
         label {
             input {
                 display: block;
@@ -306,11 +334,18 @@ footer {
         }
     }
 }
+
 .footer-bottom {
     padding-left: var(--spacing-xl);
     padding-right: var(--spacing-xl);
     background-color: var(--color-error);
     padding-top: var(--spacing-3xl);
+
+    @media (min-width: 1025px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
 
     .footer-legal {
         ul {
@@ -345,15 +380,16 @@ footer {
         padding-bottom: var(--spacing-2xl);
         width: 100%;
         max-width: 450px;
-        img {
-            width: 100%;
-        }
+
         @media (min-width: 550px) {
             margin-left: auto;
         }
+
+        img {
+            width: 100%;
+        }
     }
 }
-
 /*=====================-Detail-======================*/
 /*------------------------Hero-----------------------*/
 .hero {
@@ -385,11 +421,15 @@ footer {
         grid-template-columns: 1fr 1fr;
         gap: var(--spacing-2xl);
         align-items: start;
-        margin-top: var(--spacing-3xl);
 
         .exhibit-sidebar { grid-column: 1; }
         .exhibit-content { grid-column: 2; }
     }
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+        margin: var(--spacing-5xl) auto;
+    }
+
 }
 
 /*-------------------Exhibit-sidebar-------------------*/
@@ -404,6 +444,7 @@ footer {
 
         .exhibit-title {
             margin-bottom: 0;
+            max-width: 70ch;
         }
 
         .exhibit-creator {
@@ -423,6 +464,9 @@ footer {
 
     .info-list {
         margin-top: var(--spacing-lg);
+        @media (min-width: 1025px) {
+            margin-top: var(--spacing-2xl);
+        }
 
         .info-item {
             font-family: var(--font-primary);
@@ -459,23 +503,30 @@ footer {
         }
     }
 
-    .btn-more {
+    .btn-more, .btn-less {
         padding: var(--spacing-xs) var(--spacing-md);
         font-size: var(--font-size-body-md);
         width: fit-content;
         margin-top: var(--spacing-3xl);
 
         &::after {
-            content: url(/assets/icons/plus.svg);
             display: inline-block;
             transform: scale(0.5);
             vertical-align: middle;
             margin-left: -0.7rem;
         }
+    }
 
-        &:hover::after {
-            content: url(/assets/icons/plus-hover.svg);
-        }
+    .btn-more {
+        display: none;
+        &::after { content: url(/assets/icons/plus.svg); }
+        &:hover::after { content: url(/assets/icons/plus-hover.svg); }
+    }
+
+    .btn-less {
+        display: none;
+        &::after { content: url(/assets/icons/min.svg); }
+        &:hover::after { content: url(/assets/icons/min-hover.svg); }
     }
 }
 
@@ -483,6 +534,7 @@ footer {
 .exhibit-content {
     font-family: var(--font-secondary);
     font-weight: var(--font-weight-regular);
+    max-width: 37ch;
 
     .exhibit-status {
         font-size: var(--font-size-body-md);

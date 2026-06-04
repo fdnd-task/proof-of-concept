@@ -48,3 +48,23 @@ nav.addEventListener('keydown', function (e) {
         first.focus()
     }
 })
+
+// Aside infolijst openen en sluiten
+const btnMore = document.querySelector('.btn-more');
+const btnLess = document.querySelector('.btn-less');
+const makersList = document.querySelector('.item-list');
+
+btnMore.style.display = 'block';
+makersList.style.display = 'none';
+
+btnMore.addEventListener('click', () => {
+    makersList.style.display = 'block';
+    btnMore.style.display = 'none';
+    btnLess.style.display = 'flex';
+});
+
+btnLess.addEventListener('click', () => {
+    makersList.style.display = 'none';
+    btnLess.style.display = 'none';
+    btnMore.style.display = 'flex';
+});
