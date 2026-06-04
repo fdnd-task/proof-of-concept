@@ -41,7 +41,7 @@
             <p class="exhibit-period">{{  exhibit.period }}</p>
             <h1 class="exhibit-title">{{  exhibit.title }}</h1>
             <p class="exhibit-creator" >{{ exhibit.creators.first.teylers_museum_persons_id.last_name }}, {{ exhibit.creators.first.teylers_museum_persons_id.first_name }}</p>
-            <a class="exhibit-link" href="/niet-beschikbaar">Bekijk onze hele collectie</a>
+            <a class="btn btn--primary exhibit-link" href="/niet-beschikbaar">Bekijk onze hele collectie</a>
         </section>
 
         <aside class="exhibit-info">
@@ -53,7 +53,7 @@
             </dl>
 
             <details>
-                <summary>Meer details</summary>
+                <summary class="btn btn--secondary btn-more">Meer details</summary>
                 <dl class="info-list">
                     <div class="info-item">
                         <dt class="info-label">Maker(s)</dt>

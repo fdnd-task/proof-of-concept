@@ -306,20 +306,88 @@ footer {
 }
 
 /*-------------------Exhibit-intro-------------------*/
-.exhibit-intro {}
-.exhibit-period {}
-.exhibit-title {}
-.exhibit-creator {}
-.exhibit-link {}
+.exhibit{
+    font-family: var(--font-primary);
+    padding: var(--spacing-lg) var(--spacing-md);
+    .exhibit-intro {
+        font-size: var(--font-size-body-lg);
+        .exhibit-period {
+            margin-bottom: 0;
+            font-weight: var(--font-weight-bold);
+        }
+        .exhibit-title {
+            margin-bottom: 0;
+        }
+        .exhibit-creator {
+            font-family: var(--font-secondary);
+            font-weight: var(--font-weight-regular);
+        }
+        .exhibit-link {
+            font-size: var(--font-size-body-lg);
+            padding: var(--spacing-md) var(--spacing-lg);
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+        }
+    }
+}
 
 /*-------------------Exhibit-info--------------------*/
-.exhibit-info {}
-.info-list {}
-.info-item {}
-.info-label {}
+.exhibit-info {
+    margin-top: var(--spacing-lg);
+    .info-list {
+        .info-item {
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-body-xl);
+            letter-spacing: var(--letter-spacing-normal);
+        }
+        .info-label {
+           font-family: var(--font-secondary);
+           font-weight: var(--font-weight-regular);
+           font-size: var(--font-size-body-md);
+        }
+        
+    }
+    .btn-more{
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: var(--font-size-body-md);
+        width: fit-content;
+        margin-top: var(--spacing-lg);
+        &::after{
+            content: url(/assets/icons/plus.svg);
+            display: inline-block;
+            transform: scale(0.5);
+            vertical-align: middle;
+            margin-left: -0.7rem;
+        }
+    }
+}
 
 /*------------------Exhibit-status-------------------*/
-.exhibit-status {}
+.exhibit-status {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-body-md);
+    letter-spacing: var(--letter-spacing-wide);
+    margin-top: var(--spacing-3xl);
+    &::before{
+        content: "";
+        display: inline-block;
+        background-color: var(--color-success);
+        border-radius: 50%;
+        border: none;
+        height: 1rem;
+        aspect-ratio: 1;
+        margin-right: var(--spacing-md);
+    }
+}
 
 /*------------------Exhibit-content------------------*/
-.exhibit-content {}
+.exhibit-content {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-regular);
+    p{
+       font-size: var(--font-size-body-md); 
+    }
+    
+}
