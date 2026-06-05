@@ -165,17 +165,9 @@ header {
     background-size: 0% 2px;
     background-repeat: no-repeat;
     background-position: left bottom;
-}
-.nav-primary a:hover,
-.nav-secondary a:hover,
-.nav-utility a:hover {
-    background-size: 100% 2px;
-}
-@media (prefers-reduced-motion: no-preference) {
-    .nav-primary a,
-    .nav-secondary a,
-    .nav-utility a {
-        transition: background-size 0.3s ease;
+    transition: background-size 0.3s ease;
+    &:hover{
+        background-size: 100% 2px;
     }
 }
 /*=====================-nav-=====================*/
