@@ -15,7 +15,7 @@ Bekijk onderstaande drie stappen en bepaal tot welke stap jij bent gekomen:
 
 ### Bedenk waar je feedback op wilt ontvangen
 
-Maak een issue aan en beschrijf duidelijk wat voor review je wilt ontvangen. Bekijk hiervoor ook eerdere code/design reviews van semester 2.
+Maak een issue aan en beschrijf duidelijk wat voor review je wilt ontvangen. Bekijk hiervoor ook eerdere code/design reviews van semester twee.
 
 **Relevante code/design reviews uit semester 2:**
 - [Sprint 7: NodeJS](https://github.com/fdnd-task/connect-your-tribe-profile-card/blob/main/docs/code-design-review-nodejs.md)
