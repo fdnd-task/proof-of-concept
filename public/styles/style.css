@@ -2,12 +2,12 @@
 header{
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding-right: var(--spacing-lg);
     padding-left: var(--spacing-sm);
     padding-top: var(--spacing-sm);
     padding-bottom: var(--spacing-sm);
+    gap: 1rem;
     .nav-logo img {
         width: 3.5rem;
         height: auto;
@@ -51,12 +51,29 @@ header{
         }
     }
 }
+
+.mobile-nav-top {
+  display: flex;
+}
+
+@media (min-width: 1025px) {
+  .mobile-nav-top {
+    display: none;
+  }
+}
+
 .nav-menu-top {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
     align-items: center;
     padding: var(--spacing-lg);
+    margin-left: auto;
+    width: 100%;
+    max-width: 400px;
+    justify-content: flex-end;
+    gap: 1rem;
+    
     .btn-search{
         text-align: center;
         svg{
@@ -86,6 +103,21 @@ header{
     .nav-close{
         text-align: center;
     }
+}
+.desktop-nav-top {
+  display: none;
+}
+@media (min-width: 1025px) {
+  .desktop-nav-top {
+    display: flex;
+    select{
+        color: var(--color-secondary);
+        background-image: url("/assets/icons/arrow-down-light.svg");
+    }
+  }
+  .nav-toggle {
+    margin-left: 2rem;
+  }
 }
 .nav-primary {
     font-family: var(--font-primary);
