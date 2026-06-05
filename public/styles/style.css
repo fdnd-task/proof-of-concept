@@ -107,6 +107,9 @@ header .nav-toggle {
 .mobile-nav-top {
     display: flex;
 }
+.desktop-nav-top {
+    display: none;
+}
 @media (min-width: 1025px) {
     .mobile-nav-top {
         display: none;
@@ -164,9 +167,6 @@ header .nav-toggle {
 }
 .nav-menu-top .nav-close {
     text-align: center;
-}
-.desktop-nav-top {
-    display: none;
 }
 /*=====================-Nav links-=====================*/
 .nav-primary a,
@@ -402,7 +402,7 @@ footer {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         padding-top: var(--spacing-lg);
-        margin-top: 0;
+        
     }
 
     .footer-legal {
