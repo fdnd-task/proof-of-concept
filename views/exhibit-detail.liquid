@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block content %}
-
 <main>
     <section class="hero">
         <picture class="hero-image">
@@ -54,12 +53,10 @@
                     <dd>
                         <ul class="creators-list">
                             {% for creator in exhibit.creators %}
-                            {% for rol in creator.teylers_museum_persons_id.Rollen %}
                                 <li class="creator-item">
                                     <p>{{ creator.teylers_museum_persons_id.last_name }}, {{ creator.teylers_museum_persons_id.first_name }} ({{ creator.teylers_museum_persons_id.birth_year }} - {{ creator.teylers_museum_persons_id.death_year }})</p>
-                                    <p>{{ rol | capitalize }}</p>
+                                    <p>{{ creator.teylers_museum_persons_id.roles | capitalize }}</p>
                                 </li>
-                            {% endfor %}
                             {% endfor %}
                         </ul>
                     </dd>
