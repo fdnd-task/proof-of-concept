@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ontdek de Grote Elektriseermachine met Leidse flessen in Teylers Museum. Een interactief verhaal over elektriciteit, wetenschap en geschiedenis.">
-    
+    <meta name="description"
+        content="Ontdek de Grote Elektriseermachine met Leidse flessen in Teylers Museum. Een interactief verhaal over elektriciteit, wetenschap en geschiedenis.">
+
     <link rel="preload" href="/assets/fonts/Bitter-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -14,28 +16,32 @@
     <link rel="stylesheet" href="/styles/style.css">
     <title>Teyler Museum Elektriseermachine</title>
 </head>
+
 <body>
     <header>
-        <a class="nav-logo" href="/niet-beschikbaar"><img fetchpriority="high" src="/assets/icons/teylers-dark-light.svg" alt="Site logo"></a>
-        
+        <a class="nav-logo" href="/niet-beschikbaar"><img fetchpriority="high"
+                src="/assets/icons/teylers-dark-light.svg" alt="Site logo"></a>
+
         <div class="nav-menu-top desktop-nav-top">
-                <a class="btn-search" href="/niet-beschikbaar">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
-                        <title>Zoeken</title>
-                        <path fill="currentColor" d="M9.664 1.85a14.44 14.44 0 0 1 17.021 22.076l5.494 5.493a1.951 1.951 0 1 1-2.76 2.76l-5.493-5.494A14.44 14.44 0 1 1 9.664 1.85Zm5.525 2.802a10.537 10.537 0 1 0 0 21.074 10.537 10.537 0 0 0 0-21.074Z"/>
-                    </svg>
-                </a>
-                <select name="language" aria-label="Taal kiezen">
-                    <option value="nl">nl</option>
-                    <option value="en">en</option>
-                </select>
-                <a class="btn btn--primary btn-ticket" href="/niet-beschikbaar">Boek ticket</a>
+            <a class="btn-search" href="/niet-beschikbaar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
+                    <title>Zoeken</title>
+                    <path fill="currentColor"
+                        d="M9.664 1.85a14.44 14.44 0 0 1 17.021 22.076l5.494 5.493a1.951 1.951 0 1 1-2.76 2.76l-5.493-5.494A14.44 14.44 0 1 1 9.664 1.85Zm5.525 2.802a10.537 10.537 0 1 0 0 21.074 10.537 10.537 0 0 0 0-21.074Z" />
+                </svg>
+            </a>
+            <select name="language" aria-label="Taal kiezen">
+                <option value="nl">nl</option>
+                <option value="en">en</option>
+            </select>
+            <a class="btn btn--primary btn-ticket" href="/niet-beschikbaar">Boek ticket</a>
         </div>
-        
+
         <a class="nav-toggle" href="#navigatie" aria-label="Menu openen">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" width="32" height="32">
                 <title>Menu openen</title>
-                <path fill="currentColor" d="M0 13.827v-1.638h32v1.638H0Zm0-4.095V8.095h32v1.637H0Zm0-4.094V4h32v1.638H0ZM4.764 25.967l2.682-5.963h1.158v7.861H7.346v-5.054l-2.282 5.054h-.69l-2.26-4.997v4.997H.858v-7.861h1.224l2.683 5.963ZM11.605 24.44v2.19h3.962v1.235h-5.253v-7.861h5.142v1.235h-3.851v2h3.428v1.2h-3.428ZM21.788 25.608v-5.604h1.257v7.861h-1.19l-3.73-5.604v5.604h-1.257v-7.861h1.19l3.73 5.604ZM27.709 28c-1.814 0-3.005-1.325-3.005-3.077v-4.92h1.29v4.92c0 1.078.646 1.83 1.715 1.83 1.068 0 1.714-.752 1.714-1.83v-4.92h1.291v4.92c0 1.752-1.191 3.077-3.005 3.077Z"/>
+                <path fill="currentColor"
+                    d="M0 13.827v-1.638h32v1.638H0Zm0-4.095V8.095h32v1.637H0Zm0-4.094V4h32v1.638H0ZM4.764 25.967l2.682-5.963h1.158v7.861H7.346v-5.054l-2.282 5.054h-.69l-2.26-4.997v4.997H.858v-7.861h1.224l2.683 5.963ZM11.605 24.44v2.19h3.962v1.235h-5.253v-7.861h5.142v1.235h-3.851v2h3.428v1.2h-3.428ZM21.788 25.608v-5.604h1.257v7.861h-1.19l-3.73-5.604v5.604h-1.257v-7.861h1.19l3.73 5.604ZM27.709 28c-1.814 0-3.005-1.325-3.005-3.077v-4.92h1.29v4.92c0 1.078.646 1.83 1.715 1.83 1.068 0 1.714-.752 1.714-1.83v-4.92h1.291v4.92c0 1.752-1.191 3.077-3.005 3.077Z" />
             </svg>
         </a>
         <section class="nav-menu" id="navigatie" aria-label="Hoofdnavigatie">
@@ -49,9 +55,11 @@
                 <div class="nav-menu-content">
                     <div class="nav-menu-top mobile-nav-top">
                         <a class="btn-search" href="/niet-beschikbaar">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32"
+                                height="32">
                                 <title>Zoeken</title>
-                                <path fill="currentColor" d="M9.664 1.85a14.44 14.44 0 0 1 17.021 22.076l5.494 5.493a1.951 1.951 0 1 1-2.76 2.76l-5.493-5.494A14.44 14.44 0 1 1 9.664 1.85Zm5.525 2.802a10.537 10.537 0 1 0 0 21.074 10.537 10.537 0 0 0 0-21.074Z"/>
+                                <path fill="currentColor"
+                                    d="M9.664 1.85a14.44 14.44 0 0 1 17.021 22.076l5.494 5.493a1.951 1.951 0 1 1-2.76 2.76l-5.493-5.494A14.44 14.44 0 1 1 9.664 1.85Zm5.525 2.802a10.537 10.537 0 1 0 0 21.074 10.537 10.537 0 0 0 0-21.074Z" />
                             </svg>
                         </a>
                         <select name="language" aria-label="Taal kiezen">
@@ -60,9 +68,11 @@
                         </select>
                         <a class="btn btn--primary btn-ticket" href="/niet-beschikbaar">Boek ticket</a>
                         <a class="nav-close" href="#" aria-label="Menu sluiten">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32" height="32">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" width="32"
+                                height="32">
                                 <title>Menu sluiten</title>
-                                <path fill="currentColor" d="M31.753 30.563a.842.842 0 0 1-1.19 1.19L16 17.191 1.438 31.753a.842.842 0 0 1-1.191-1.19L14.809 16 .247 1.437a.842.842 0 1 1 1.19-1.19L16 14.809 30.562.247a.842.842 0 1 1 1.191 1.19L17.191 16l14.562 14.563Z"/>
+                                <path fill="currentColor"
+                                    d="M31.753 30.563a.842.842 0 0 1-1.19 1.19L16 17.191 1.438 31.753a.842.842 0 0 1-1.191-1.19L14.809 16 .247 1.437a.842.842 0 1 1 1.19-1.19L16 14.809 30.562.247a.842.842 0 1 1 1.191 1.19L17.191 16l14.562 14.563Z" />
                             </svg>
                         </a>
                     </div>
@@ -107,7 +117,7 @@
     <footer>
         <div class="footer-top">
             <img class="footer-logo" src="/assets/icons/teylersmuseum.svg" alt="Teylers Museum">
-        
+
             <section class="footer-info">
                 <h2>Bezoekersinformatie</h2>
                 <dl>
@@ -127,30 +137,33 @@
                     </div>
                 </dl>
             </section>
-                
+
             <section class="footer-social">
                 <p>Volg ons</p>
                 <div class="social-links">
-                <a href="/niet-beschikbaar">
+                    <a href="/niet-beschikbaar">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" width="24" height="24">
                             <title>Facebook</title>
-                            <path fill="currentColor" d="M13.313 32V17.688H8.5V12h4.813V7.5c0-2.375.666-4.219 2-5.531C16.645.656 18.416 0 20.625 0c1.792 0 3.25.084 4.375.25v5.063h-3c-1.125 0-1.896.25-2.313.75-.333.416-.5 1.083-.5 2V12H24.5l-.75 5.688h-4.563V32h-5.875Z"/>
+                            <path fill="currentColor"
+                                d="M13.313 32V17.688H8.5V12h4.813V7.5c0-2.375.666-4.219 2-5.531C16.645.656 18.416 0 20.625 0c1.792 0 3.25.084 4.375.25v5.063h-3c-1.125 0-1.896.25-2.313.75-.333.416-.5 1.083-.5 2V12H24.5l-.75 5.688h-4.563V32h-5.875Z" />
                         </svg>
                     </a>
                     <a href="/niet-beschikbaar">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24">
                             <title>Instagram</title>
-                            <path fill="currentColor" d="M16 7.786c1.476 0 2.845.369 4.107 1.107a8.238 8.238 0 0 1 3 3A7.993 7.993 0 0 1 24.214 16a7.993 7.993 0 0 1-1.107 4.107 8.24 8.24 0 0 1-3 3A7.994 7.994 0 0 1 16 24.214a7.994 7.994 0 0 1-4.107-1.107 8.24 8.24 0 0 1-3-3A7.993 7.993 0 0 1 7.786 16c0-1.476.369-2.845 1.107-4.107a8.238 8.238 0 0 1 3-3A7.994 7.994 0 0 1 16 7.786Zm0 13.571c1.476 0 2.738-.524 3.786-1.571 1.047-1.048 1.571-2.31 1.571-3.786s-.524-2.738-1.571-3.786c-1.048-1.047-2.31-1.571-3.786-1.571s-2.738.524-3.786 1.571c-1.047 1.048-1.571 2.31-1.571 3.786s.524 2.738 1.571 3.786c1.048 1.047 2.31 1.571 3.786 1.571ZM26.5 7.428c-.048.524-.25.977-.607 1.358a1.74 1.74 0 0 1-1.322.571c-.524 0-.976-.19-1.357-.571a1.854 1.854 0 0 1-.571-1.358c0-.523.19-.976.571-1.357.381-.38.834-.571 1.357-.571.524 0 .976.19 1.357.571.381.381.572.834.572 1.357Zm5.428 1.93C31.976 10.69 32 12.904 32 16s-.036 5.321-.107 6.678c-.072 1.358-.274 2.536-.608 3.536a8.325 8.325 0 0 1-1.964 3.107 8.325 8.325 0 0 1-3.107 1.965c-1 .333-2.178.535-3.536.607-1.357.071-3.583.107-6.678.107-3.095 0-5.322-.036-6.679-.107-1.357-.072-2.535-.298-3.535-.679a7.614 7.614 0 0 1-3.107-1.893 8.324 8.324 0 0 1-1.965-3.107c-.333-1-.535-2.178-.607-3.536C.036 21.321 0 19.095 0 16c0-3.095.036-5.322.107-6.679.072-1.357.274-2.535.607-3.535A8.324 8.324 0 0 1 2.68 2.679 8.326 8.326 0 0 1 5.786.714C6.786.381 7.964.18 9.32.107 10.678.036 12.905 0 16 0s5.321.036 6.678.107c1.358.072 2.536.274 3.536.607a8.326 8.326 0 0 1 3.107 1.965 8.325 8.325 0 0 1 1.964 3.107c.334 1 .548 2.19.643 3.571ZM28.5 25.427c.285-.809.476-2.095.571-3.857.048-1.047.072-2.523.072-4.428v-2.286c0-1.952-.024-3.428-.072-4.428-.095-1.81-.286-3.096-.571-3.858-.572-1.476-1.595-2.5-3.072-3.071-.761-.286-2.047-.476-3.857-.571-1.047-.048-2.523-.072-4.428-.072h-2.286c-1.905 0-3.38.024-4.428.072-1.762.095-3.048.285-3.858.571-1.476.571-2.5 1.595-3.071 3.071-.286.762-.476 2.048-.571 3.857-.048 1.048-.072 2.524-.072 4.43v2.285c0 1.905.024 3.38.072 4.428.095 1.762.285 3.048.57 3.857.62 1.477 1.644 2.5 3.072 3.072.81.286 2.096.476 3.857.571 1.048.048 2.524.072 4.429.072h2.286c1.952 0 3.428-.024 4.428-.072 1.81-.095 3.096-.285 3.857-.571 1.477-.62 2.5-1.643 3.072-3.072Z"/>
-                        </svg> 
+                            <path fill="currentColor"
+                                d="M16 7.786c1.476 0 2.845.369 4.107 1.107a8.238 8.238 0 0 1 3 3A7.993 7.993 0 0 1 24.214 16a7.993 7.993 0 0 1-1.107 4.107 8.24 8.24 0 0 1-3 3A7.994 7.994 0 0 1 16 24.214a7.994 7.994 0 0 1-4.107-1.107 8.24 8.24 0 0 1-3-3A7.993 7.993 0 0 1 7.786 16c0-1.476.369-2.845 1.107-4.107a8.238 8.238 0 0 1 3-3A7.994 7.994 0 0 1 16 7.786Zm0 13.571c1.476 0 2.738-.524 3.786-1.571 1.047-1.048 1.571-2.31 1.571-3.786s-.524-2.738-1.571-3.786c-1.048-1.047-2.31-1.571-3.786-1.571s-2.738.524-3.786 1.571c-1.047 1.048-1.571 2.31-1.571 3.786s.524 2.738 1.571 3.786c1.048 1.047 2.31 1.571 3.786 1.571ZM26.5 7.428c-.048.524-.25.977-.607 1.358a1.74 1.74 0 0 1-1.322.571c-.524 0-.976-.19-1.357-.571a1.854 1.854 0 0 1-.571-1.358c0-.523.19-.976.571-1.357.381-.38.834-.571 1.357-.571.524 0 .976.19 1.357.571.381.381.572.834.572 1.357Zm5.428 1.93C31.976 10.69 32 12.904 32 16s-.036 5.321-.107 6.678c-.072 1.358-.274 2.536-.608 3.536a8.325 8.325 0 0 1-1.964 3.107 8.325 8.325 0 0 1-3.107 1.965c-1 .333-2.178.535-3.536.607-1.357.071-3.583.107-6.678.107-3.095 0-5.322-.036-6.679-.107-1.357-.072-2.535-.298-3.535-.679a7.614 7.614 0 0 1-3.107-1.893 8.324 8.324 0 0 1-1.965-3.107c-.333-1-.535-2.178-.607-3.536C.036 21.321 0 19.095 0 16c0-3.095.036-5.322.107-6.679.072-1.357.274-2.535.607-3.535A8.324 8.324 0 0 1 2.68 2.679 8.326 8.326 0 0 1 5.786.714C6.786.381 7.964.18 9.32.107 10.678.036 12.905 0 16 0s5.321.036 6.678.107c1.358.072 2.536.274 3.536.607a8.326 8.326 0 0 1 3.107 1.965 8.325 8.325 0 0 1 1.964 3.107c.334 1 .548 2.19.643 3.571ZM28.5 25.427c.285-.809.476-2.095.571-3.857.048-1.047.072-2.523.072-4.428v-2.286c0-1.952-.024-3.428-.072-4.428-.095-1.81-.286-3.096-.571-3.858-.572-1.476-1.595-2.5-3.072-3.071-.761-.286-2.047-.476-3.857-.571-1.047-.048-2.523-.072-4.428-.072h-2.286c-1.905 0-3.38.024-4.428.072-1.762.095-3.048.285-3.858.571-1.476.571-2.5 1.595-3.071 3.071-.286.762-.476 2.048-.571 3.857-.048 1.048-.072 2.524-.072 4.43v2.285c0 1.905.024 3.38.072 4.428.095 1.762.285 3.048.57 3.857.62 1.477 1.644 2.5 3.072 3.072.81.286 2.096.476 3.857.571 1.048.048 2.524.072 4.429.072h2.286c1.952 0 3.428-.024 4.428-.072 1.81-.095 3.096-.285 3.857-.571 1.477-.62 2.5-1.643 3.072-3.072Z" />
+                        </svg>
                     </a>
                     <a href="/niet-beschikbaar">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" width="24" height="24">
                             <title>LinkedIn</title>
-                            <path fill="currentColor" d="M8.25 28H2.437V9.313H8.25V28ZM5.375 6.75c-.917 0-1.708-.333-2.375-1S2 4.292 2 3.375 2.333 1.667 3 1s1.458-1 2.375-1S7.083.333 7.75 1s1 1.458 1 2.375-.333 1.708-1 2.375-1.458 1-2.375 1ZM30 28h-5.813v-9.125c0-1.5-.125-2.583-.375-3.25-.458-1.125-1.354-1.687-2.687-1.687-1.333 0-2.27.5-2.813 1.5-.416.75-.625 1.854-.625 3.312V28h-5.75V9.313H17.5v2.562h.063c.416-.833 1.083-1.52 2-2.062 1-.667 2.166-1 3.5-1 2.708 0 4.604.854 5.687 2.562.833 1.375 1.25 3.5 1.25 6.375V28Z"/>
-                        </svg> 
-                    </a> 
+                            <path fill="currentColor"
+                                d="M8.25 28H2.437V9.313H8.25V28ZM5.375 6.75c-.917 0-1.708-.333-2.375-1S2 4.292 2 3.375 2.333 1.667 3 1s1.458-1 2.375-1S7.083.333 7.75 1s1 1.458 1 2.375-.333 1.708-1 2.375-1.458 1-2.375 1ZM30 28h-5.813v-9.125c0-1.5-.125-2.583-.375-3.25-.458-1.125-1.354-1.687-2.687-1.687-1.333 0-2.27.5-2.813 1.5-.416.75-.625 1.854-.625 3.312V28h-5.75V9.313H17.5v2.562h.063c.416-.833 1.083-1.52 2-2.062 1-.667 2.166-1 3.5-1 2.708 0 4.604.854 5.687 2.562.833 1.375 1.25 3.5 1.25 6.375V28Z" />
+                        </svg>
+                    </a>
                 </div>
-                
+
             </section>
 
             <form class="footer-newsletter" action="">
@@ -173,11 +186,13 @@
             </nav>
             <ul class="footer-partners">
                 <li><a href="/niet-beschikbaar"><img src="/assets/images/mvocew.svg" alt="Museumvereniging"></a></li>
-                <li><a href="/niet-beschikbaar"><img src="/assets/images/vriendenloterij.svg" alt="Vriendenloterij"></a></li>
+                <li><a href="/niet-beschikbaar"><img src="/assets/images/vriendenloterij.svg" alt="Vriendenloterij"></a>
+                </li>
                 <li><a href="/niet-beschikbaar"><img src="/assets/images/haarlem.svg" alt="Gemeente Haarlem"></a></li>
             </ul>
         </section>
     </footer>
     <script src="/js/main.js"></script>
 </body>
-</html>   
+
+</html>
