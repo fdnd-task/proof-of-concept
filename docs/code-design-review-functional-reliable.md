@@ -17,7 +17,7 @@ Bekijk onderstaande drie stappen en bepaal tot welke stap jij bent gekomen:
 
 Maak een issue aan en beschrijf duidelijk wat voor review je wilt ontvangen. Bekijk hiervoor ook eerdere code/design reviews van semester 2.
 
-**Eerdere code/design reviews uit semester 2:**
+**Relevante code/design reviews uit semester 2:**
 - [Sprint 7: NodeJS](https://github.com/fdnd-task/connect-your-tribe-profile-card/blob/main/docs/code-design-review-nodejs.md)
 - [Sprint 8: Content First](https://github.com/fdnd-task/server-side-rendering-server-side-website/blob/main/docs/code-design-review.md)
 - [Sprint 9: UI states](https://github.com/fdnd-task/the-web-is-for-everyone-interactive-functionality/blob/main/docs/code-design-review-ui-states.md)
