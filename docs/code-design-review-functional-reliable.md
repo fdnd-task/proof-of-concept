@@ -19,13 +19,12 @@ Maak een issue aan en beschrijf duidelijk wat voor review je wilt ontvangen. Bek
 
 **Eerdere code/design reviews uit semester 2:**
 - [Sprint 7: NodeJS](https://github.com/fdnd-task/connect-your-tribe-profile-card/blob/main/docs/code-design-review-nodejs.md)
-- [Sprint 7: Server.js](https://github.com/fdnd-task/connect-your-tribe-squad-page/blob/main/docs/code-design-review-design-squadpage.md)
-- [Sprint 8: Vrije invulling code review](https://github.com/fdnd-task/server-side-rendering-server-side-website/blob/main/docs/code-design-review.md)
+- [Sprint 8: Content First](https://github.com/fdnd-task/server-side-rendering-server-side-website/blob/main/docs/code-design-review.md)
 - [Sprint 9: UI states](https://github.com/fdnd-task/the-web-is-for-everyone-interactive-functionality/blob/main/docs/code-design-review-ui-states.md)
-- [Sprint 9: Device lab](https://github.com/fdnd-task/the-web-is-for-everyone-interactive-functionality/blob/main/docs/code-design-review-device-lab.md)
-- [Sprint 10: Enhanced website](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/code-design-review.md)
-- [Sprint 11: RAPPE websites](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/code-design-review-week-1.md)
-- [Sprint 11: Pleasurable laag](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/code-design-review-week-2.md)
+- [Sprint 9: Browsers Test](https://github.com/fdnd-task/the-web-is-for-everyone-interactive-functionality/blob/main/docs/code-design-review-browsers.md)
+- [Sprint 10: Performance technieken](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/code-design-review.md)
+- [Sprint 11: Feature branches](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/code-design-review-feature-branches.md)
+
 
 ### Zoek minimaal twee peers voor review
 
