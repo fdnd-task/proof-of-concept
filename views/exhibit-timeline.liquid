@@ -1,0 +1,27 @@
+{% layout 'layouts/base.liquid'%}
+{% block content %}
+
+{% for section in sections %}
+    <section id="{{ section.slug }}">
+
+        {% if section.cover %}
+            <img src="https://fdnd-agency.directus.app/assets/{{ section.cover }}" alt="{{ section.title }}">
+        {% endif %}
+
+        <h2>{{ section.title }}</h2>
+        <p>{{ section.summary }}</p>
+        <p>{{ section.era }}</p>
+
+        {% for block in section.content_blocks %}
+            {% if block.block_type == 'paragraph' %}
+                <p>{{ block.text }}</p>
+            {% elsif block.block_type == 'heading' %}
+                <h{{ block.heading_level }}>{{ block.text }}</h{{ block.heading_level }}>
+            {% elsif block.block_type == 'quote' %}
+                <blockquote>{{ block.text }}</blockquote>
+            {% endif %}
+        {% endfor %}
+    </section>
+{% endfor %}
+
+{% endblock %}

@@ -20,20 +20,40 @@ const quizAnswersUrl   = 'https://fdnd-agency.directus.app/items/teylers_museum_
 const quizAttemptsUrl  = 'https://fdnd-agency.directus.app/items/teylers_museum_quiz_attempts'
 
 app.get('/', async function (request, response) {
-  const fetchResponse = await fetch(exhibitUrl)
-  const fetchResponseJSON = await fetchResponse.json()
+  const exhibitFetchResponse = await fetch(exhibitUrl)
+  const exhibitFetchResponseJSON = await exhibitFetchResponse.json()
 
-  response.redirect(`/exhibits/${fetchResponseJSON.data[0].slug}`)
+  response.redirect(`/exhibit/${exhibitFetchResponseJSON.data[0].slug}`)
 })
 
-app.get('/exhibits/:slug', async function (request, response) {
+app.get('/exhibit/:slug', async function (request, response) {
   // exhibit ophalen en creators 
-  const fetchResponse = await fetch(`${exhibitUrl}?filter[slug][_eq]=${request.params.slug}&fields=*,creators.teylers_museum_persons_id.*`)
-  const fetchResponseJSON = await fetchResponse.json()
-  const exhibit = fetchResponseJSON.data[0]
+  const exhibitFetchResponse = await fetch(`${exhibitUrl}?filter[slug][_eq]=${request.params.slug}&fields=*,creators.teylers_museum_persons_id.*`)
+  const exhibitFetchResponseJSON = await exhibitFetchResponse.json()
+  const exhibit = exhibitFetchResponseJSON.data[0]
+
+  const sectionsFetchResponse = await fetch(`${sectionsUrl}?filter[exhibit][_eq]=${exhibit.id}&sort=start_year`)
+  const sectionsFetchResponseJSON = await sectionsFetchResponse.json()
+  const sections = sectionsFetchResponseJSON.data
 
   response.render('exhibit-detail.liquid', { 
-    exhibit 
+    exhibit,
+    sections
+  })
+})
+
+app.get('/exhibit/:slug/timeline', async function (request, response) {
+  const exhibitFetchResponse = await fetch(`${exhibitUrl}?filter[slug][_eq]=${request.params.slug}&fields=*,creators.teylers_museum_persons_id.*`)
+  const exhibitFetchResponseJSON = await exhibitFetchResponse.json()
+  const exhibit = exhibitFetchResponseJSON.data[0]
+
+  const sectionsFetchResponse = await fetch(`${sectionsUrl}?filter[exhibit][_eq]=${exhibit.id}&sort=start_year`)
+  const sectionsFetchResponseJSON = await sectionsFetchResponse.json()
+  const sections = sectionsFetchResponseJSON.data
+
+  response.render('exhibit-timeline.liquid', { 
+    exhibit,
+    sections
   })
 })
 
