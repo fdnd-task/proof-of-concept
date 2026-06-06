@@ -1,13 +1,13 @@
 @font-face {
     font-family: Bitter;
-    src: url(/fonts/Bitter-Regular.woff2) format(woff2);
+    src: url(/assets/fonts/Bitter-Regular.woff2) format(woff2);
     font-weight: 400;    
     font-display: swap;
 }
     
 @font-face {
     font-family: Bitter;
-    src: url(/fonts/Bitter-Bold.woff2) format(woff2);
+    src: url(/assets/fonts/Bitter-Bold.woff2) format(woff2);
     font-weight: 700;
     font-display: swap;
 }
