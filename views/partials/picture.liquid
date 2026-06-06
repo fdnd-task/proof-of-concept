@@ -1,0 +1,77 @@
+{% if imagesrc contains '/assets/images' and format != 'svg' %}
+    <picture class="{{ class }}">
+        <source
+            srcset="{{ imagesrc }}.avif?width=400&quality={{ quality | default: 70 }} 400w,
+                    {{ imagesrc }}.avif?width=800&quality={{ quality | default: 70 }} 800w,
+                    {{ imagesrc }}.avif?width=1200&quality={{ quality | default: 70 }} 1200w"
+            type="image/avif"
+            width="{{ width }}"
+            height="{{ height }}"
+        >
+        <source
+            srcset="{{ imagesrc }}.webp?width=400&quality={{ quality | default: 70 }} 400w,
+                    {{ imagesrc }}.webp?width=800&quality={{ quality | default: 70 }} 800w,
+                    {{ imagesrc }}.webp?width=1200&quality={{ quality | default: 70 }} 1200w"
+            type="image/webp"
+            width="{{ width }}"
+            height="{{ height }}"
+        >
+        <img
+            src="{{ image_src }}"
+            srcset="{{ imagesrc }}?width=400&quality={{ quality | default: 70 }} 400w,
+                    {{ imagesrc }}?width=800&quality={{ quality | default: 70 }} 800w,
+                    {{ imagesrc }}?width=1200&quality={{ quality | default: 70 }} 1200w"
+            sizes=""
+            height="{{ height }}"
+            width="{{ width }}"
+            alt="{{ alt_text }}"
+            fetchpriority="{{ fetch_type | default: 'auto'}}"
+            loading="{{ loading_type | default: 'eager'}}"
+            decoding="{{ decoding_type | default: 'async'}}"
+        >
+    </picture>
+
+{% elsif format == 'svg' %}
+
+    <img 
+        src="{{ image_src }}" 
+        alt="{{ alt_text }}"
+        {% if width %}width="{{ width }}"{% endif %}
+        {% if height %}height="{{ height }}"{% endif %}
+        fetchpriority="{{ fetch_type | default: 'auto'}}"
+        loading="{{ loading_type | default: 'eager'}}"
+    >
+
+{% else %}
+  <picture class="{{ class }}">
+    <source
+        srcset="{{ imagesrc }}.avif?width=400&quality={{ quality | default: 70 }} 400w,
+                {{ imagesrc }}.avif?width=800&quality={{ quality | default: 70 }} 800w,
+                {{ imagesrc }}.avif?width=1200&quality={{ quality | default: 70 }} 1200w"
+        type="image/avif"
+        sizes=""
+        height="{{ height }}"
+        width="{{ width }}"
+    >
+    <source
+        type="image/webp"
+        srcset="{{ imagesrc }}.webp?width=400&quality={{ quality | default: 70 }} 400w,
+                {{ imagesrc }}.webp?width=800&quality={{ quality | default: 70 }} 800w,
+                {{ imagesrc }}.webp?width=1200&quality={{ quality | default: 70 }} 1200w"
+        sizes=""
+        height="{{ height }}"
+        width="{{ width }}"
+    >
+    <img
+        src="https://fdnd-agency.directus.app/assets/{{ image_src }}?width={{  width }}&quality={{ quality }}"
+        srcset="https://fdnd-agency.directus.app/assets/{{ image_src }}?width={{  width }}&quality={{ quality }}"
+        sizes=""
+        height="{{ height }}"
+        width="{{ width }}"
+        alt="{{ alt_text }}"
+        fetchpriority="{{ fetch_type | default: 'auto'}}"
+        loading="{{ loading_type | default: 'eager'}}"
+        decoding="{{ decoding_type | default: 'async'}}"
+    >
+  </picture>
+{% endif %}
