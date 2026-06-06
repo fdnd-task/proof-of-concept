@@ -58,8 +58,9 @@ app.get('/exhibit/:slug/timeline', async function (request, response) {
   const questionsFetchResponseJSON = await questionsFetchResponse.json()
   const question = questionsFetchResponseJSON.data[0]
 
-  response.render('exhibit-detail.liquid', { 
-    exhibit
+  response.render('exhibit-timeline.liquid', { 
+    exhibit,
+    sections
   })
 })
 

@@ -19,7 +19,7 @@
             height="{{ height }}"
         >
         <img
-            src="{{ image_src }}"
+            src="{{ image_src }}.{{ fallback_type | default: 'jpg' }}"
             srcset="{{ image_src }}?width=400&quality={{ quality | default: 70 }} 400w,
                     {{ image_src }}?width=800&quality={{ quality | default: 70 }} 800w,
                     {{ image_src }}?width=1200&quality={{ quality | default: 70 }} 1200w"

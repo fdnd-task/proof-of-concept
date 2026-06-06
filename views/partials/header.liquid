@@ -35,9 +35,12 @@
 
             <div class="nav-menu-visual">
                 {% render 'partials/picture.liquid',
-                    image_src: '/assets/images/nav-image.jpg',
+                    image_src: '/assets/images/nav-image',
                     alt_text: '',
-                    loading_type: 'lazy'
+                    loading_type: 'lazy',
+                    fallback_type: 'avif',
+                    width: 1000,
+                    height: 1000
                 %}
                 {% render 'partials/picture.liquid',
                     image_src: '/assets/icons/teylers-dark-light.svg',
