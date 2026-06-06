@@ -1,6 +1,11 @@
 <header>
-    <a class="nav-logo" href="/niet-beschikbaar"><img fetchpriority="high" src="/assets/icons/teylers-light-dark.svg"
-            alt="Site logo">
+    <a class="nav-logo" href="/niet-beschikbaar">
+        {% render 'partials/picture.liquid',
+            image_src: '/assets/icons/teylers-light-dark.svg',
+            alt_text: 'Site logo',
+            format: 'svg',
+            fetch_type: 'high'
+        %}
     </a>
 
     <div class="nav-menu-top desktop-nav-top">
@@ -29,8 +34,17 @@
         <div class="nav-menu-layout">
 
             <div class="nav-menu-visual">
-                <img src="/assets/images/nav-image.jpg" alt="">
-                <img class="nav-menu-logo" src="/assets/icons/teylers-dark-light.svg" alt="Logo">
+                {% render 'partials/picture.liquid',
+                    image_src: '/assets/images/nav-image.jpg',
+                    alt_text: '',
+                    loading_type: 'lazy'
+                %}
+                {% render 'partials/picture.liquid',
+                    image_src: '/assets/icons/teylers-dark-light.svg',
+                    alt_text: 'Logo',
+                    format: 'svg',
+                    class: 'nav-menu-logo'
+                %}
             </div>
 
             <div class="nav-menu-content">

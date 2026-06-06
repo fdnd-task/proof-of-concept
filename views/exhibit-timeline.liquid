@@ -5,7 +5,12 @@
     <section id="{{ section.slug }}">
 
         {% if section.cover %}
-            <img src="https://fdnd-agency.directus.app/assets/{{ section.cover }}" alt="{{ section.title }}" width="800"height="600">
+            {% render 'picture',
+                image_src: section.cover,
+                alt_text: section.title,
+                width: 800,
+                height: 600
+            %}
         {% endif %}
 
         <h2>{{ section.title }}</h2>

@@ -7,29 +7,15 @@
 {% block content %}
 <main>
     <section class="hero">
-        <picture class="hero-image">
-            <source type="image/avif"
-                srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=400&quality=70 400w,
-                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=800&quality=70 800w,
-                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=avif&width=1200&quality=70 1200w"
-                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
-            >
-            <source type="image/webp"
-                srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=400&quality=70 400w,
-                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=800&quality=70 800w,
-                        https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?format=webp&width=1200&quality=70 1200w"
-                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
-            >
-            <img
-                src="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70"
-                srcset="https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=400&quality=70 400w,
-                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=800&quality=70 800w,
-                    https://fdnd-agency.directus.app/assets/{{ exhibit.cover }}?width=1200&quality=70 1200w"
-                sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px"
-                alt="{{ exhibit.title }}"
-                fetchpriority="high"
-            >
-        </picture>
+        {% render 'partials/picture.liquid',
+            image_src: exhibit.cover,
+            alt_text: exhibit.title,
+            class: 'hero-image',
+            fetch_type: 'high',
+            decoding_type: 'sync',
+            width: 1200,
+            height: 800
+        %}
     </section>
     
     <article class="exhibit">
