@@ -54,17 +54,12 @@
   /* Kleuren ===================================================================================*/
   /* Brand */
   --color-brand:             var(--palette-brand-700);
-  --color-brand-rgb:         var(--palette-brand-rgb);
   --color-secondary:         var(--palette-secondary-700);
-  --color-secondary-rgb:     var(--palette-secondary-rgb);
 
   /* Accent */
   --color-accent:            var(--palette-accent-700);
-  --color-accent-rgb:        var(--palette-accent-rgb);
   --color-accent-2:          var(--palette-accent-2-700);
-  --color-accent-2-rgb:      var(--palette-accent-2-rgb);
   --color-accent-3:          var(--palette-accent-3-700);
-  --color-accent-3-rgb:      var(--palette-accent-3-rgb);
 
   /* Neutraal */
   --color-neutral-darkest:   var(--palette-neutral-900);
