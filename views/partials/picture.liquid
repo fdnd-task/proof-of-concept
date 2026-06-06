@@ -1,27 +1,29 @@
-{% if imagesrc contains '/assets/images' and format != 'svg' %}
+{%- assign default_sizes = sizes | default: "(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px" -%}
+{% comment %} - verwijdert de witruimte{% endcomment %}
+{% if image_src contains '/assets/images' and format != 'svg' %}
     <picture class="{{ class }}">
         <source
-            srcset="{{ imagesrc }}.avif?width=400&quality={{ quality | default: 70 }} 400w,
-                    {{ imagesrc }}.avif?width=800&quality={{ quality | default: 70 }} 800w,
-                    {{ imagesrc }}.avif?width=1200&quality={{ quality | default: 70 }} 1200w"
+            srcset="{{ image_src }}.avif?width=400&quality={{ quality | default: 70 }} 400w,
+                    {{ image_src }}.avif?width=800&quality={{ quality | default: 70 }} 800w,
+                    {{ image_src }}.avif?width=1200&quality={{ quality | default: 70 }} 1200w"
             type="image/avif"
             width="{{ width }}"
             height="{{ height }}"
         >
         <source
-            srcset="{{ imagesrc }}.webp?width=400&quality={{ quality | default: 70 }} 400w,
-                    {{ imagesrc }}.webp?width=800&quality={{ quality | default: 70 }} 800w,
-                    {{ imagesrc }}.webp?width=1200&quality={{ quality | default: 70 }} 1200w"
+            srcset="{{ image_src }}.webp?width=400&quality={{ quality | default: 70 }} 400w,
+                    {{ image_src }}.webp?width=800&quality={{ quality | default: 70 }} 800w,
+                    {{ image_src }}.webp?width=1200&quality={{ quality | default: 70 }} 1200w"
             type="image/webp"
             width="{{ width }}"
             height="{{ height }}"
         >
         <img
             src="{{ image_src }}"
-            srcset="{{ imagesrc }}?width=400&quality={{ quality | default: 70 }} 400w,
-                    {{ imagesrc }}?width=800&quality={{ quality | default: 70 }} 800w,
-                    {{ imagesrc }}?width=1200&quality={{ quality | default: 70 }} 1200w"
-            sizes=""
+            srcset="{{ image_src }}?width=400&quality={{ quality | default: 70 }} 400w,
+                    {{ image_src }}?width=800&quality={{ quality | default: 70 }} 800w,
+                    {{ image_src }}?width=1200&quality={{ quality | default: 70 }} 1200w"
+            sizes="{{ default_sizes }}"
             height="{{ height }}"
             width="{{ width }}"
             alt="{{ alt_text }}"
@@ -30,6 +32,22 @@
             decoding="{{ decoding_type | default: 'async'}}"
         >
     </picture>
+
+    {% comment %} 
+        {% render 'picture',
+            image_src: ,
+            width: ,
+            height: ,
+            alt_text: ,
+            class: ,
+            quality: ,
+            fetch_type: ,
+            loading_type: ,
+            decoding_type: ,
+            format: ,
+            sizes:,
+        %}
+    {% endcomment %}
 
 {% elsif format == 'svg' %}
 
@@ -40,32 +58,47 @@
         {% if height %}height="{{ height }}"{% endif %}
         fetchpriority="{{ fetch_type | default: 'auto'}}"
         loading="{{ loading_type | default: 'eager'}}"
+        class="{{ class }}"
     >
+    {% comment %} 
+        {% render 'picture',
+            image_src: ,
+            width: ,
+            height: ,
+            alt_text: ,
+            class: ,
+            fetch_type: ,
+            loading_type: ,
+            format: 
+        %}
+    {% endcomment %}
 
 {% else %}
   <picture class="{{ class }}">
     <source
-        srcset="{{ imagesrc }}.avif?width=400&quality={{ quality | default: 70 }} 400w,
-                {{ imagesrc }}.avif?width=800&quality={{ quality | default: 70 }} 800w,
-                {{ imagesrc }}.avif?width=1200&quality={{ quality | default: 70 }} 1200w"
         type="image/avif"
-        sizes=""
+        srcset="https://fdnd-agency.directus.app/assets/{{ image_src }}?format=avif&width=400&quality={{ quality | default: 70 }} 400w,
+                https://fdnd-agency.directus.app/assets/{{ image_src }}?format=avif&width=800&quality={{ quality | default: 70 }} 800w,
+                https://fdnd-agency.directus.app/assets/{{ image_src }}?format=avif&width=1200&quality={{ quality | default: 70 }} 1200w"
+        sizes="{{ default_sizes }}"
         height="{{ height }}"
         width="{{ width }}"
     >
     <source
         type="image/webp"
-        srcset="{{ imagesrc }}.webp?width=400&quality={{ quality | default: 70 }} 400w,
-                {{ imagesrc }}.webp?width=800&quality={{ quality | default: 70 }} 800w,
-                {{ imagesrc }}.webp?width=1200&quality={{ quality | default: 70 }} 1200w"
-        sizes=""
+        srcset="https://fdnd-agency.directus.app/assets/{{ image_src }}?format=webp&width=400&quality={{ quality | default: 70 }} 400w,
+                https://fdnd-agency.directus.app/assets/{{ image_src }}?format=webp&width=800&quality={{ quality | default: 70 }} 800w,
+                https://fdnd-agency.directus.app/assets/{{ image_src }}?format=webp&width=1200&quality={{ quality | default: 70 }} 1200w"
+        sizes="{{ default_sizes }}"
         height="{{ height }}"
         width="{{ width }}"
     >
     <img
         src="https://fdnd-agency.directus.app/assets/{{ image_src }}?width={{  width }}&quality={{ quality }}"
-        srcset="https://fdnd-agency.directus.app/assets/{{ image_src }}?width={{  width }}&quality={{ quality }}"
-        sizes=""
+        srcset="https://fdnd-agency.directus.app/assets/{{ image_src }}?width=400&quality={{ quality | default: 70 }} 400w,
+                https://fdnd-agency.directus.app/assets/{{ image_src }}?width=800&quality={{ quality | default: 70 }} 800w,
+                https://fdnd-agency.directus.app/assets/{{ image_src }}?width=1200&quality={{ quality | default: 70 }} 1200w"
+        sizes="{{ default_sizes }}"
         height="{{ height }}"
         width="{{ width }}"
         alt="{{ alt_text }}"
@@ -74,4 +107,20 @@
         decoding="{{ decoding_type | default: 'async'}}"
     >
   </picture>
+  {% comment %} 
+        {% render 'picture',
+            image_src: ,
+            width: ,
+            height: ,
+            alt_text: ,
+            class: ,
+            quality: ,
+            fetch_type: ,
+            loading_type: ,
+            decoding_type: ,
+            format: ,
+            sizes:,
+        %}
+    {% endcomment %}
+
 {% endif %}
