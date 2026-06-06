@@ -94,7 +94,7 @@
         width="{{ width }}"
     >
     <img
-        src="https://fdnd-agency.directus.app/assets/{{ image_src }}?width={{  width }}&quality={{ quality }}"
+        src="https://fdnd-agency.directus.app/assets/{{ image_src }}?width={{  width }}&quality={{ quality | default: 70}}"
         srcset="https://fdnd-agency.directus.app/assets/{{ image_src }}?width=400&quality={{ quality | default: 70 }} 400w,
                 https://fdnd-agency.directus.app/assets/{{ image_src }}?width=800&quality={{ quality | default: 70 }} 800w,
                 https://fdnd-agency.directus.app/assets/{{ image_src }}?width=1200&quality={{ quality | default: 70 }} 1200w"

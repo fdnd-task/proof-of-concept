@@ -1,3 +1,50 @@
+/*==================-loading state-===================*/ 
+
+@supports selector(:has(img)) {
+    picture {
+        background: var(--color-secondary);
+        animation: shimmer 1.5s infinite;
+    }
+    picture:has(img[src]) {
+        animation: none;
+    }
+
+    @keyframes shimmer {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+} /*ik weet niet hoe ik dit kan testen*/
+
+.img-wrapper{
+    position: relative;
+}
+
+.img-wrapper--fit{
+    width: fit-content;
+}
+.img-wrapper--hero{
+    width: 100%;
+}
+.spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .spinner {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to { rotate: 360deg; }
+    }
+}
+
 /*=====================-Header-======================*/ 
 header {
     width: 100%;
