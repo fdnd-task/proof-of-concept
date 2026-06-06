@@ -37,7 +37,7 @@ app.get('/exhibit/:slug', async function (request, response) {
 
   const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${exhibit.id}&fields=*`)
   const questionsFetchResponseJSON = await questionsFetchResponse.json()
-  const question = questionsFetchResponseJSON.data[0]
+  const questions = questionsFetchResponseJSON.data
 
   response.render('exhibit-detail.liquid', { 
     exhibit,
@@ -52,15 +52,16 @@ app.get('/exhibit/:slug/timeline', async function (request, response) {
 
   const sectionsFetchResponse = await fetch(`${sectionsUrl}?filter[exhibit][_eq]=${exhibit.id}&sort=start_year`)
   const sectionsFetchResponseJSON = await sectionsFetchResponse.json()
-  const sections = sectionsFetchResponseJSON
+  const sections = sectionsFetchResponseJSON.data
 
   const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${exhibit.id}&fields=*`)
   const questionsFetchResponseJSON = await questionsFetchResponse.json()
-  const question = questionsFetchResponseJSON.data[0]
+  const questions = questionsFetchResponseJSON.data
 
   response.render('exhibit-timeline.liquid', { 
     exhibit,
-    sections
+    sections,
+    questions
   })
 })
 
