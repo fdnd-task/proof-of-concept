@@ -5,12 +5,32 @@
     <section id="{{ section.slug }}">
 
         {% if section.cover %}
-            <img src="https://fdnd-agency.directus.app/assets/{{ section.cover }}" alt="{{ section.title }}">
+            <img src="https://fdnd-agency.directus.app/assets/{{ section.cover }}" alt="{{ section.title }}" width="800"height="600">
         {% endif %}
 
         <h2>{{ section.title }}</h2>
         <p>{{ section.summary }}</p>
         <p>{{ section.era }}</p>
+        <p>{{ section.start_year }} - {{ section.end_year }}</p>
+
+        {% unless section.sources == empty %}
+            <ul>
+                {% for source in section.sources %}
+                <li>
+                    {% if source.url %}
+                    <a href="{{ source.url }}">{{ source.title }}</a>
+                    {% else %}
+                    {{ source.title }}
+                    {% endif %}
+
+                    {% if source.type %}<p>{{ source.type }}</p>{% endif %}
+                    {% if source.credit %}<p>{{ source.credit }}</p>{% endif %}
+                    {% if source.license %}<p>{{ source.license }}</p>{% endif %}
+                    {% if source.notes %}<p>{{ source.notes }}</p>{% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        {% endunless %}
 
         {% for block in section.content_blocks %}
             {% if block.block_type == 'paragraph' %}
@@ -21,6 +41,28 @@
                 <blockquote>{{ block.text }}</blockquote>
             {% endif %}
         {% endfor %}
+
+
+        {% if section.question %}
+            <section>
+                <h2>{{ section.question.question }}</h2>
+                <ul>
+                {% for option in section.question.options %}
+                    <li>
+                        <form method="POST" action="/quiz-attempt">
+                            <input type="hidden" name="question_id" value="{{ section.question.id }}">
+                            <input type="hidden" name="section_slug" value="{{ section.slug }}">
+                            <input type="hidden" name="option_key" value="{{ option.key }}">
+                            <button type="submit" class="btn btn--secondary">
+                                <span class="quiz-option-key">{{ option.key }}</span>{{ option.answer }}
+                            </button>
+                        </form>
+                    </li>
+                {% endfor %}
+                </ul>
+            </section>
+        {% endif %}
+
     </section>
 {% endfor %}
 

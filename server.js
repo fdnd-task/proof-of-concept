@@ -26,15 +26,18 @@ app.get('/', async function (request, response) {
   response.redirect(`/exhibit/${exhibitFetchResponseJSON.data[0].slug}`)
 })
 
-app.get('/exhibit/:slug', async function (request, response) {
-  // exhibit ophalen en creators 
+app.get('/exhibit/:slug', async function (request, response) { 
   const exhibitFetchResponse = await fetch(`${exhibitUrl}?filter[slug][_eq]=${request.params.slug}&fields=*,creators.teylers_museum_persons_id.*`)
   const exhibitFetchResponseJSON = await exhibitFetchResponse.json()
   const exhibit = exhibitFetchResponseJSON.data[0]
 
   const sectionsFetchResponse = await fetch(`${sectionsUrl}?filter[exhibit][_eq]=${exhibit.id}&sort=start_year`)
   const sectionsFetchResponseJSON = await sectionsFetchResponse.json()
-  const sections = sectionsFetchResponseJSON.data
+  const sections = sectionsFetchResponseJSON
+
+  const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${exhibit.id}&fields=*`)
+  const questionsFetchResponseJSON = await questionsFetchResponse.json()
+  const question = questionsFetchResponseJSON.data[0]
 
   response.render('exhibit-detail.liquid', { 
     exhibit,
@@ -49,16 +52,15 @@ app.get('/exhibit/:slug/timeline', async function (request, response) {
 
   const sectionsFetchResponse = await fetch(`${sectionsUrl}?filter[exhibit][_eq]=${exhibit.id}&sort=start_year`)
   const sectionsFetchResponseJSON = await sectionsFetchResponse.json()
-  const sections = sectionsFetchResponseJSON.data
+  const sections = sectionsFetchResponseJSON
 
-  response.render('exhibit-timeline.liquid', { 
-    exhibit,
-    sections
+  const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${exhibit.id}&fields=*`)
+  const questionsFetchResponseJSON = await questionsFetchResponse.json()
+  const question = questionsFetchResponseJSON.data[0]
+
+  response.render('exhibit-detail.liquid', { 
+    exhibit
   })
-})
-
-app.get('/niet-beschikbaar', async function (request, response) {
-  response.render('partials/niet-beschikbaar.liquid')
 })
 
 app.set('port', process.env.PORT || 8000)
