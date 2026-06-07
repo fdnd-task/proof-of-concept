@@ -17,7 +17,7 @@ Dit semester heb je veel geleerd over Progressive Enhancement en de _Hierarchy o
 
 👉 Lees en bespreek met je buur een aantal workshops over design, ui states en user preferences uit Sprint 9, 10 en 11 nog een keer. Schrijf de begrippen en technieken op het whiteboard en noteer welke je al een keer hebt toegepast en welke je nog moet leren: 
 
-- [Workshop 'User Preferences' in sprint 9](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/INSTRUCTIONS.md)
+- [Workshop 'User Preferences' in sprint 9](https://github.com/fdnd-task/the-web-is-for-everyone-interactive-functionality/blob/main/docs/INSTRUCTIONS.md)
 - [Workshop 'UI states' in sprint 9](https://github.com/fdnd-task/the-web-is-for-everyone-interactive-functionality/blob/main/docs/INSTRUCTIONS.md)
 - [Workshop 'Client-Side Scripting for UX' in sprint 10](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/INSTRUCTIONS.md)
 - [Workshop 'Pleasurable is in the details' in sprint 11](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/INSTRUCTIONS.md)
