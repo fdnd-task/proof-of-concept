@@ -4,7 +4,7 @@
 
 <!-- Over wat je kunt doen om de UX van een website beter te maken en te verrijken met micro-interacties, animaties, en ui states. -->
 
-Hoe ontwerp en bouw je een website die goed te gebruiken is? Nadat je eerst de *functional* en *reliable* laag hebt ontworpen, gebouwd en getest (met server-side rendering en de simpelste technieken zoals HTML, formulier elementen en eenvoudige CSS) kan je je website gebruiksvriendelijk maken met enhancements.
+Hoe ontwerp en bouw je een website die goed te gebruiken is? Nadat je eerst de *functional* en *reliable* laag hebt ontworpen, gebouwd en getest (met server-side rendering, URL's, HTML, formulier elementen en eenvoudige CSS) kan je je website gebruiksvriendelijk maken met enhancements.
 
 🍴🍔
 
