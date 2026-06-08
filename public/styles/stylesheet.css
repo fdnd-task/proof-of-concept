@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaire-kleur: hsl(194, 37%, 16%);
+  --secundiary-kleur: hsl(37, 53%, 92%);
+  --action-kleur: hsl(48, 100%, 50%);
+}
+
+body {
+  background: var(--primaire-kleur);
+  color: var(--secundiary-kleur);
+}
+
+img {
+  max-width: 10rem;
+  width: 100%;
+}
+
+main {
+  min-height: 100vh;
+}
+
+section {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.timeline__svg {
+  height: 100vh;
+  width: auto;
+}

@@ -1,0 +1,20 @@
+{% render 'partials/head.liquid' %}
+
+<main>
+  <section>
+    <nav aria-label="Tijdlijn">
+      <svg class="timeline__svg" viewBox="-10 0 310 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 9 34 A 230 230 0 0 1 9 466"
+              fill="none"
+              stroke="rgba(255,255,255,0.35)"
+              stroke-width="1.5"
+              stroke-dasharray="5 8"/>
+        <g class="timeline__items"></g>
+      </svg>
+    </nav>
+  </section>
+</main>
+
+<script src="./scripts/timeline.js"></script>
+
+{% render 'partials/foot.liquid' %}
