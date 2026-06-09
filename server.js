@@ -111,6 +111,14 @@ app.post('/quiz-answer', async function (request, response) {
         is_correct: isCorrect
       })
     })
+
+    await fetch(`https://fdnd-agency.directus.app/items/teylers_museum_quiz_attempts/${attemptId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        completed_at: new Date()
+      })
+    })
   }
 
   response.redirect(`/exhibit/${request.body.exhibit_slug}/timeline?attempt_id=${attemptId}#quiz`)
