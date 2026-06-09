@@ -648,3 +648,18 @@ footer {
         font-size: var(--font-size-body-md);
     }
 }
+
+/*=====================-timeline-======================*/
+
+.timeline{
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3rem;
+        background-image: url(/assets/icons/decoratief-point-pattern.svg);
+        background-repeat: repeat-x;
+        background-size: 3.2rem;
+        background-color: var(--color-neutral-darker);
+    }
+}

@@ -26,26 +26,7 @@ app.get('/', async function (request, response) {
   response.redirect(`/exhibit/${exhibitFetchResponseJSON.data[0].slug}`)
 })
 
-app.get('/exhibit/:slug', async function (request, response) { 
-  const exhibitFetchResponse = await fetch(`${exhibitUrl}?filter[slug][_eq]=${request.params.slug}&fields=*,creators.teylers_museum_persons_id.*`)
-  const exhibitFetchResponseJSON = await exhibitFetchResponse.json()
-  const exhibit = exhibitFetchResponseJSON.data[0]
-
-  const sectionsFetchResponse = await fetch(`${sectionsUrl}?filter[exhibit][_eq]=${exhibit.id}&sort=start_year`)
-  const sectionsFetchResponseJSON = await sectionsFetchResponse.json()
-  const sections = sectionsFetchResponseJSON
-
-  const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${exhibit.id}&fields=*`)
-  const questionsFetchResponseJSON = await questionsFetchResponse.json()
-  const questions = questionsFetchResponseJSON.data
-
-  response.render('exhibit-detail.liquid', { 
-    exhibit,
-    sections
-  })
-})
-
-app.get('/exhibit/:slug/timeline', async function (request, response) {
+app.get('/exhibit/:slug', async function (request, response) {
   // exhibits ophalen
   const exhibitFetchResponse = await fetch(`${exhibitUrl}?filter[slug][_eq]=${request.params.slug}&fields=*,creators.teylers_museum_persons_id.*`)
   const exhibitFetchResponseJSON = await exhibitFetchResponse.json()
@@ -62,7 +43,7 @@ app.get('/exhibit/:slug/timeline', async function (request, response) {
   const questions = questionsFetchResponseJSON.data
 
   
-  response.render('exhibit-timeline.liquid', { 
+  response.render('exhibit-detail.liquid', { 
     exhibit,
     sections,
     questions,
@@ -82,7 +63,7 @@ app.post('/quiz-attempt', async function (request, response) {
   const attemptFetchResponseJSON = await attemptFetchResponse.json()
   const attempt = attemptFetchResponseJSON.data
 
-  response.redirect(`/exhibit/${request.body.exhibit_slug}/timeline?attempt_id=${attempt.id}#quiz`)
+  response.redirect(`/exhibit/${request.body.exhibit_slug}?attempt_id=${attempt.id}#quiz`)
 });
 
 app.post('/quiz-answer', async function (request, response) {
@@ -126,7 +107,7 @@ app.post('/quiz-answer', async function (request, response) {
     })
   })
 
-  response.redirect(`/exhibit/${request.body.exhibit_slug}/timeline?attempt_id=${attemptId}#quiz`)
+  response.redirect(`/exhibit/${request.body.exhibit_slug}?attempt_id=${attemptId}#quiz`)
 });
 
 app.set('port', process.env.PORT || 8000)
