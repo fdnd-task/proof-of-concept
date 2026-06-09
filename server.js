@@ -56,16 +56,12 @@ app.get('/exhibit/:slug/timeline', async function (request, response) {
   const sectionsFetchResponseJSON = await sectionsFetchResponse.json()
   const sections = sectionsFetchResponseJSON.data
 
-  // questions ophalen ophalen
-  const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${exhibit.id}&fields=*`)
+  // questions ophalen ophalen gesorteerd op exhibit section 
+  const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${exhibit.id}&fields=*&sort=exhibit_section`)
   const questionsFetchResponseJSON = await questionsFetchResponse.json()
   const questions = questionsFetchResponseJSON.data
 
-  // niet van mij maar koppeld de section aan de question zodat ik in liquid section.question.id kan doen enzovoort
-  sections.forEach(section => {
-    section.question = questions.find(question => question.exhibit_section === section.id)
-  })
-
+  
   response.render('exhibit-timeline.liquid', { 
     exhibit,
     sections,
