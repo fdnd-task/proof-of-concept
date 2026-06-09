@@ -92,6 +92,7 @@ app.post('/quiz-answer', async function (request, response) {
   const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${request.body.exhibit_id}&fields=*`)
   const questionsFetchResponseJSON = await questionsFetchResponse.json()
   const questions = questionsFetchResponseJSON.data
+  let score = 0
 
   // dit snap ik nog niet 100%
   // for elke vraag in questions kijkt hij naar de de optie die dezelfde key heeft als de gekozen antwoord en dan kijkt hij of deze iscorrect truee heeft 
@@ -99,6 +100,8 @@ app.post('/quiz-answer', async function (request, response) {
     const chosenKey = request.body[`question_${question.id}_answer`]
     if (!chosenKey) continue
     const isCorrect = question.options.find(option => option.key === chosenKey)?.is_correct === true
+
+    if (isCorrect) score = score + 1
 
     await fetch('https://fdnd-agency.directus.app/items/teylers_museum_quiz_answers', {
       method: 'POST',
@@ -111,16 +114,17 @@ app.post('/quiz-answer', async function (request, response) {
         is_correct: isCorrect
       })
     })
-
-    await fetch(`https://fdnd-agency.directus.app/items/teylers_museum_quiz_attempts/${attemptId}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        completed_at: new Date(),
-        total_questions: questions.length
-      })
-    })
   }
+
+  await fetch(`https://fdnd-agency.directus.app/items/teylers_museum_quiz_attempts/${attemptId}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      completed_at: new Date(),
+      total_questions: questions.length,
+      score: score
+    })
+  })
 
   response.redirect(`/exhibit/${request.body.exhibit_slug}/timeline?attempt_id=${attemptId}#quiz`)
 });
