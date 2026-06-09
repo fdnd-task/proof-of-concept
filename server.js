@@ -70,11 +70,22 @@ app.get('/exhibit/:slug/timeline', async function (request, response) {
     exhibit,
     sections,
     questions,
-    attempt_id: request.query.attempt_id
   })
 })
 
 app.post('/quiz-attempt', async function (request, response) {
+  const attemptFetchResponse = await fetch('https://fdnd-agency.directus.app/items/teylers_museum_quiz_attempts',{
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      exhibit: request.body.exhibit_id,
+      started_at: new Date()
+    })
+  })
+  const attemptFetchResponseJSON = await attemptFetchResponse.json()
+  const attempt = attemptFetchResponseJSON.data
+
+  response.redirect(`/exhibit/${request.body.exhibit_slug}/timeline?attempt_id=${attempt.id}#quiz`)
 });
 
 app.post('/quiz-answer', async (request, response) => {

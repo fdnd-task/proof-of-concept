@@ -35,7 +35,12 @@
     {% endfor %}
 </article>
 
-<section>
+<section id="quiz">
+    <form action="/quiz-attempt" method="POST">
+        <input type="hidden" name="exhibit_id" value="{{ exhibit.id }}">
+        <input type="hidden" name="exhibit_slug" value="{{ exhibit.slug }}">
+        <button>Start quiz</button>
+    </form>
 
 </section>
 
