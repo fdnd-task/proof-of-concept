@@ -9,7 +9,7 @@ Een pleasurable interface is een interface waar een gebruiker plezier aan beleef
 ✨🪩
 
 Een pleasurable interface is gebouwd op een stevig fundament, een website die het altijd doet. Zonder functional, reliable, en usable laag werkt een 'leuke' interface juist averechts. Begin daarom altijd met stap 1 en 2, voordat je met de enhancements aan de slag gaat.
-Staat jouw fundament stevig? Met server-side rendering, netter URLs en routes, responsive huisstijl en degelijke UI states? Dan gaan we los...
+Staat jouw fundament stevig? Met server-side rendering, nette URLs en routes, responsive huisstijl en degelijke UI states? Dan gaan we los...
 
 
 
@@ -17,11 +17,13 @@ Staat jouw fundament stevig? Met server-side rendering, netter URLs en routes, r
 
 In Sprint 11 heb je geleerd over de pleasurable user interface. 
 
-#### 👉 Lees en bespreek met je buur de workshop "Client-Side Fetch met Server-side partials" uit sprint 9 nog een keer. 
-Maak aantekeningen in je Learning Journal en pas de stof toe op de opdracht waar je nu aan werkt.
-- [Workshop Pleasurable is in the details](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/pleasurable-is-in-the-details.md)
+👉 Lees en bespreek met je buur een aantal workshops over het _enhancen_ van je frontend met CSS en JavaScript uit Sprint 10 en 11 nog een keer. Schrijf de begrippen en technieken op het whiteboard en noteer welke je al een keer hebt toegepast en welke je nog moet leren:
 
-#### 👉 Ontwerp een Pleasurable interactie
+- [Workshop 'Client-Side scripting for UX' in Sprint 10](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/client-side-scripting-for-ux.md)
+- [Workshop 'Pleasurable is in the details' in Sprint 11](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/pleasurable-is-in-the-details.md)
+- [Workshop 'Client-Side Scripting for UX' in Sprint 11](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/client-side-scripting-for-ux.md)
+
+👉 Ontwerp een Pleasurable interactie
 
 Schets een interactie met animatie voor jouw website. Je kan bijvoorbeeld pleasurable button states, een micro interactie of een pleasurable laag voor het fetchen van data ontwerpen. 
 
@@ -42,7 +44,7 @@ Over leuke dingen maken. Maar er tegelijk voor zorgen dat als een browser, of ee
 
 Over hoe je view transitions 'veilig' kan gebruiken
 Over hoe je scroll driven animations 'veilig' kan gebruiken
-Over hoe je ancor position 'veilig' kan gebruiken
+Over hoe je anchor position 'veilig' kan gebruiken
 
 
 -->
