@@ -116,7 +116,8 @@ app.post('/quiz-answer', async function (request, response) {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        completed_at: new Date()
+        completed_at: new Date(),
+        total_questions: questions.length
       })
     })
   }
