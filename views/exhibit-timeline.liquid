@@ -35,34 +35,9 @@
     {% endfor %}
 </article>
 
-<form action="/quiz-attempt" method="post">
-    <input type="hidden" name="slug" value="{{ exhibit.slug }}">
-    <button type="submit">Start quiz</button>
-</form>
+<section>
 
-
-    {% for section in sections %}
-    {% if section.question %}
-        <form action="/quiz-answer" method="post">
-            <fieldset>
-                <legend>{{ section.question.question }}</legend>
-                <input type="hidden" name="question_id" value="{{ section.question.id }}">
-                <input type="hidden" name="exhibit_section" value="{{ section.question.exhibit_section }}">
-                <input type="hidden" name="attempt_id" value="{{ attempt_id }}">
-                <input type="hidden" name="slug" value="{{ exhibit.slug }}">
-
-                {%  for option in section.question.options %}
-                    <label>
-                        <input type="radio" name="chosen_option" value="{{ option.key }}">
-                        <span>{{ option.key }}</span>{{ option.answer }}
-                    </label>
-                {% endfor %}
-            </fieldset>
-            <button type="submit">Bekijk je resultaten</button>
-        </form>
-    {% endif %}
-    {% endfor %}
-    
+</section>
 
 
 {% endblock %}
