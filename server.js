@@ -86,8 +86,34 @@ app.post('/quiz-attempt', async function (request, response) {
 });
 
 app.post('/quiz-answer', async function (request, response) {
-  console.log(request.body)
-  response.redirect(`/exhibit/${request.body.exhibit_slug}/timeline?attempt_id=${request.body.attempt_id}#quiz`)
+  const attemptId = request.body.attempt_id
+
+  // haal alle vragen op van huidige exhibit haal alle velden op dus ook options
+  const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${request.body.exhibit_id}&fields=*`)
+  const questionsFetchResponseJSON = await questionsFetchResponse.json()
+  const questions = questionsFetchResponseJSON.data
+
+  // dit snap ik nog niet 100%
+  // for elke vraag in questions kijkt hij naar de de optie die dezelfde key heeft als de gekozen antwoord en dan kijkt hij of deze iscorrect truee heeft 
+  for (const question of questions) {
+    const chosenKey = request.body[`question_${question.id}_answer`]
+    if (!chosenKey) continue
+    const isCorrect = question.options.find(option => option.key === chosenKey)?.is_correct === true
+
+    await fetch('https://fdnd-agency.directus.app/items/teylers_museum_quiz_answers', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        attempt: attemptId,
+        question: question.id,
+        chosen_option: chosenKey,
+        answered_at: new Date(),
+        is_correct: isCorrect
+      })
+    })
+  }
+
+  response.redirect(`/exhibit/${request.body.exhibit_slug}/timeline?attempt_id=${attemptId}#quiz`)
 });
 
 app.set('port', process.env.PORT || 8000)
