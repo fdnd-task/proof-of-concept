@@ -2,84 +2,67 @@
 {% block content %}
 
 
+<aside>
+    <ol>
+        {% for section in sections %}
+        <li><a href="#{{ section.slug }}">{{ section.title }}</a></li>
+        {% endfor %}
+    </ol>
+</aside>
 
-{% for section in sections %}
-    <section id="{{ section.slug }}">
+<article>
+    {% for section in sections %}
+        <section id="{{ section.slug }}">
 
-    {% if section.cover %}
-        <div class="img-wrapper img-wrapper--fit">
-            <svg class="spinner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
-                <path fill="currentColor" d="M16 12.44a3.565 3.565 0 0 1 3.566 3.566A3.565 3.565 0 0 1 16 19.572a3.565 3.565 0 0 1-3.566-3.566A3.565 3.565 0 0 1 16 12.439Zm-1.553 11.375L16 32l1.553-8.185 4.567 6.968-1.695-8.157 6.888 4.687-4.692-6.888 8.162 1.695-6.974-4.567L32 16l-8.19-1.553 6.973-4.567-8.162 1.695 4.692-6.888-6.888 4.687 1.695-8.157-4.567 6.968L16 0l-1.553 8.185L9.88 1.217l1.695 8.157-6.888-4.687 4.692 6.888L1.217 9.88l6.974 4.567L0 16l8.19 1.553-6.973 4.567 8.162-1.695-4.692 6.888 6.888-4.687-1.695 8.157 4.567-6.968Z"/>
-            </svg>
-            {% render 'partials/picture.liquid',
-                image_src: section.cover,
-                alt_text: section.title,
-                width: 800,
-                height: 600
-            %}
-        </div>
-    {% endif %}
+            <h2>{{ section.title }}</h2>
+            <p>{{ section.summary }}</p>
 
-        <h2>{{ section.title }}</h2>
-        <p>{{ section.summary }}</p>
-        <p>{{ section.era }}</p>
-        <p>{{ section.start_year }} - {{ section.end_year }}</p>
-
-        {% unless section.sources == empty %}
-            <ul>
-                {% for source in section.sources %}
-                <li>
-                    {% if source.url %}
-                    <a href="{{ source.url }}">{{ source.title }}</a>
-                    {% else %}
-                    {{ source.title }}
-                    {% endif %}
-
-                    {% if source.type %}<p>{{ source.type }}</p>{% endif %}
-                    {% if source.credit %}<p>{{ source.credit }}</p>{% endif %}
-                    {% if source.license %}<p>{{ source.license }}</p>{% endif %}
-                    {% if source.notes %}<p>{{ source.notes }}</p>{% endif %}
-                </li>
-                {% endfor %}
-            </ul>
-        {% endunless %}
-
-        {% for block in section.content_blocks %}
-            {% if block.block_type == 'paragraph' %}
-                <p>{{ block.text }}</p>
-            {% elsif block.block_type == 'heading' %}
-                <h{{ block.heading_level }}>{{ block.text }}</h{{ block.heading_level }}>
-            {% elsif block.block_type == 'quote' %}
-                <blockquote>{{ block.text }}</blockquote>
+            {% if section.cover %}
+                <div class="img-wrapper img-wrapper--fit">
+                    <svg class="spinner" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+                        <path fill="currentColor" d="M16 12.44a3.565 3.565 0 0 1 3.566 3.566A3.565 3.565 0 0 1 16 19.572a3.565 3.565 0 0 1-3.566-3.566A3.565 3.565 0 0 1 16 12.439Zm-1.553 11.375L16 32l1.553-8.185 4.567 6.968-1.695-8.157 6.888 4.687-4.692-6.888 8.162 1.695-6.974-4.567L32 16l-8.19-1.553 6.973-4.567-8.162 1.695 4.692-6.888-6.888 4.687 1.695-8.157-4.567 6.968L16 0l-1.553 8.185L9.88 1.217l1.695 8.157-6.888-4.687 4.692 6.888L1.217 9.88l6.974 4.567L0 16l8.19 1.553-6.973 4.567 8.162-1.695-4.692 6.888 6.888-4.687-1.695 8.157 4.567-6.968Z"/>
+                    </svg>
+                    {% render 'partials/picture.liquid',
+                        image_src: section.cover,
+                        alt_text: section.title,
+                        width: 800,
+                        height: 600
+                    %}
+                </div>
             {% endif %}
-        {% endfor %}
 
-    </section>
-{% endfor %}
+        </section>
+    {% endfor %}
+</article>
 
-{{ questions | json }}
+<form action="/quiz-attempt" method="post">
+    <input type="hidden" name="slug" value="{{ exhibit.slug }}">
+    <button type="submit">Start quiz</button>
+</form>
 
-{% for question in questions %}
-    <section>
-        <h2>{{ question.question }}</h2>
 
-        <ul>
-        {% for option in question.options %}
-            <li>
-                <form method="POST" action="/quiz-attempt">
-                    <input type="hidden" name="question_id" value="{{ question.id }}">
-                    <input type="hidden" name="section_slug" value="{{ slug }}">
-                    <input type="hidden" name="option_key" value="{{ option.key }}">
+    {% for section in sections %}
+    {% if section.question %}
+        <form action="/quiz-answer" method="post">
+            <fieldset>
+                <legend>{{ section.question.question }}</legend>
+                <input type="hidden" name="question_id" value="{{ section.question.id }}">
+                <input type="hidden" name="exhibit_section" value="{{ section.question.exhibit_section }}">
+                <input type="hidden" name="attempt_id" value="{{ attempt_id }}">
+                <input type="hidden" name="slug" value="{{ exhibit.slug }}">
 
-                    <button type="submit" class="btn btn--secondary">
-                        <span class="quiz-option-key">{{ option.key }}</span>
-                        {{ option.answer }}
-                    </button>
-                </form>
-            </li>
-        {% endfor %}
-        </ul>
-    </section>
-{% endfor %}
+                {%  for option in section.question.options %}
+                    <label>
+                        <input type="radio" name="chosen_option" value="{{ option.key }}">
+                        <span>{{ option.key }}</span>{{ option.answer }}
+                    </label>
+                {% endfor %}
+            </fieldset>
+            <button type="submit">Bekijk je resultaten</button>
+        </form>
+    {% endif %}
+    {% endfor %}
+    
+
 
 {% endblock %}

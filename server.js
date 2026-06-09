@@ -46,24 +46,75 @@ app.get('/exhibit/:slug', async function (request, response) {
 })
 
 app.get('/exhibit/:slug/timeline', async function (request, response) {
+  // exhibits ophalen
   const exhibitFetchResponse = await fetch(`${exhibitUrl}?filter[slug][_eq]=${request.params.slug}&fields=*,creators.teylers_museum_persons_id.*`)
   const exhibitFetchResponseJSON = await exhibitFetchResponse.json()
   const exhibit = exhibitFetchResponseJSON.data[0]
 
+  // timeline sections ophalen gesorteerd op start year 
   const sectionsFetchResponse = await fetch(`${sectionsUrl}?filter[exhibit][_eq]=${exhibit.id}&sort=start_year`)
   const sectionsFetchResponseJSON = await sectionsFetchResponse.json()
   const sections = sectionsFetchResponseJSON.data
 
+  // questions ophalen ophalen
   const questionsFetchResponse = await fetch(`${quizQuestionsUrl}?filter[exhibit][_eq]=${exhibit.id}&fields=*`)
   const questionsFetchResponseJSON = await questionsFetchResponse.json()
   const questions = questionsFetchResponseJSON.data
 
+  // niet van mij maar koppeld de section aan de question zodat ik in liquid section.question.id kan doen enzovoort
+  sections.forEach(section => {
+    section.question = questions.find(question => question.exhibit_section === section.id)
+  })
+
   response.render('exhibit-timeline.liquid', { 
     exhibit,
     sections,
-    questions
+    questions,
+    attempt_id: request.query.attempt_id
   })
 })
+
+app.post('/quiz-attempt', async function (request, response) {
+  const attemptFetchResponse = await fetch ('https://fdnd-agency.directus.app/items/teylers_museum_quiz_attempts',{
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      exhibit: request.body.exhibit_id,
+      started_at: new Date()
+    })
+  })
+  const attemptFetchResponseJSON = await attemptFetchResponse.json()
+  const attempt = attemptFetchResponseJSON.data
+
+  response.redirect(`/exhibit/${request.body.slug}/timeline?attempt_id=${attempt.id}`)
+});
+
+app.post('/quiz-answer', async (request, response) => {
+
+  const questionsFetchResponse = await fetch(`${quizQuestionsUrl}/${request.body.question_id}`)
+  const questionsFetchResponseJSON = await questionsFetchResponse.json()
+  const questions = questionsFetchResponseJSON.data
+
+  const chosenOption = questions.options.find(o => o.key === request.body.chosen_option)
+  const isCorrect = chosenOption.is_correct === true
+
+  await fetch('https://fdnd-agency.directus.app/items/teylers_museum_quiz_answers', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      attempt: request.body.attempt_id,
+      question: request.body.question_id,
+      chosen_option: request.body.chosen_option,
+      exhibit_section: request.body.exhibit_section,
+      answered_at: new Date(),
+      is_correct: isCorrect
+    })
+  });
+
+  const slug = request.body.section_slug;
+
+  response.redirect(`/exhibit/${request.body.slug}/timeline?attempt_id=${request.body.attempt_id}`)
+});
 
 app.set('port', process.env.PORT || 8000)
 
