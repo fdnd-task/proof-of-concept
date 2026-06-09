@@ -70,6 +70,7 @@ app.get('/exhibit/:slug/timeline', async function (request, response) {
     exhibit,
     sections,
     questions,
+    attempt_id: request.query.attempt_id
   })
 })
 
@@ -88,7 +89,9 @@ app.post('/quiz-attempt', async function (request, response) {
   response.redirect(`/exhibit/${request.body.exhibit_slug}/timeline?attempt_id=${attempt.id}#quiz`)
 });
 
-app.post('/quiz-answer', async (request, response) => {
+app.post('/quiz-answer', async function (request, response) {
+  console.log(request.body)
+  response.redirect(`/exhibit/${request.body.exhibit_slug}/timeline?attempt_id=${request.body.attempt_id}#quiz`)
 });
 
 app.set('port', process.env.PORT || 8000)

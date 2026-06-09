@@ -41,7 +41,26 @@
         <input type="hidden" name="exhibit_slug" value="{{ exhibit.slug }}">
         <button>Start quiz</button>
     </form>
-
+    {% if attempt_id %}
+        <form action="/quiz-answer" method="POST">
+            <input type="hidden" name="attempt_id" value="{{ attempt_id }}">
+            <input type="hidden" name="exhibit_slug" value="{{ exhibit.slug }}">
+            {% for section in sections %}
+            {% if section.question %}
+            <fieldset>
+                <legend>{{ section.question.question }}</legend>
+                {% for option in section.question.options %}
+                    <label>
+                        <input type="radio" name="question_{{ section.question.id }}_answer" value="{{ option.key }}">
+                        <span>{{ option.key }}</span> {{ option.answer }}
+                    </label>
+                {% endfor %}
+            </fieldset>
+            {% endif %}
+            {% endfor %}
+            <button type="submit">Bereken mijn score / Bekijk resulaten</button>
+        </form>
+    {% endif %}
 </section>
 
 
