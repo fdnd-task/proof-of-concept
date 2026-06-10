@@ -17,11 +17,13 @@ Staat jouw fundament stevig? Met server-side rendering, nette URLs en routes, re
 
 In Sprint 11 heb je geleerd over de pleasurable user interface. 
 
-👉 Lees en bespreek met je buur een aantal workshops over het _enhancen_ van je frontend met CSS en JavaScript uit Sprint 10 en 11 nog een keer. Schrijf de begrippen en technieken op het whiteboard en noteer welke je al een keer hebt toegepast en welke je nog moet leren:
+👉 Lees en bespreek met je buur een aantal workshops over het _enhancen_ van je frontend met CSS en JavaScript uit nog een keer. Schrijf de begrippen en technieken op het whiteboard en noteer welke je al een keer hebt toegepast en welke je nog moet leren:
 
-- [Workshop 'Client-Side scripting for UX' in Sprint 10](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/client-side-scripting-for-ux.md)
-- [Workshop 'Pleasurable is in the details' in Sprint 11](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/pleasurable-is-in-the-details.md)
-- [Workshop 'Client-Side Scripting for UX' in Sprint 11](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/client-side-scripting-for-ux.md)
+- [Workshop 'Programming User Interaction' uit Sprint 5](https://github.com/fdnd-task/fix-the-flow-interactive-website/blob/main/docs/programming-user-interaction.md)
+- [Workshop 'Programming User Interaction' uit Sprint 6](https://github.com/fdnd-task/the-startup-responsive-interactive-website/blob/main/docs/programming-user-interaction.md)
+- [Workshop 'Client-Side scripting for UX' uit Sprint 10](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/client-side-scripting-for-ux.md)
+- [Workshop 'Pleasurable is in the details' uit Sprint 11](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/pleasurable-is-in-the-details.md)
+- [Workshop 'Client-Side Scripting for UX' uit Sprint 11](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/client-side-scripting-for-ux.md)
 
 👉 Ontwerp een Pleasurable interactie
 
