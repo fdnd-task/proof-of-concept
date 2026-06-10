@@ -24,6 +24,7 @@ In Sprint 11 heb je geleerd over de pleasurable user interface.
 - [Workshop 'Client-Side scripting for UX' uit Sprint 10](https://github.com/fdnd-task/user-experience-enhanced-website/blob/main/docs/client-side-scripting-for-ux.md)
 - [Workshop 'Pleasurable is in the details' uit Sprint 11](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/pleasurable-is-in-the-details.md)
 - [Workshop 'Client-Side Scripting for UX' uit Sprint 11](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/client-side-scripting-for-ux.md)
+- [Strategieën en voorbeelden voor verschillende enhancements uit de Progressive Enhancement deeltaak](https://github.com/fdnd-task/progressive-enhancement/blob/main/docs/INSTRUCTIONS.md#strategie%C3%ABn-en-voorbeelden-voor-verschillende-enhancements)
 
 👉 Ontwerp een Pleasurable interactie
 
