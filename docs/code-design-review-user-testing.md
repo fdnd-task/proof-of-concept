@@ -41,7 +41,7 @@ Je hebt in jouw website gewerkt aan een interactie. Vandaag verzamel je feedback
 
 Het ontwerpen van een goede gebruikerservaring (UX) gaat niet alleen over iets bouwen dat werkt, maar vooral over iets maken dat intuïtief en prettig te gebruiken is. Misschien denk je dat jouw micro-interactie perfect is – alles functioneert precies zoals jij het had bedacht – maar hoe ervaart een gebruiker jouw werk? Om dat te ontdekken, gebruik je user testing. Het doel is om te achterhalen hoe een echte gebruiker, iemand die jouw code niet kent, jouw werk ervaart.
 
-Voer een User Test uit met minimaal 2 users, waarvan één met een docent. 
+Voer een User Test uit. Tip: doe dit met een student niet uit jouw jaar. Misschien kun je iemand vragen vanuit de FDND Agency? Of een meeloopstudent?
 
 Pak voor de User Test de instructies van de 'Code/design review User Test' er opnieuw bij. Deze kun je vinden in sprint 5 bij de workshop [Code/Design User Testing](https://github.com/fdnd-task/fix-the-flow-interactive-website/blob/main/docs/code-design-review-user-testing.md). 
 
