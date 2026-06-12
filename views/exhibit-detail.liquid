@@ -123,7 +123,7 @@
                 <fieldset>
                     <legend>{{ question.question }}</legend>
                     {% for option in question.options %}
-                        <label>
+                        <label class="btn btn--secondary">
                             <input type="radio" name="question_{{ question.id }}_answer" value="{{ option.key }}">
                             <span>{{ option.key }}</span> {{ option.answer }}
                         </label>
