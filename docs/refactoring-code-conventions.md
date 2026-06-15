@@ -34,6 +34,8 @@ Welke volgorde hou je in je server aan? Volg je de sitemap in je routes, of staa
 
 ## Ademruimte en inspringen
 
+Waarschijnlijk snap je nu beter wat we je [in Sprint 2 probeerden uit te leggen](https://github.com/fdnd-task/the-client-website/blob/main/docs/code-conventies.md#geef-je-html-ademruimte).
+
 Welke conventies hou je zelf aan? Gebruik je voor inspringen altijd tabs? Gebruik je altijd 2 spaties, of 4? Hou je richtlijnen aan voor inline-level en block-level elementen in HTML? Wanneer gebruik je meer ademruimte? Hoe pas je ademruimte en inspringen toe in je Liquid code? Hoe in je server-side en client-side JavaScript code? Probeer je eigen conventies en voorkeuren te herkennen. Schoon inconsequente code op, en commit deze. Zet in je commit message bijvoorbeeld “Refactor HTML”. Zorg er tijdens deze refactorslag voor dat je geen functionaliteit verandert.
 
 <!-- Maak in je Readme een kopje aan met “Ademruimte en inspringen” en leg uit hoe je dit in je Liquid en HTML files hebt gedaan. Link naar voorbeelden in je code. -->
