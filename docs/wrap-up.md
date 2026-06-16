@@ -22,6 +22,18 @@
 
 ## Readme schrijven
 
+t.b.d.
+
+<!--
+Over waarom een goede readme: Verschillende stakeholders
+Over hoe een goede readme, gebruik van titels, subtitels, plkaatjes en video's, hoofd- en bijzaken. (dit hoort ook bij wat je in de sprint review gaart vertellen)
+Over iteraties en experimenten: Ontwerpkeuzes verantwoorden
+Over techstack, code conventies (als je die hebt) met voorbeelden, hoe repo te forjen en runnnen?
+
+
+-->
+
+<!--
 📝 Schrijf een nette Readme, waarin je laat zien wat je hebt gedaan. In je Readme laat je het eindresultaat zien en breng je je ontwerpkeuzes over. Licht ook kort je [code conventies](https://github.com/fdnd-task/proof-of-concept/blob/main/docs/refactoring-code-conventions.md) toe, en op welke details jij let.
 
 👉 Neem de wrap-ups van vorige sprints nog eens door, en bepaal zelf welke onderdelen relevant zijn voor deze opdracht:
@@ -34,3 +46,4 @@
 - [Wrap up Sprint 11, Pleasurabe UI](https://github.com/fdnd-task/pleasurable-ui/blob/main/docs/wrap-up.md)
 
 🤩 Zet 'm op bij de Sprint Review morgen!
+-->
