@@ -17,6 +17,10 @@
 
 🎁 Het proces van Briefing en Sprint Reviews gaat over Communiceren met de opdrachtgever (en je team). Als je straks aan het werk bent, zul je merken dat je ook vaak je werk moet laten zien; wat heb je gedaan, wat heb je niet gedaan, en waarom. Hiermee kun je de verwachtingen van een opdrachtgever sturen. Gebruik de MoSCoW methode en je project board ook om inzicht te geven in wat wel en niet gelukt is.
 
+<!--
+Hier kan misschien het PR voorbeeld van Arman, Sebastiaan.
+-->
+
 🎆 Maak ook samen de poster voor de Expo van woensdag 2 juli. Heb jij al vrienden en familie uitgenodigd voor die avond trouwens? De link naar het Figma bestand staat op het scherm en in Teams.
 
 
