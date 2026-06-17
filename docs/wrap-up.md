@@ -13,9 +13,9 @@ In de wrap-up ga je de Sprint Review voorbereiden. Wat ga je aan de oprachtgever
 
 
 ## Sprint Review voorbereiden 👫
-👉 Eerst ga je met je team met studenten die dezelfde opdracht hebben de Sprint Review voorbereiden. Ga met elkaar aan tafel zitten. Laat eerst aan elkaar zien wat je hebt gemaakt deze sprint. Bedenk daarna wat en hoe jullie dit gaan presenteren, en spreek een logische volgorde af, zodat jullie elkaar aan kunnen vullen.
+Het proces van Briefing en Sprint Reviews gaat over Communiceren met de opdrachtgever (en je team). Als je straks aan het werk bent, zul je merken dat je ook vaak je werk moet laten zien; wat heb je gedaan, wat heb je niet gedaan, en waarom. Hiermee kun je de verwachtingen van een opdrachtgever sturen. <!-- Gebruik de MoSCoW methode en je project board ook om inzicht te geven in wat wel en niet gelukt is.-->
 
-🎁 Het proces van Briefing en Sprint Reviews gaat over Communiceren met de opdrachtgever (en je team). Als je straks aan het werk bent, zul je merken dat je ook vaak je werk moet laten zien; wat heb je gedaan, wat heb je niet gedaan, en waarom. Hiermee kun je de verwachtingen van een opdrachtgever sturen. Gebruik de MoSCoW methode en je project board ook om inzicht te geven in wat wel en niet gelukt is.
+👉 Eerst ga je met je team met studenten die dezelfde opdracht hebben de Sprint Review voorbereiden. Ga met elkaar aan tafel zitten. Laat eerst aan elkaar zien wat je hebt gemaakt deze sprint. Bedenk daarna wat en hoe jullie dit gaan presenteren, en spreek een logische volgorde af, zodat jullie elkaar aan kunnen vullen.
 
 <!--
 Hier kan misschien het PR voorbeeld van Arman, Sebastiaan.
