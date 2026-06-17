@@ -61,7 +61,7 @@ Als je een onderdeel netjes volgens het principe van Progressive enhancement heb
 Als je verschillende versies hebt gemaakt van een onderdeel van je website kan je dat ook presenteren. Laat eerst de laatste versie zien, en daaronder de experimenten die je hebt gemaakt. Zorg dat je voor de expoerimenten ook een link hebt als dat kan.
 
 
-## Kenmerken
+### Kenmerken
 Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Hoe is je project opgebouwd in NodeJS met url's, routes en de views? 
 
 Licht ook kort je [code conventies](https://github.com/fdnd-task/proof-of-concept/blob/main/docs/refactoring-code-conventions.md) toe, en op welke details jij let.
