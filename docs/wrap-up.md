@@ -38,7 +38,7 @@ Breng in kaart welke onderdelen van jouw website je wil presenteren in jouw Read
 
 ### Readme ontwerpen
 
-Een Readme heeft een logische volgorde en opmaak zodat een lezer goed kan volgen wat je hebt gedaan. 
+Een Readme heeft een logische volgorde en opmaak zodat lezers (belanghebbenden) goed kunnen volgen wat je hebt gedaan. 
 
 #### Titel
 
