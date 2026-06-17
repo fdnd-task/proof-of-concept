@@ -56,7 +56,7 @@ Als je het responsive ontwerp wil presenteren laat je verschillende screenshots 
 
 Als je een onderdeel netjes volgens het principe van Progressive enhancement hebt gemaakt, laat dan de meeste enhanced versie zien met screenshots of een video, én laat zien wat er in een browser gebeurt die bepaalde technieken niet ondersteunt. Een stuk code met feature detection kan je hier ook laten zien. Link zo nodig door naar een issue waarin je op verschillende (oude) browsers hebt getest.
 
-Als je verschillende versies hebt gemaakt van een onderdeel van je website kan je dat ook presenteren. Laat eerst de laatste versie zien, en daaronder de experimenten die je hebt gemaakt. Zorg dat je voor de expoerimenten ook een link hebt als dat kan.
+Als je verschillende versies hebt gemaakt van een onderdeel van je website kan je dat ook presenteren. Laat eerst de laatste versie zien, en daaronder de experimenten die je hebt gemaakt. Zorg dat je voor de experimenten ook een link hebt, naar een feature branche of demo pagina, de opdrachtgever wil dit misschien later nog bekijken.
 
 
 #### Kenmerken
