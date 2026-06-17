@@ -32,7 +32,7 @@ Hier kan misschien het PR voorbeeld van Arman, Sebastiaan.
 
 ### Componenten in kaart brengen
 
-Breng in kaart welke onderdelen van jouw website je wil presenteren in jouw Readme. Heb je veel aandacht besteed aan het responsive design? Heb je een mooi menu gemaakt dat responsive goed werkt? Een photo-viewer die mooi is opgebouwd volgens het principe van Progressive Enhancement zodat die het altijd doet? Heb je een website met veel photo's en extra aandacht besteed aan performance? Misschien heb je een POST met goede UI states? Of heb je verschillende versies van een experimentele scroll interface gemaakt? 
+Breng in kaart welke componenten of onderdelen van jouw website je wil presenteren in jouw Readme. Heb je veel aandacht besteed aan het responsive design? Heb je een mooi menu gemaakt dat responsive goed werkt? Een photo-viewer die mooi is opgebouwd volgens het principe van Progressive Enhancement zodat die het altijd doet? Heb je een website met veel photo's en extra aandacht besteed aan performance? Misschien heb je een POST met goede UI states? Of heb je verschillende versies van een experimentele scroll interface gemaakt? 
 
 👉 Maak een lijst van alle componenten en onderdelen van je website en schrijf daarachter wat er goed is aan de uitwerking en je ontwerpkeuzes. Bespreek de lijst met je tafel en kies 3 onderdelen die je in de Readme wil presenteren.
 
