@@ -5,16 +5,15 @@
 Over het voorbereiden van de Sprint Review en klaarzetten van jouw project voor oplevering met een nette Readme.
 
 ### Aanpak
-⁉️ In de wrap-up ga je de Sprint Review voorbereiden. Wat ga je aan de oprachtgever presenteren? Hoe ga je dat doen? En waar wil je feedback op van de opdrachtgever?
+In de wrap-up ga je de Sprint Review voorbereiden. Wat ga je aan de oprachtgever presenteren? Hoe ga je dat doen? En waar wil je feedback op van de opdrachtgever?
 
 🆕 Je opdrachtgever deze sprint is een andere dan de afgelopen sprints. Deze kent jou nog niet zo goed, dus dit is een goed moment om je visitekaartje af te geven. Misschien wil je komend jaar wel stage lopen bij dit bedrijf, en leg je nu de eerste contacten hiervoor. In Sprint 12 hebben we bewust bedrijven uitgezocht die regelmatig op zoek zijn naar frontend developers.
 
 🚧 Pro-tip: maak alvast een LinkedIn account aan als je die nog niet hebt. Laat maar zien dat je een serieuze frontender aan het worden bent. Bouw tijdens je opleiding alvast je netwerk op, zodat je over een jaar soepel het bedrijfsleven inrolt. Stuur alvast een invite naar je docenten, want die kunnen je hierbij helpen.
 
 
-## Sprint Review voorbereiden
-
-👫 Eerst ga je met je team met studenten die dezelfde opdracht hebben de Sprint Review voorbereiden. Ga met elkaar aan tafel zitten. Laat eerst aan elkaar zien wat je hebt gemaakt deze sprint. Bedenk daarna wat en hoe jullie dit gaan presenteren, en spreek een logische volgorde af, zodat jullie elkaar aan kunnen vullen.
+## Sprint Review voorbereiden 👫
+👉 Eerst ga je met je team met studenten die dezelfde opdracht hebben de Sprint Review voorbereiden. Ga met elkaar aan tafel zitten. Laat eerst aan elkaar zien wat je hebt gemaakt deze sprint. Bedenk daarna wat en hoe jullie dit gaan presenteren, en spreek een logische volgorde af, zodat jullie elkaar aan kunnen vullen.
 
 🎁 Het proces van Briefing en Sprint Reviews gaat over Communiceren met de opdrachtgever (en je team). Als je straks aan het werk bent, zul je merken dat je ook vaak je werk moet laten zien; wat heb je gedaan, wat heb je niet gedaan, en waarom. Hiermee kun je de verwachtingen van een opdrachtgever sturen. Gebruik de MoSCoW methode en je project board ook om inzicht te geven in wat wel en niet gelukt is.
 
@@ -26,9 +25,8 @@ Hier kan misschien het PR voorbeeld van Arman, Sebastiaan.
 🎆 Maak ook samen de poster voor de Expo van woensdag 2 juli. Heb jij al vrienden en familie uitgenodigd voor die avond trouwens? De link naar het Figma bestand staat op het scherm en in Teams.
 -->
 
-## Readme schrijven
-
-📝 Schrijf een nette Readme, waarin je laat zien wat je hebt gedaan. In je Readme laat je het eindresultaat zien en breng je je ontwerpkeuzes over. 
+## Readme schrijven 📝
+Schrijf een nette Readme, waarin je laat zien wat je hebt gedaan. In je Readme laat je het eindresultaat zien en breng je je ontwerpkeuzes over. 
 
 ### Componenten in kaart brengen
 
