@@ -46,7 +46,7 @@ Een Readme heeft een logische volgorde en opmaak zodat lezers (belanghebbenden) 
 
 #### Beschrijving 
 
-👉 Leg kort en bondig uit welke odnerdelen je website bestaat en welke je in de Readme gaat presenteren. Maak een screenshot of video die je tekst ondersteunt. Voeg hier ook een link naar de live site toe.
+👉 Leg kort en bondig uit welke onderdelen je website bestaat en welke je in de Readme gaat presenteren. Maak een screenshot of video die je tekst ondersteunt. Voeg hier ook een link naar de live site toe.
 
 #### Gebruik 
 Bij Gebruik staat hoe het werkt en wat je er mee kan. Hier ga je de drie onderdelen waar je trotst op bent beschrijven en laten zien. 
