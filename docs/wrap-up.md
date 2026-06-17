@@ -45,11 +45,12 @@ Een Readme heeft een logische volgorde en opmaak zodat lezers (belanghebbenden) 
 👉 Bedenk een goede titel en schrijf daaronder in een duidelijke zin die beschrijft wat er in de repo te vinden is en wat je hebt gemaakt. Check met je tafel of je zin dudielijk is. 
 
 #### Beschrijving 
+Bij "Beschrijving" staat kort beschreven wat voor project het is en wat je hebt gemaakt.
 
 👉 Leg kort en bondig uit welke onderdelen je website bestaat en welke je in de Readme gaat presenteren. Maak een screenshot of video die je tekst ondersteunt. Voeg hier ook een link naar de live site toe.
 
 #### Gebruik 
-Bij Gebruik staat hoe het werkt en wat je er mee kan. Hier ga je de drie onderdelen waar je trotst op bent beschrijven en laten zien. 
+Bij "Gebruik" staat hoe het werkt en wat je er mee kan. Hier ga je de drie onderdelen waar je trots op bent beschrijven en laten zien. 
 
 Als je het responsive ontwerp wil presenteren laat je verschillende screenshots zien en leg je uit wat je hebt gedaan. je mag hier ook funky code laten zien en kort uitleggen. 
 
