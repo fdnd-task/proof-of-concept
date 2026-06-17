@@ -7,9 +7,9 @@ Over het voorbereiden van de Sprint Review en klaarzetten van jouw project voor 
 ### Aanpak
 In de wrap-up ga je de Sprint Review voorbereiden. Wat ga je aan de oprachtgever presenteren? Hoe ga je dat doen? En waar wil je feedback op van de opdrachtgever?
 
-🆕 Je opdrachtgever deze sprint is een andere dan de afgelopen sprints. Deze kent jou nog niet zo goed, dus dit is een goed moment om je visitekaartje af te geven. Misschien wil je komend jaar wel stage lopen bij dit bedrijf, en leg je nu de eerste contacten hiervoor. In Sprint 12 hebben we bewust bedrijven uitgezocht die regelmatig op zoek zijn naar frontend developers.
+Je opdrachtgever deze sprint is een andere dan de afgelopen sprints. Deze kent jou nog niet zo goed, dus dit is een goed moment om je visitekaartje af te geven. Misschien wil je komend jaar wel stage lopen bij dit bedrijf, en leg je nu de eerste contacten hiervoor. In Sprint 12 hebben we bewust bedrijven uitgezocht die regelmatig op zoek zijn naar frontend developers.
 
-🚧 Pro-tip: maak alvast een LinkedIn account aan als je die nog niet hebt. Laat maar zien dat je een serieuze frontender aan het worden bent. Bouw tijdens je opleiding alvast je netwerk op, zodat je over een jaar soepel het bedrijfsleven inrolt. Stuur alvast een invite naar je docenten, want die kunnen je hierbij helpen.
+💪 Pro-tip: maak alvast een LinkedIn account aan als je die nog niet hebt. Laat maar zien dat je een serieuze frontender aan het worden bent. Bouw tijdens je opleiding alvast je netwerk op, zodat je over een jaar soepel het bedrijfsleven inrolt. Stuur alvast een invite naar je docenten, want die kunnen je hierbij helpen.
 
 
 ## Sprint Review voorbereiden 👫
