@@ -48,7 +48,9 @@ Bij "Beschrijving" staat kort beschreven wat voor project het is en wat je hebt 
 👉 Leg kort en bondig uit welke onderdelen je website bestaat en welke je in de Readme gaat presenteren. Maak een screenshot of video die je tekst ondersteunt. Voeg hier ook een link naar de live site toe.
 
 #### Gebruik 
-Bij "Gebruik" staat hoe het werkt en wat je er mee kan. Hier ga je de drie componenten of onderdelen waar je trots op bent beschrijven en laten zien. 
+Bij "Gebruik" staat hoe het werkt en wat je er mee kan. 
+
+👉 Hier ga je de drie componenten of onderdelen waar je trots op bent beschrijven en laten zien. 
 
 Bijvoorbeeld: 
 
