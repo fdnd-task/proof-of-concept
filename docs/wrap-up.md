@@ -62,11 +62,11 @@ Als je verschillende versies hebt gemaakt van een onderdeel van je website kan j
 
 
 #### Kenmerken
-Bij "Kenmerken" staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Hoe is je project opgebouwd in NodeJS met url's, routes en de views? 
+Bij "Kenmerken" staat welke technieken zijn gebruikt en hoe. 
 
-Licht ook kort je [code conventies](https://github.com/fdnd-task/proof-of-concept/blob/main/docs/refactoring-code-conventions.md) toe, en op welke details jij let.
+👉 Hier schrijf je de belangrijkste technieken en opbouw van je code. Licht ook kort je [code conventies](https://github.com/fdnd-task/proof-of-concept/blob/main/docs/refactoring-code-conventions.md) toe, en op welke details jij let. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Hoe is je project opgebouwd in NodeJS met url's, routes en de views? Zo nodig link je door naar code snippets. 
 
-Tot slot schrijf je instructues voor iemand die jouw repo wil clonen. Welke stappen moet iemand ondernemen om jouw werk te runnen?
+👉 Tot slot schrijf je instructies voor iemand die jouw repo wil clonen. Welke stappen moet iemand ondernemen om jouw werk te runnen?
 
 
 
