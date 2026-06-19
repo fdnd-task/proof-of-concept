@@ -1,20 +1,63 @@
 {% render 'partials/head.liquid' %}
 
-<main>
-  <section>
-    <nav aria-label="Tijdlijn">
-      <svg class="timeline__svg" viewBox="-10 0 310 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M 9 34 A 230 230 0 0 1 9 466"
-              fill="none"
-              stroke="rgba(255,255,255,0.35)"
-              stroke-width="1.5"
-              stroke-dasharray="5 8"/>
-        <g class="timeline__items"></g>
+<main data-staat="info">
+  <nav class="tijdlijn no-select" aria-label="Tijdlijn">
+    <svg viewBox="-10 0 310 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 9 34 A 230 230 0 0 1 9 466"
+            fill="none"
+            stroke="rgba(255,255,255,0.35)"
+            stroke-width="1.5"
+            stroke-dasharray="5 8"/>
+      <g></g>
+    </svg>
+  </nav>
+
+  <section class="info-panel">
+    <img class="sectie-cover" id="sectie-cover" src="" alt="" hidden>
+    <h2 class="sectie-naam" id="sectie-naam"></h2>
+    <p class="sectie-era" id="sectie-era"></p>
+    <p class="sectie-jaar-groot" id="sectie-jaar-groot"></p>
+    <p class="sectie-samenvatting" id="sectie-samenvatting"></p>
+    <div class="sectie-content" id="sectie-content"></div>
+    <button class="primary-btn" id="wissel-btn">
+      <span class="lbl-kennis">Check je kennis</span>
+      <span class="lbl-info">Onthul de info</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z" fill="currentColor"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C17.5915 3 22.2898 6.82432 23.6219 12C22.2898 17.1757 17.5915 21 12 21C6.40848 21 1.71018 17.1757 0.378052 12C1.71018 6.82432 6.40848 3 12 3ZM12 19C7.52443 19 3.73132 16.0581 2.45723 12C3.73132 7.94186 7.52443 5 12 5C16.4756 5 20.2687 7.94186 21.5428 12C20.2687 16.0581 16.4756 19 12 19Z" fill="currentColor"/>
       </svg>
-    </nav>
+    </button>
   </section>
+
+  <div class="quiz-kaart-wrapper">
+    <div class="quiz-kaart">
+      {% for sectie in secties %}
+        {% assign vraag = vragenPerSectie[sectie.id] %}
+        {% if vraag %}
+        <article class="quiz-inhoud" data-sectie="{{ sectie.id }}" hidden>
+          <p class="kaart-jaar">{{ sectie.start_year }}</p>
+          <h3 class="kaart-titel">{{ vraag.question }}</h3>
+          <ul class="antwoorden">
+            {% for optie in vraag.options %}
+            <li>
+              <button class="antwoord-btn" data-correct="{{ optie.is_correct }}"
+                      data-uitleg-correct="{{ vraag.explanation_correct }}"
+                      data-uitleg-fout="{{ vraag.explanation_wrong }}">
+                <span class="key">{{ optie.key }}</span>
+                {{ optie.answer }}
+              </button>
+            </li>
+            {% endfor %}
+          </ul>
+          <p class="uitleg" hidden></p>
+          <button class="probeer-opnieuw-btn" hidden>Probeer opnieuw</button>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </main>
 
-<script src="./scripts/timeline.js"></script>
+<script type="application/json" id="secties-data">{{ sectiesJson }}</script>
 
 {% render 'partials/foot.liquid' %}

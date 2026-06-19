@@ -1,0 +1,324 @@
+/* Layout */
+main {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.tijdlijn {
+  flex-shrink: 0;
+  height: 90vh;
+
+  svg {
+    height: 100%;
+    width: auto;
+    max-width: 400px;
+  }
+}
+
+/* Info panel */
+.info-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 38rem;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.sectie-cover {
+  width: 100%;
+  max-height: 18rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.sectie-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.85;
+
+  blockquote {
+    border-left: 3px solid var(--secundiary-kleur);
+    margin: 0;
+    padding-left: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+  }
+}
+
+.sectie-naam {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.sectie-samenvatting {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.sectie-jaar-groot {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1;
+  color: var(--secundiary-kleur);
+}
+
+/* Knoplabels wisselen op staat */
+main[data-staat="info"] .lbl-info,
+main[data-staat="quiz"] .lbl-kennis {
+  display: none;
+}
+
+/* Quiz kaart */
+.quiz-kaart-wrapper {
+  flex-shrink: 0;
+  position: relative;
+  width: clamp(14rem, 35vw, 18rem);
+}
+
+.quiz-kaart-wrapper::before,
+.quiz-kaart-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--secundiary-kleur);
+  border-radius: 0.75rem;
+  z-index: 0;
+}
+
+.quiz-kaart-wrapper::before {
+  transform: rotate(-4deg) translateY(6px);
+  opacity: 0.5;
+}
+
+.quiz-kaart-wrapper::after {
+  transform: rotate(2deg) translateY(3px);
+  opacity: 0.7;
+}
+
+.quiz-kaart {
+  position: relative;
+  z-index: 1;
+  background: var(--secundiary-kleur);
+  color: var(--primaire-kleur);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-areas: 'inhoud';
+}
+
+.quiz-inhoud {
+  grid-area: inhoud;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+/* Quiz staat: info geblurd */
+main[data-staat="quiz"] .info-panel {
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+main[data-staat="info"] .info-panel {
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+/* Info staat: kaart verborgen */
+main[data-staat="info"] .quiz-kaart-wrapper {
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+main[data-staat="quiz"] .quiz-kaart-wrapper {
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+.kaart-jaar {
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kaart-titel {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.antwoorden {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.antwoord-btn {
+  width: 100%;
+  background: rgba(0,0,0,0.06);
+  border: 1.5px solid rgba(0,0,0,0.12);
+  color: var(--primaire-kleur);
+  padding: 0.6rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 2rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.9rem;
+
+  .key {
+    font-weight: bold;
+    min-width: 1rem;
+  }
+
+  &:not(:disabled):hover {
+    background: rgba(0,0,0,0.12);
+  }
+
+  &[data-status="correct"] {
+    background: rgba(50,160,80,0.2);
+    border-color: rgba(50,160,80,0.7);
+  }
+
+  &[data-status="fout"] {
+    background: rgba(200,50,50,0.15);
+    border-color: rgba(200,50,50,0.6);
+  }
+}
+
+.probeer-opnieuw-btn {
+  background: none;
+  border: 1.5px solid rgba(0,0,0,0.2);
+  color: var(--primaire-kleur);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  align-self: flex-start;
+
+  &:hover {
+    background: rgba(0,0,0,0.06);
+  }
+}
+
+.uitleg {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  padding: 0.6rem 0.75rem;
+  background: rgba(0,0,0,0.06);
+  border-radius: 0.5rem;
+}
+
+/* Primaire knop */
+.primary-btn {
+  background: var(--action-kleur);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: Grotesk, sans-serif;
+  font-size: 1rem;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  align-self: flex-start;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .info-panel {
+    max-width: 28rem;
+  }
+
+  .quiz-kaart-wrapper {
+    width: clamp(12rem, 28vw, 16rem);
+  }
+
+  .sectie-jaar-groot {
+    font-size: 3.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    gap: 0;
+    min-height: 100svh;
+  }
+
+  .tijdlijn {
+    height: 60vw;
+    width: 100%;
+    flex-shrink: 0;
+
+    svg {
+      height: 100%;
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .info-panel {
+    max-width: none;
+    max-height: none;
+    overflow-y: visible;
+    padding: 1.25rem 1.25rem 0;
+    flex: 1;
+  }
+
+  .sectie-cover {
+    max-height: 12rem;
+  }
+
+  .sectie-jaar-groot {
+    font-size: 3rem;
+  }
+
+  .quiz-kaart-wrapper {
+    width: calc(100% - 2.5rem);
+    margin: 1.25rem;
+    align-self: center;
+  }
+
+  .primary-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.no-select {
+  /*
+Source - https://stackoverflow.com/a/4407335
+Posted by Blowsie, modified by community. See post 'Timeline' for change history
+Retrieved 2026-06-08, License - CC BY-SA 4.0
+*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

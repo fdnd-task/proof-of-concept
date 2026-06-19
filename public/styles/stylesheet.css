@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Grotesk, sans-serif;
+  src: url(../fonts/OTF/CabinetGrotesk-Light.otf);
+  font-weight: 100;
+}
+
 :root {
   --primaire-kleur: hsl(194, 37%, 16%);
   --secundiary-kleur: hsl(37, 53%, 92%);
@@ -18,24 +24,40 @@ body {
 }
 
 img {
-  max-width: 10rem;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-main {
-  min-height: 100vh;
-}
-
-section {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
+.primary-btn {
+  background: var(--action-kleur);
   display: flex;
   align-items: center;
+  gap: 1rem;
+  font-family: Grotesk, sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
 }
 
-.timeline__svg {
-  height: 100vh;
-  width: auto;
+.no-select {
+  /*
+Source - https://stackoverflow.com/a/4407335
+Posted by Blowsie, modified by community. See post 'Timeline' for change history
+Retrieved 2026-06-08, License - CC BY-SA 4.0
+*/
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.blur {
+  filter: blur(40%);
 }
