@@ -34,7 +34,7 @@
       {% for sectie in secties %}
         {% assign vraag = vragenPerSectie[sectie.id] %}
         {% if vraag %}
-        <article class="quiz-inhoud" data-sectie="{{ sectie.id }}" hidden>
+        <article class="quiz-inhoud" data-sectie="{{ sectie.id }}" data-vraag-id="{{ vraag.id }}" hidden>
           <p class="kaart-jaar">{{ sectie.start_year }}</p>
           <h3 class="kaart-titel">{{ vraag.question }}</h3>
           <ul class="antwoorden">
@@ -50,12 +50,34 @@
             {% endfor %}
           </ul>
           <p class="uitleg" hidden></p>
-          <button class="probeer-opnieuw-btn" hidden>Probeer opnieuw</button>
+          <button class="volgende-vraag-btn" hidden>Ga naar volgende vraag →</button>
         </article>
         {% endif %}
       {% endfor %}
+
+      <div class="score-opslaan" id="score-opslaan" hidden>
+        <p class="score-resultaat" id="score-resultaat"></p>
+      </div>
     </div>
   </div>
+
+  <section class="scorebord">
+    <h2 class="scorebord-titel">Scorebord</h2>
+    <ol class="scores-lijst">
+      {% for poging in pogingen %}
+      <li class="score-item">
+        <span class="score-positie">{{ forloop.index }}</span>
+        <div class="score-info">
+          <span class="score-punten">{{ poging.score }} / {{ poging.total_questions }}</span>
+          <time class="score-datum">{{ poging.completed_at | slice: 0, 10 }}</time>
+        </div>
+        <div class="score-balk-wrapper">
+          <div class="score-balk" style="width: {{ poging.score | times: 100 | divided_by: poging.total_questions }}%"></div>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
 </main>
 
 <script type="application/json" id="secties-data">{{ sectiesJson }}</script>

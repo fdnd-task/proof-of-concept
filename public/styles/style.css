@@ -206,7 +206,7 @@ main[data-staat="quiz"] .quiz-kaart-wrapper {
   }
 }
 
-.probeer-opnieuw-btn {
+.volgende-vraag-btn {
   background: none;
   border: 1.5px solid rgba(0,0,0,0.2);
   color: var(--primaire-kleur);
@@ -307,6 +307,78 @@ main[data-staat="quiz"] .quiz-kaart-wrapper {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* Scorebord sectie op hoofdpagina */
+.scorebord {
+  flex-shrink: 0;
+  width: clamp(12rem, 18vw, 16rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.scorebord-titel {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+}
+
+.scores-lijst {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.score-item {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1rem;
+  row-gap: 0.35rem;
+  align-items: center;
+}
+
+.score-positie {
+  grid-row: 1 / 3;
+  font-size: 0.8rem;
+  opacity: 0.4;
+  text-align: right;
+}
+
+.score-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.score-punten {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.score-datum {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.score-balk-wrapper {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.score-balk {
+  height: 100%;
+  background: var(--action-kleur);
+  border-radius: 2px;
 }
 
 .no-select {

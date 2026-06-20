@@ -107,6 +107,7 @@ function activeerSectie(index) {
   document.querySelectorAll('.quiz-inhoud').forEach(el => el.hidden = true)
   document.querySelectorAll('.uitleg').forEach(el => { el.hidden = true; el.textContent = '' })
   document.querySelectorAll('.antwoord-btn').forEach(el => { el.disabled = false; el.removeAttribute('data-status') })
+  document.querySelectorAll('.volgende-vraag-btn').forEach(el => { el.hidden = true })
 
   // Toon de quizvraag die bij deze sectie hoort
   const actief = document.querySelector(`.quiz-inhoud[data-sectie="${sectie.id}"]`)
@@ -160,28 +161,71 @@ document.getElementById('wissel-btn').addEventListener('click', () => {
   main.dataset.staat = main.dataset.staat === 'info' ? 'quiz' : 'info'
 })
 
+// Bijhouden van de lopende quiz-poging en score
+let attemptId = null
+let scoreCount = 0
+const beantwoord = new Set()
+const aantalVragen = document.querySelectorAll('.quiz-inhoud').length
+
+async function slaAntwoordOp(questionId, answerKey, isCorrect) {
+  if (!attemptId) {
+    const res = await fetch('/quiz/attempt', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({})
+    })
+    const json = await res.json()
+    attemptId = json.attemptId
+  }
+
+  await fetch('/quiz/answer', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ attemptId, questionId, answerKey, isCorrect })
+  })
+}
+
+async function slaScoreOp() {
+  await fetch('/quiz/complete', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ attemptId, score: scoreCount, totalQuestions: aantalVragen })
+  })
+  document.getElementById('score-resultaat').textContent = `Je hebt ${scoreCount} van de ${aantalVragen} vragen goed!`
+  document.getElementById('score-opslaan').hidden = false
+  setTimeout(() => window.location.reload(), 2000)
+}
+
 // Antwoordknoppen: verwerk de keuze van de gebruiker en toon de uitleg
 document.querySelectorAll('.antwoord-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', async () => {
     const vraag = btn.closest('.quiz-inhoud')
     const uitleg = vraag.querySelector('.uitleg')
     const correct = btn.dataset.correct === 'true' // controleer of het gekozen antwoord correct is
+    const sectieId = vraag.dataset.sectie
+    const questionId = vraag.dataset.vraagId
+    const answerKey = btn.querySelector('.key').textContent.trim()
 
     vraag.querySelectorAll('.antwoord-btn').forEach(b => b.disabled = true) // vergrendel alle knoppen
     btn.setAttribute('data-status', correct ? 'correct' : 'fout')           // markeer de gekozen knop
     uitleg.textContent = correct ? btn.dataset.uitlegCorrect : btn.dataset.uitlegFout // toon de juiste uitleg
     uitleg.hidden = false
-    if (!correct) vraag.querySelector('.probeer-opnieuw-btn').hidden = false // toon de knop alleen bij fout antwoord
+    vraag.querySelector('.volgende-vraag-btn').hidden = false
+
+    // Sla het antwoord op bij de eerste poging op deze sectie
+    if (!beantwoord.has(sectieId)) {
+      beantwoord.add(sectieId)
+      if (correct) scoreCount++
+      await slaAntwoordOp(questionId, answerKey, correct)
+      if (beantwoord.size === aantalVragen) await slaScoreOp()
+    }
   })
 })
 
-// Probeer opnieuw: reset de vraag naar de beginstand
-document.querySelectorAll('.probeer-opnieuw-btn').forEach(knop => {
+// Volgende vraag: navigeer naar de volgende sectie op de tijdlijn
+document.querySelectorAll('.volgende-vraag-btn').forEach(knop => {
   knop.addEventListener('click', () => {
-    const vraag = knop.closest('.quiz-inhoud')
-    vraag.querySelectorAll('.antwoord-btn').forEach(b => { b.disabled = false; b.removeAttribute('data-status') })
-    vraag.querySelector('.uitleg').hidden = true
-    knop.hidden = true
+    snap(Math.round(offset) + 1)
   })
 })
 

@@ -1,0 +1,26 @@
+{% render 'partials/head.liquid' %}
+
+<main class="scores-pagina">
+  <header class="scores-header">
+    <a href="/" class="terug-link">← Terug naar tijdlijn</a>
+    <h1>Scorebord</h1>
+    <p class="scores-intro">De laatste {{ pogingen.length }} voltooide quizpogingen</p>
+  </header>
+
+  <ol class="scores-lijst">
+    {% for poging in pogingen %}
+    <li class="score-item">
+      <span class="score-positie">{{ forloop.index }}</span>
+      <div class="score-info">
+        <span class="score-punten">{{ poging.score }} / {{ poging.total_questions }}</span>
+        <time class="score-datum">{{ poging.completed_at | slice: 0, 10 }}</time>
+      </div>
+      <div class="score-balk-wrapper">
+        <div class="score-balk" style="width: {{ poging.score | times: 100 | divided_by: poging.total_questions }}%"></div>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</main>
+
+{% render 'partials/foot.liquid' %}
